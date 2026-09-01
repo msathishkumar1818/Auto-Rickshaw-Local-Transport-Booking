@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPulse | Modern Auto Rickshaw & Urban Feeder Transport Booking</title>
+  <meta name="description"
+    content="Book 100% metered, GPS-tracked auto rickshaws, green e-rickshaws, and metro feeder shuttles with AutoPulse. Zero haggling, police-verified drivers, and instant pickup.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FAF5FF',
+              100: '#F3E8FF',
+              200: '#E9D5FF',
+              300: '#D8B4FE',
+              400: '#C084FC',
+              500: '#A855F7',
+              600: '#9333EA',
+              700: '#7E22CE',
+              800: '#6B21A8',
+              900: '#581C87',
+              950: '#3B0764',
+            },
+            violet: {
+              50: '#FAF8FF',
+              100: '#F5F3FF',
+              200: '#EDE9FE',
+              300: '#DDD6FE',
+              400: '#C4B5FD',
+              500: '#8B5CF6',
+              600: '#7C3AED',
+              700: '#6D28D9',
+              800: '#5B21B6',
+              900: '#4C1D95',
+              950: '#2E1065',
+            },
+            purple: {
+              50: '#FAF5FF',
+              100: '#F3E8FF',
+              200: '#E9D5FF',
+              300: '#D8B4FE',
+              400: '#C084FC',
+              500: '#A855F7',
+              600: '#9333EA',
+              700: '#7E22CE',
+              800: '#6B21A8',
+              900: '#581C87',
+              950: '#3B0764',
+            },
+            darkpurple: {
+              800: '#1E1038',
+              900: '#180D2D',
+              950: '#0C0517',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-white dark:bg-[#0C0517] text-[#1A0B2E] dark:text-purple-100 antialiased transition-colors duration-200">
+
+  <!-- ==================== HEADER (Desktop: Strict 1-Line | Mobile: Clean Logo + Hamburger) ==================== -->
+  <header class="site-header">
+    <div class="container-custom">
+      <div class="nav-desktop-row">
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0 text-decoration-none group">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 flex items-center justify-center shadow-md shadow-violet-500/25 group-hover:scale-105 transition-transform text-white">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-heading font-extrabold text-2xl tracking-tight text-[#1A0B2E] dark:text-white leading-none">Auto<span
+                class="text-violet-600 dark:text-violet-400">Pulse</span></span>
+            <span
+              class="text-[10px] font-semibold uppercase tracking-wider text-purple-800 dark:text-purple-300">Urban
+              Transit Network</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Strict 1-Line) -->
+        <nav class="desktop-nav nav-links-wrap">
+          <!-- Home Dropdown -->
+          <div class="nav-item-dropdown">
+            <a href="index.html" class="nav-link active">
+              <span>Home</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html" class="nav-dropdown-link font-semibold text-violet-600 dark:text-violet-400">
+                <span class="w-2 h-2 rounded-full bg-violet-600"></span> Home 1 (Feeder & City)
+              </a>
+              <a href="home-2.html" class="nav-dropdown-link">
+                <span class="w-2 h-2 rounded-full bg-purple-200 dark:bg-purple-800"></span> Home 2 (Express Night &
+                Bento)
+              </a>
+            </div>
+          </div>
+
+          <a href="how-to-book.html" class="nav-link">How to Book</a>
+          <a href="fare-calculator.html" class="nav-link">Fare Calculator</a>
+          <a href="safety.html" class="nav-link">Safety Features</a>
+          <a href="corporate.html" class="nav-link">Corporate Accounts</a>
+          <a href="contact.html" class="nav-link">Contact </a>
+        </nav>
+
+        <!-- Desktop Action Controls: Dark Mode, RTL/LTR, CTA -->
+        <div class="desktop-actions header-actions">
+          <!-- Dark Mode Toggle Button -->
+          <button type="button" class="theme-toggle-btn util-btn" aria-label="Toggle dark mode" title="Toggle theme">
+            <span class="theme-icon"></span>
+          </button>
+
+          <!-- RTL / LTR Toggle Button -->
+          <button type="button" class="rtl-toggle-btn util-btn font-bold text-xs" aria-label="Toggle RTL layout"
+            title="Toggle direction">
+            <span class="dir-label">RTL</span>
+          </button>
+
+          <!-- Main CTA -->
+          <a href="booking.html" class="btn-primary">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+            </svg>
+            <span>Book a Ride</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button (Strictly Only on Mobile/Tablet < 1024px) -->
+        <button type="button" class="mobile-menu-btn mobile-menu-toggle lg:hidden" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="w-6 h-6 icon-hamburger" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="w-6 h-6 icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION MENU (Below Fixed Header) ==================== -->
+  <div id="mobile-backdrop" class="mobile-menu-backdrop"></div>
+  <nav id="mobile-drawer" class="mobile-menu-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-menu-scroll">
+      <!-- Navigation Links -->
+      <div class="mobile-nav-group space-y-1">
+        <!-- Home Submenu -->
+        <div>
+          <button type="button"
+            class="mobile-subnav-toggle mobile-nav-link active"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="w-4 h-4 toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mobile-subnav">
+            <a href="index.html" class="mobile-subnav-link active">
+              <span class="w-1.5 h-1.5 rounded-full bg-violet-600"></span>
+              <span>Home 1: Feeder &amp; City</span>
+            </a>
+            <a href="home-2.html" class="mobile-subnav-link">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-300 dark:bg-purple-700"></span>
+              <span>Home 2: Express Night &amp; Bento</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="how-to-book.html" class="mobile-nav-link">How to Book</a>
+        <a href="fare-calculator.html" class="mobile-nav-link">Fare Calculator</a>
+        <a href="safety.html" class="mobile-nav-link">Safety Features</a>
+        <a href="corporate.html" class="mobile-nav-link">Corporate Accounts</a>
+        <a href="contact.html" class="mobile-nav-link">Contact &amp; Driver Partner</a>
+      </div>
+
+      <!-- Preferences inside scrollable area -->
+      <div class="mobile-util-box space-y-3 mt-4">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 block">Preferences</span>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-[#1A0B2E] dark:text-purple-200">Theme</span>
+          <button type="button"
+            class="theme-toggle-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <span class="theme-icon"></span>
+            <span class="theme-label">Dark Mode</span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between pt-1">
+          <span class="text-sm font-medium text-[#1A0B2E] dark:text-purple-200">Reading Direction</span>
+          <button type="button"
+            class="rtl-toggle-btn flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <span>Layout:</span>
+            <span class="dir-label font-bold text-violet-600 dark:text-violet-400">RTL</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Drawer CTA Button -->
+      <div class="pt-4 mt-2">
+        <a href="booking.html" class="btn-primary w-full text-center">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+          </svg>
+          <span>Book a Ride</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN 8 SECTIONS ==================== -->
+  <main id="main-content">
+
+    <!-- ----------------------------------------------------
+         SECTION 1: HERO (Next-Gen Urban Transit Command Stage)
+    ----------------------------------------------------- -->
+    <section class="relative pt-6 pb-16 lg:pt-10 lg:pb-20 overflow-hidden">
+      <!-- Ambient Visual Backgrounds -->
+      <div class="hero-glow-radial"></div>
+      <div class="hero-grid-pattern"></div>
+
+      <div class="container-custom relative z-10">
+        <!-- Top Editorial Live Status Pill -->
+        <div class="flex justify-center mb-6 lg:mb-8">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full hero-pill-glass text-xs font-semibold text-purple-900 dark:text-purple-200 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-violet-500 animate-ping"></span>
+            <span class="font-bold text-violet-700 dark:text-violet-300">City Network Live:</span>
+            <span>480+ Connected Autos Active</span>
+            <span class="hidden sm:inline-block text-purple-400 dark:text-purple-600">•</span>
+            <span class="hidden sm:inline-flex items-center gap-1 text-violet-600 dark:text-violet-400 font-bold">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              Zero Surge Locked
+            </span>
+          </div>
+        </div>
+
+        <!-- Central High-Impact Headline & Value Proposition -->
+        <div class="text-center max-w-4xl mx-auto mb-10 lg:mb-14 space-y-4">
+          <h1
+            class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-[#1A0B2E] dark:text-white leading-[1.12]">
+            The Smarter Way to Move Around Town.
+            <span
+              class="block mt-1 sm:mt-2 bg-clip-text text-transparent bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 dark:from-violet-400 dark:via-purple-300 dark:to-violet-200">
+              Zero Surge. Pure Meter. Instant Hail.
+            </span>
+          </h1>
+          <p
+            class="text-base sm:text-lg lg:text-xl text-purple-900 dark:text-purple-200 max-w-2xl mx-auto font-normal">
+            Bridging metro stations and tech hubs with GPS-calibrated CNG &amp; Electric auto rickshaws. Guaranteed
+            statutory RTO meter fares, verified captains, and effortless WhatsApp dispatch.
+          </p>
+        </div>
+
+        <!-- Interactive Dispatch Deck & Floating Visual Showcase Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+
+          <!-- Left: Smart Interactive Dispatch Deck (Glass Cockpit) -->
+          <div
+            class="lg:col-span-6 bg-white/95 dark:bg-[#180D2D]/95 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-purple-200 dark:border-[#341A59] shadow-2xl shadow-violet-900/10 flex flex-col justify-between space-y-6">
+
+            <div>
+              <!-- Segmented Modality Selector -->
+              <div class="flex items-center justify-between pb-4 border-b border-purple-100 dark:border-[#341A59]/60">
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-8 h-8 rounded-xl bg-violet-100 dark:bg-violet-950/60 flex items-center justify-center text-violet-600 dark:text-violet-400">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span
+                      class="text-xs font-bold text-[#1A0B2E] dark:text-white uppercase tracking-wider block leading-tight">Instant
+                      Fare Desk</span>
+                    <span class="text-[11px] font-medium text-purple-700 dark:text-purple-300">Calculated in real-time</span>
+                  </div>
+                </div>
+                <span
+                  class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet-600 animate-pulse"></span>
+                  Avg ETA: 2.5 min
+                </span>
+              </div>
+
+              <!-- Interactive Origin & Destination Matcher -->
+              <div class="mt-5 space-y-3">
+                <div class="relative">
+                  <label
+                    class="block text-[11px] font-bold text-purple-800 dark:text-purple-300 uppercase tracking-wider mb-1">
+                    Pickup Location / Metro Gate
+                  </label>
+                  <div class="relative flex items-center">
+                    <span class="absolute left-3.5 text-violet-500">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </span>
+                    <input type="text" value="MG Road Metro Interchange - Gate 2" id="hero-pickup-input"
+                      class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-purple-50/60 dark:bg-[#130924] border border-purple-200 dark:border-[#341A59] text-xs sm:text-sm font-semibold text-[#1A0B2E] dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all">
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <label
+                    class="block text-[11px] font-bold text-purple-800 dark:text-purple-300 uppercase tracking-wider mb-1">
+                    Drop-off Destination
+                  </label>
+                  <div class="relative flex items-center">
+                    <span class="absolute left-3.5 text-purple-500">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" />
+                        <circle cx="12" cy="12" r="5" />
+                        <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+                      </svg>
+                    </span>
+                    <input type="text" value="Cyber Gateway Tech Boulevard Tower 4" id="hero-drop-input"
+                      class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-purple-50/60 dark:bg-[#130924] border border-purple-200 dark:border-[#341A59] text-xs sm:text-sm font-semibold text-[#1A0B2E] dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vehicle Category Selector Badges -->
+              <div class="mt-4 pt-3">
+                <span
+                  class="block text-[11px] font-bold text-purple-800 dark:text-purple-300 uppercase tracking-wider mb-2">
+                  Select Ride Category
+                </span>
+                <div class="grid grid-cols-3 gap-2">
+                  <button type="button"
+                    class="p-2.5 rounded-xl border border-violet-500 bg-violet-50/70 dark:bg-violet-950/40 text-center transition-all">
+                    <span class="text-xs font-bold text-violet-700 dark:text-violet-300 block">Eco Electric</span>
+                    <span class="text-[10px] text-purple-600 dark:text-purple-400 font-semibold">₹25 base</span>
+                  </button>
+                  <button type="button"
+                    class="p-2.5 rounded-xl border border-purple-200 dark:border-[#341A59] hover:border-violet-400 bg-white dark:bg-[#130924] text-center transition-all">
+                    <span class="text-xs font-bold text-[#1A0B2E] dark:text-white block">Standard CNG</span>
+                    <span class="text-[10px] text-purple-600 dark:text-purple-400 font-semibold">₹30 base</span>
+                  </button>
+                  <button type="button"
+                    class="p-2.5 rounded-xl border border-purple-200 dark:border-[#341A59] hover:border-violet-400 bg-white dark:bg-[#130924] text-center transition-all">
+                    <span class="text-xs font-bold text-[#1A0B2E] dark:text-white block">Prime Auto</span>
+                    <span class="text-[10px] text-purple-600 dark:text-purple-400 font-semibold">₹35 base</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Calculated Output & CTA Split -->
+            <div class="pt-4 border-t border-purple-100 dark:border-[#341A59]/80 space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-[#1A0B2E] dark:text-purple-200 block">Estimated Distance: <strong>4.2
+                      km</strong></span>
+                  <span class="text-xs font-semibold text-purple-800 dark:text-purple-200">Govt RTO Gazette
+                    Tariff</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] uppercase font-bold text-[#1A0B2E] dark:text-purple-300 block">Estimated
+                    Fare</span>
+                  <div class="text-2xl font-extrabold text-violet-600 dark:text-violet-400 leading-tight">
+                    ₹68.50
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <a href="booking.html"
+                  class="btn-primary text-center py-3 text-xs sm:text-sm font-bold shadow-lg shadow-violet-500/25">
+                  <span>Confirm Ride Now &rarr;</span>
+                </a>
+                <a href="how-to-book.html#whatsapp"
+                  class="btn-secondary text-center py-3 text-xs sm:text-sm font-bold border-purple-200 dark:border-[#341A59] flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 text-violet-600 dark:text-violet-400" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                  <span>Hail Via WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Multi-Layered Urban Mobility Stage with Floating Telematics Cards -->
+          <div class="lg:col-span-6 relative flex flex-col justify-center">
+
+            <!-- Main Stage Showcase Window -->
+            <div
+              class="relative rounded-3xl overflow-hidden shadow-2xl border border-purple-200 dark:border-[#341A59] bg-[#180D2D]">
+              <img src="assets/images/hero/hero_home1.jpg"
+                alt="Modern Electric Auto Rickshaw fleet stationed at central transit bay"
+                class="w-full h-80 sm:h-96 lg:h-[440px] object-cover filter brightness-[0.96] hover:scale-105 transition-transform duration-700">
+
+              <!-- Soft Gradient Overlay for Readability -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#0C0517]/90 via-transparent to-[#0C0517]/20 pointer-events-none">
+              </div>
+
+              <!-- In-Image Caption -->
+              <div class="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-white text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-ping"></div>
+                  <span class="font-bold tracking-wide">Fleet Zone: Metro East Feeder Hub</span>
+                </div>
+                <span
+                  class="text-[11px] font-semibold text-purple-200/80 bg-[#1A0B2E]/60 backdrop-blur-md px-2.5 py-0.5 rounded-md">
+                  Active Dispatch
+                </span>
+              </div>
+            </div>
+
+            <!-- Floating Card 1: Top-Right Driver Trust Telematics (Subtle Float) -->
+            <div
+              class="hidden sm:flex absolute -top-4 -right-4 lg:-right-6 z-20 p-3.5 rounded-2xl hero-pill-glass items-center gap-3 animate-gentle-float max-w-xs">
+              <div
+                class="w-10 h-10 rounded-xl bg-violet-600 text-white flex items-center justify-center shadow-md shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div class="leading-tight">
+                <span class="text-xs font-bold text-[#1A0B2E] dark:text-white block">100% Police Verified</span>
+                <span class="text-[11px] text-purple-800 dark:text-purple-200 font-medium">Commercial RTO Badge Drivers</span>
+              </div>
+            </div>
+
+            <!-- Floating Card 2: Bottom-Left Tamper-Proof Meter Guarantee (Reverse Float) -->
+            <div
+              class="hidden sm:flex absolute -bottom-5 -left-4 lg:-left-6 z-20 p-3.5 rounded-2xl hero-pill-glass items-center gap-3 animate-gentle-float-reverse max-w-xs">
+              <div
+                class="w-10 h-10 rounded-xl bg-purple-100 dark:bg-[#130924] border border-violet-500/40 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="leading-tight">
+                <span class="text-xs font-bold text-[#1A0B2E] dark:text-white block">Digital IoT Meter</span>
+                <span class="text-[11px] text-purple-800 dark:text-purple-200 font-medium">No bargaining. Zero cash
+                  dispute.</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Distinctive Feature Highlights Ribbon (Bottom of Hero) -->
+        <div class="mt-12 lg:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div
+            class="p-4 rounded-2xl bg-white/70 dark:bg-[#180D2D]/70 border border-purple-200 dark:border-[#341A59] backdrop-blur-sm hero-feature-card">
+            <div class="text-violet-600 dark:text-violet-400 font-extrabold text-lg sm:text-xl font-heading mb-1">
+              420+ Hubs
+            </div>
+            <p class="text-xs text-purple-900 dark:text-purple-200 font-medium">
+              Stationed outside every metro station &amp; bus terminus.
+            </p>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-white/70 dark:bg-[#180D2D]/70 border border-purple-200 dark:border-[#341A59] backdrop-blur-sm hero-feature-card">
+            <div class="text-violet-600 dark:text-violet-400 font-extrabold text-lg sm:text-xl font-heading mb-1">
+              ₹0 Surge
+            </div>
+            <p class="text-xs text-purple-900 dark:text-purple-200 font-medium">
+              100% flat statutory pricing even during peak rain &amp; rush hours.
+            </p>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-white/70 dark:bg-[#180D2D]/70 border border-purple-200 dark:border-[#341A59] backdrop-blur-sm hero-feature-card">
+            <div class="text-violet-600 dark:text-violet-400 font-extrabold text-lg sm:text-xl font-heading mb-1">
+              2.8 min ETA
+            </div>
+            <p class="text-xs text-purple-900 dark:text-purple-200 font-medium">
+              Direct dispatch algorithm assigns the closest active auto.
+            </p>
+          </div>
+
+          <div
+            class="p-4 rounded-2xl bg-white/70 dark:bg-[#180D2D]/70 border border-purple-200 dark:border-[#341A59] backdrop-blur-sm hero-feature-card">
+            <div class="text-violet-600 dark:text-violet-400 font-extrabold text-lg sm:text-xl font-heading mb-1">
+              UPI &amp; Cash
+            </div>
+            <p class="text-xs text-purple-900 dark:text-purple-200 font-medium">
+              Scan driver's dashboard QR code or pay cash directly.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 2: FLEET & VEHICLE CATEGORIES SHOWCASE
+    ----------------------------------------------------- -->
+    <section class="section-py bg-[#FAF8FF] dark:bg-[#130924]">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="brand-badge mb-3">Our Urban Fleet</span>
+          <h2 class="section-heading text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white">
+            Tailored For Every Local Commute Need
+          </h2>
+          <p class="text-purple-900 dark:text-purple-200 mt-3 text-base sm:text-lg">
+            From single-passenger quick metro connector hops to 6-seater pooled community tempos, choose the right ride
+            for your journey.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Fleet Card 1 -->
+          <div class="interactive-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300 text-xs font-bold px-2.5 py-1 rounded-md">Popular</span>
+                <span class="text-xs font-semibold text-purple-700 dark:text-purple-300">3 Seats</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#1A0B2E] dark:text-white mb-2">Standard CNG Auto</h3>
+              <p class="text-xs text-purple-800 dark:text-purple-200 mb-4">
+                The classic 3-wheeler city workhorse. Agile through crowded traffic lanes with standard government
+                calibrated meter.
+              </p>
+              <ul class="text-xs space-y-2 text-purple-900 dark:text-purple-200 mb-6">
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Base Fare: ₹30 (First 1.5 km)</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Running: ₹15.00 / km</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Luggage Rack: Up to 2 bags</li>
+              </ul>
+            </div>
+            <a href="fare-calculator.html" class="btn-secondary text-xs w-full text-center py-2.5">Check Fare Rates
+              &rarr;</a>
+          </div>
+
+          <!-- Fleet Card 2 -->
+          <div class="interactive-card rounded-2xl p-6 flex flex-col justify-between border-2 border-violet-500/40">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300 text-xs font-bold px-2.5 py-1 rounded-md">100%
+                  Electric</span>
+                <span class="text-xs font-semibold text-purple-700 dark:text-purple-300">3-4 Seats</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#1A0B2E] dark:text-white mb-2">Green E-Rickshaw</h3>
+              <p class="text-xs text-purple-800 dark:text-purple-200 mb-4">
+                Whisper-quiet electric drive with zero tailpipe emissions, lower vibration, and discounted eco-friendly
+                tariff.
+              </p>
+              <ul class="text-xs space-y-2 text-purple-900 dark:text-purple-200 mb-6">
+                <li class="flex items-center gap-2 text-violet-600 dark:text-violet-400 font-semibold">✓ Base Fare: ₹25
+                  (10%
+                  Cheaper)</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Running: ₹13.50 / km</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> High Suspension Ride Comfort</li>
+              </ul>
+            </div>
+            <a href="fare-calculator.html" class="btn-eco text-xs w-full text-center py-2.5">Hail Green Auto &rarr;</a>
+          </div>
+
+          <!-- Fleet Card 3 -->
+          <div class="interactive-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300 text-xs font-bold px-2.5 py-1 rounded-md">Executive</span>
+                <span class="text-xs font-semibold text-purple-700 dark:text-purple-300">3 Seats</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#1A0B2E] dark:text-white mb-2">Prime Comfort Auto</h3>
+              <p class="text-xs text-purple-800 dark:text-purple-200 mb-4">
+                Extra padded leatherette seats, onboard mobile charging socket, roll-up transparent rain blinds, and
+                top-rated 4.9/5 verified captains.
+              </p>
+              <ul class="text-xs space-y-2 text-purple-900 dark:text-purple-200 mb-6">
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> USB Charging Onboard</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Top-Tier Senior Drivers</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Complimentary Bottled Water</li>
+              </ul>
+            </div>
+            <a href="how-to-book.html" class="btn-secondary text-xs w-full text-center py-2.5">Learn More &rarr;</a>
+          </div>
+
+          <!-- Fleet Card 4 -->
+          <div class="interactive-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300 text-xs font-bold px-2.5 py-1 rounded-md">Shared
+                  Pool</span>
+                <span class="text-xs font-semibold text-purple-700 dark:text-purple-300">6 Seats</span>
+              </div>
+              <h3 class="text-xl font-bold text-[#1A0B2E] dark:text-white mb-2">Metro Feeder Tempo</h3>
+              <p class="text-xs text-purple-800 dark:text-purple-200 mb-4">
+                Fixed corridor high-frequency shared shuttles connecting residential layouts directly to rapid metro &
+                suburban rail gates.
+              </p>
+              <ul class="text-xs space-y-2 text-purple-900 dark:text-purple-200 mb-6">
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Fixed Seat Rate: ₹15 to ₹25</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Departures every 3 minutes</li>
+                <li class="flex items-center gap-2"><span
+                    class="text-violet-600 dark:text-violet-400 font-bold">✓</span> Direct Tech Park Express</li>
+              </ul>
+            </div>
+            <a href="fare-calculator.html" class="btn-secondary text-xs w-full text-center py-2.5">View Corridors
+              &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 3: METRO FEEDER & COVERAGE HUBS
+    ----------------------------------------------------- -->
+    <section class="section-py bg-white dark:bg-[#0C0517]">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <div class="lg:col-span-6 space-y-6">
+            <span class="brand-badge">Comprehensive Coverage</span>
+            <h2 class="section-heading text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white">
+              Solving The Last-Mile Metro & Transit Riddle
+            </h2>
+            <p class="text-purple-900 dark:text-purple-200 text-base sm:text-lg">
+              No more stepping out of the metro station into chaos. AutoPulse operates pre-designated pickup bays across
+              32 major metro stations, suburban rail terminals, and corporate tech parks.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div
+                class="p-4 rounded-xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-lg bg-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0 font-bold">
+                  01</div>
+                <div>
+                  <h4 class="font-bold text-[#1A0B2E] dark:text-white text-base">Designated Station Auto Bays</h4>
+                  <p class="text-xs sm:text-sm text-purple-800 dark:text-purple-200 mt-1">
+                    Follow the violet AutoPulse signage at metro exits. Drivers wait in an organized queue, ready to
+                    board immediately.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 font-bold">
+                  02</div>
+                <div>
+                  <h4 class="font-bold text-[#1A0B2E] dark:text-white text-base">QR Fast-Hail Without App Install</h4>
+                  <p class="text-xs sm:text-sm text-purple-800 dark:text-purple-200 mt-1">
+                    Scan the bay QR code with your phone camera to instantly lock your government meter fare and embark
+                    in 30 seconds.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="p-4 rounded-xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-lg bg-violet-600/20 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0 font-bold">
+                  03</div>
+                <div>
+                  <h4 class="font-bold text-[#1A0B2E] dark:text-white text-base">Guaranteed Return Feeder Shuttles</h4>
+                  <p class="text-xs sm:text-sm text-purple-800 dark:text-purple-200 mt-1">
+                    Evening peak hours? Schedule an auto pickup directly from your residential gate back to the station
+                    with 0% cancellation rate.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="how-to-book.html" class="btn-primary">
+                <span>View All 32 Station Hubs</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Metro Coverage Matrix -->
+          <div class="lg:col-span-6">
+            <div class="bg-white dark:bg-[#180D2D] text-[#1A0B2E] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#341A59]">
+              <div class="flex items-center justify-between pb-4 border-b border-purple-900/50">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-violet-500 animate-ping"></span>
+                  <h3 class="font-bold text-lg font-heading text-[#1A0B2E] dark:text-white">Live Metro Feeder Corridors</h3>
+                </div>
+                <span
+                  class="text-xs font-mono text-violet-300 bg-violet-950/70 border border-violet-500/30 px-2.5 py-1 rounded">Avg
+                  Wait: 1.8
+                  min</span>
+              </div>
+
+              <div class="mt-6 space-y-4">
+                <!-- Corridor 1 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#130924] border border-purple-200 dark:border-[#341A59] flex items-center justify-between">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-violet-600 text-white">Central
+                        Line</span>
+                      <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">Indiranagar Metro &harr; Domlur & EGL Park</h4>
+                    </div>
+                    <span class="text-xs text-purple-900 dark:text-purple-200 mt-1 block">Frequency: Every 2 mins &bull; Flat Share:
+                      ₹20</span>
+                  </div>
+                  <span
+                    class="px-2.5 py-1 rounded-full text-xs font-bold bg-violet-950 text-violet-300 border border-violet-500/30">14
+                    Autos
+                    Ready</span>
+                </div>
+
+                <!-- Corridor 2 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#130924] border border-purple-200 dark:border-[#341A59] flex items-center justify-between">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-600 text-white">South Line</span>
+                      <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">South End Circle &harr; Jayanagar 4th Block</h4>
+                    </div>
+                    <span class="text-xs text-purple-900 dark:text-purple-200 mt-1 block">Frequency: Every 3 mins &bull; Flat Share:
+                      ₹15</span>
+                  </div>
+                  <span
+                    class="px-2.5 py-1 rounded-full text-xs font-bold bg-violet-950 text-violet-300 border border-violet-500/30">9
+                    Autos
+                    Ready</span>
+                </div>
+
+                <!-- Corridor 3 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#130924] border border-purple-200 dark:border-[#341A59] flex items-center justify-between">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-violet-700 text-white">Airport
+                        Exp</span>
+                      <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">Hebbal Flyover Hub &harr; Manyata Tech Park</h4>
+                    </div>
+                    <span class="text-xs text-purple-900 dark:text-purple-200 mt-1 block">Frequency: Continuous Loop &bull; Flat Share:
+                      ₹25</span>
+                  </div>
+                  <span
+                    class="px-2.5 py-1 rounded-full text-xs font-bold bg-violet-950 text-violet-300 border border-violet-500/30">22
+                    Autos
+                    Ready</span>
+                </div>
+
+                <!-- Corridor 4 -->
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#130924] border border-purple-200 dark:border-[#341A59] flex items-center justify-between">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-700 text-white">East
+                        Corridor</span>
+                      <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">Silk Board Junction &harr; HSR BDA Complex</h4>
+                    </div>
+                    <span class="text-xs text-purple-900 dark:text-purple-200 mt-1 block">Frequency: Every 2 mins &bull; Metered Private:
+                      ₹45</span>
+                  </div>
+                  <span
+                    class="px-2.5 py-1 rounded-full text-xs font-bold bg-violet-950 text-violet-300 border border-violet-500/30">18
+                    Autos
+                    Ready</span>
+                </div>
+              </div>
+
+              <div
+                class="mt-6 pt-4 border-t border-purple-900/50 flex items-center justify-between text-xs text-purple-900 dark:text-white">
+                <span>Want an auto reserved at your station exit?</span>
+                <a href="contact.html" class="text-violet-600 dark:text-violet-400 font-bold hover:underline">Request New Bay &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 4: COMPARISON MATRIX (AutoPulse vs Street Hailing)
+    ----------------------------------------------------- -->
+    <section class="section-py bg-[#FAF8FF] dark:bg-[#130924]">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="brand-badge mb-3">Why Commuters Switch</span>
+          <h2 class="section-heading text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white">
+            AutoPulse vs Traditional Street Hailing
+          </h2>
+          <p class="text-purple-900 dark:text-purple-200/80 mt-3 text-base sm:text-lg">
+            Say goodbye to the "One and a half meter, sir!", random refusal to short distances, and faulty analog
+            meters.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table
+            class="w-full bg-white dark:bg-[#180D2D] rounded-2xl shadow-xl border border-purple-200 dark:border-[#341A59] text-left border-collapse min-w-[640px]">
+            <thead>
+              <tr class="border-b border-purple-200 dark:border-[#341A59] text-sm font-heading">
+                <th class="p-5 font-bold text-[#1A0B2E] dark:text-white uppercase tracking-wider text-xs">
+                  Feature / Experience</th>
+                <th class="p-5 font-extrabold text-violet-600 dark:text-violet-400 bg-violet-500/10 text-base">AutoPulse
+                  Network</th>
+                <th class="p-5 font-semibold text-purple-900 dark:text-purple-300 text-sm">Random Street Auto</th>
+                <th class="p-5 font-semibold text-purple-900 dark:text-purple-300 text-sm">Ride Aggregator Cabs
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-purple-100 dark:divide-[#341A59] text-sm">
+              <tr>
+                <td class="p-5 font-semibold text-[#1A0B2E] dark:text-white">Fare Calculation</td>
+                <td class="p-5 font-bold text-violet-600 dark:text-violet-400 bg-violet-500/5">100% Regulated Govt
+                  Meter (Zero Haggling)</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Arbitrary cash demands & verbal bargaining
+                </td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Dynamic 2.5x - 4x surge pricing in rains</td>
+              </tr>
+              <tr>
+                <td class="p-5 font-semibold text-[#1A0B2E] dark:text-white">Cancellation Rate</td>
+                <td class="p-5 font-bold text-violet-600 dark:text-violet-400 bg-violet-500/5">&lt; 1% (Dispatched with
+                  strict SLA)</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Frequent refusals for short or traffic routes
+                </td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Driver calls asking "Where to go?" then
+                  cancels</td>
+              </tr>
+              <tr>
+                <td class="p-5 font-semibold text-[#1A0B2E] dark:text-white">Safety & Verification</td>
+                <td class="p-5 font-bold text-violet-600 dark:text-violet-400 bg-violet-500/5">Police badge verified +
+                  Live GPS SOS</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Unknown driver credentials</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Standard app SOS only</td>
+              </tr>
+              <tr>
+                <td class="p-5 font-semibold text-[#1A0B2E] dark:text-white">Booking Accessibility</td>
+                <td class="p-5 font-bold text-violet-600 dark:text-violet-400 bg-violet-500/5">Phone 1800, WhatsApp
+                  Bot, App & Web</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Must stand on street corner waving hand</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">App only (requires data connection)</td>
+              </tr>
+              <tr>
+                <td class="p-5 font-semibold text-[#1A0B2E] dark:text-white">Environmental Footprint</td>
+                <td class="p-5 font-bold text-violet-600 dark:text-violet-400 bg-violet-500/5">80% Clean CNG + 100%
+                  Electric E-Autos</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Mixed older engines</td>
+                <td class="p-5 text-purple-800 dark:text-purple-300">Heavy petrol/diesel car emissions in gridlock
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 5: STEP-BY-STEP RIDER JOURNEY
+    ----------------------------------------------------- -->
+    <section class="section-py bg-white dark:bg-[#0C0517]">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="brand-badge mb-3">Seamless Process</span>
+          <h2 class="section-heading text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white">
+            How It Works in 4 Quick Steps
+          </h2>
+          <p class="text-purple-900 dark:text-purple-200/80 mt-3 text-base sm:text-lg">
+            From the moment you hail until your digital receipt is generated, experience smooth, transparent transit.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <!-- Step 1 -->
+          <div
+            class="relative p-6 rounded-2xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-lg shadow-violet-500/30">
+              1
+            </div>
+            <h3 class="text-lg font-bold text-[#1A0B2E] dark:text-white mb-2">Hail Your Preferred Way</h3>
+            <p class="text-xs sm:text-sm text-purple-800 dark:text-purple-200">
+              Send your location on WhatsApp, dial our toll-free 1800 number, use the mobile app, or scan the QR at a
+              metro station stand.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="relative p-6 rounded-2xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-lg shadow-violet-500/30">
+              2
+            </div>
+            <h3 class="text-lg font-bold text-[#1A0B2E] dark:text-white mb-2">Instant Dispatch & OTP</h3>
+            <p class="text-xs sm:text-sm text-purple-800 dark:text-purple-200">
+              Receive driver name, police-verified badge number, auto plate, and pickup countdown. Driver arrives in
+              under 3.5 minutes.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="relative p-6 rounded-2xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-lg shadow-violet-500/30">
+              3
+            </div>
+            <h3 class="text-lg font-bold text-[#1A0B2E] dark:text-white mb-2">Track on Live Digital Meter</h3>
+            <p class="text-xs sm:text-sm text-purple-800 dark:text-purple-200">
+              Board the auto and watch the sealed digital meter increment strictly according to government distance
+              standards.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="relative p-6 rounded-2xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-tr from-purple-700 to-violet-600 text-white font-extrabold text-xl flex items-center justify-center mb-5 shadow-lg shadow-purple-500/30">
+              4
+            </div>
+            <h3 class="text-lg font-bold text-[#1A0B2E] dark:text-white mb-2">Cashless Pay & E-Receipt</h3>
+            <p class="text-xs sm:text-sm text-purple-800 dark:text-purple-200">
+              Pay via any UPI app directly to the dashboard QR code, swipe your metro smart card, or hand exact cash.
+              E-receipt sent via SMS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 6: CITY PULSE & REAL-TIME IMPACT STATS
+    ----------------------------------------------------- -->
+    <section class="section-py bg-gradient-to-r from-[#5B21B6] via-[#6D28D9] to-[#7C3AED] text-white">
+      <div class="container-custom">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+
+          <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+            <div class="font-heading font-extrabold text-4xl sm:text-5xl tracking-tight">1.4M+</div>
+            <div class="text-xs sm:text-sm font-bold uppercase tracking-wider mt-2 text-purple-100">Rides Completed</div>
+            <p class="text-xs mt-1 text-purple-200 font-medium">100% metered & verified</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+            <div class="font-heading font-extrabold text-4xl sm:text-5xl tracking-tight">3.2 min</div>
+            <div class="text-xs sm:text-sm font-bold uppercase tracking-wider mt-2 text-purple-100">Average Pickup ETA</div>
+            <p class="text-xs mt-1 text-purple-200 font-medium">Faster than car aggregators</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+            <div
+              class="font-heading font-extrabold text-4xl sm:text-5xl tracking-tight flex items-center justify-center gap-1.5">
+              <span>4.9</span>
+              <svg class="w-8 h-8 fill-violet-300 text-violet-300 inline" viewBox="0 0 20 20">
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div class="text-xs sm:text-sm font-bold uppercase tracking-wider mt-2 text-purple-100">Passenger Rating</div>
+            <p class="text-xs mt-1 text-purple-200 font-medium">Over 250k reviews</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+            <div class="font-heading font-extrabold text-4xl sm:text-5xl tracking-tight">420+</div>
+            <div class="text-xs sm:text-sm font-bold uppercase tracking-wider mt-2 text-purple-100">Designated Auto Hubs
+            </div>
+            <p class="text-xs mt-1 text-purple-200 font-medium">Covering 18 city zones</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 7: COMMUTER STORIES & VERIFIED RIDE BADGES
+    ----------------------------------------------------- -->
+    <section class="section-py bg-white dark:bg-[#0C0517]">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="brand-badge mb-3">Real Stories</span>
+          <h2 class="section-heading text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white">
+            Loved By Daily Office Commuters & Families
+          </h2>
+          <p class="text-purple-900 dark:text-purple-200/80 mt-3 text-base sm:text-lg">
+            See how everyday city dwellers rely on AutoPulse for stress-free morning sprints and safe late-night
+            connections.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Story 1 -->
+          <div class="interactive-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-violet-500 mb-4">
+                <div class="flex items-center text-violet-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <span class="text-xs text-purple-800 dark:text-purple-300 font-semibold ml-2">Verified
+                  Commuter</span>
+              </div>
+              <p class="text-sm text-purple-950 dark:text-purple-100 mb-6 italic">
+                "Getting an auto from Baiyappanahalli Metro to Bagmane Tech Park used to be a nightmare with drivers
+                quoting ₹150 for 2.5 km. With AutoPulse, I scan the QR at the bay and pay the exact ₹42 meter fare. It
+                saves me ₹2,000 every single month!"
+              </p>
+            </div>
+            <div class="pt-4 border-t border-purple-100 dark:border-[#341A59] flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">Pooja Venkatesh</h4>
+                <span class="text-xs text-purple-700 dark:text-purple-300 font-medium">Software Engineer, Tech Park</span>
+              </div>
+              <span
+                class="text-[10px] font-bold bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300 px-2 py-0.5 rounded">
+                142 Rides
+              </span>
+            </div>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="interactive-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-violet-500 mb-4">
+                <div class="flex items-center text-violet-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <span class="text-xs text-purple-800 dark:text-purple-300 font-semibold ml-2">Late Night
+                  Rider</span>
+              </div>
+              <p class="text-sm text-purple-950 dark:text-purple-100 mb-6 italic">
+                "As a woman returning from shift duties at 11:30 PM, the police verification badge and live WhatsApp GPS
+                sharing give me and my family complete peace of mind. Plus, the 25% night surcharge is transparently
+                calculated."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-purple-100 dark:border-[#341A59] flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">Ananya Deshmukh</h4>
+                <span class="text-xs text-purple-700 dark:text-purple-300 font-medium">Healthcare Professional</span>
+              </div>
+              <span
+                class="text-[10px] font-bold bg-violet-100 text-violet-800 dark:bg-violet-900/40 dark:text-violet-300 px-2 py-0.5 rounded">
+                98 Rides
+              </span>
+            </div>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="interactive-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-violet-500 mb-4">
+                <div class="flex items-center text-violet-500">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <span class="text-xs text-purple-900/80 dark:text-purple-300/70 font-semibold ml-2">Senior Citizen
+                  Rider</span>
+              </div>
+              <p class="text-sm text-purple-900 dark:text-purple-200/80 mb-6 italic">
+                "I don't use smartphones well, so having their toll-free 1800 number where a polite executive books my
+                rickshaw in Kannada or English is a blessing. The drivers are respectful and help with my grocery bags."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-purple-100 dark:border-[#341A59] flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">K. Ramachandra</h4>
+                <span class="text-xs text-purple-600 dark:text-purple-400/70">Retired Banker, Malleshwaram</span>
+              </div>
+              <span
+                class="text-[10px] font-bold bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300 px-2 py-0.5 rounded">
+                64 Rides
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 8: CTA CONVERSION & APP PROMO
+    ----------------------------------------------------- -->
+    <section class="section-py bg-[#0C0517] text-white relative overflow-hidden">
+      <div
+        class="absolute inset-0 opacity-15 bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] [background-size:16px_16px]">
+      </div>
+
+      <div class="container-custom relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+          <div class="lg:col-span-8 space-y-4">
+            <span
+              class="bg-violet-500/20 text-violet-300 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-violet-500/30">
+              Special Launch Offer
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white">
+              Get 25% Off Your First 3 AutoPulse Rides
+            </h2>
+            <p class="text-purple-200/80 text-base max-w-2xl">
+              Use promo code <strong
+                class="text-violet-300 bg-violet-950/80 px-2 py-0.5 rounded border border-violet-500/30">METERFREE</strong>.
+              Experience predictable fares, zero cancellation anxiety, and friendly police-cleared drivers.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a href="how-to-book.html" class="btn-primary">
+                <span>Book First Ride Now</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a href="contact.html" class="btn-secondary text-white border-purple-800 hover:border-violet-500">
+                <span>Register As Driver Partner</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-[#180D2D]/90 p-6 rounded-2xl border border-[#341A59] backdrop-blur-md">
+            <h4 class="font-bold text-base text-white mb-2">Get Booking Link on SMS</h4>
+            <p class="text-xs text-purple-300/70 mb-4">Enter your mobile number to receive the instant booking link
+              directly
+              via SMS or WhatsApp.</p>
+            <form class="space-y-3"
+              onsubmit="event.preventDefault(); window.AutoPulse.showToast('Instant Hail Link sent to your mobile phone!'); this.reset();">
+              <div class="flex">
+                <span
+                  class="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-purple-800 bg-[#130924] text-purple-300 text-sm font-bold">+91</span>
+                <input type="tel" required pattern="[0-9]{10}" placeholder="98765 43210"
+                  class="w-full px-3 py-2.5 bg-[#0C0517] border border-purple-800 rounded-r-xl text-sm text-white focus:outline-none focus:border-violet-500">
+              </div>
+              <button type="submit" class="w-full btn-primary py-2.5 text-xs font-bold">
+                Send Direct Hail Link
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== CONSISTENT GLOBAL FOOTER ==================== -->
+  <footer class="bg-[#0C0517] text-white text-sm pt-16 pb-12 border-t border-[#341A59]">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#341A59]">
+
+        <!-- Brand Summary with matching logo icon -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 flex items-center justify-center text-white font-bold shadow-md shadow-violet-500/25">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+              </svg>
+            </div>
+            <div class="flex flex-col leading-none">
+              <span class="font-heading font-extrabold text-2xl text-white leading-none">Auto<span
+                  class="text-violet-400">Pulse</span></span>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-purple-400/80">Urban Transit
+                Network</span>
+            </div>
+          </a>
+          <p class="text-xs sm:text-sm text-purple-200 max-w-sm leading-relaxed">
+            The premier platform for metered auto rickshaw hailing, zero-emission e-rickshaws, and city cruiser bicycle
+            rentals across 32 transit hubs.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-violet-300 font-semibold">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-violet-400"></span> 24/7 Helpline: 1800-419-AUTO
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Navigation</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="text-purple-200 hover:text-white transition-colors font-medium">Home
+                1:
+                Feeder &amp; City</a></li>
+            <li><a href="home-2.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Home 2:
+                Express Night</a></li>
+            <li><a href="booking.html" class="text-violet-300 font-bold hover:underline transition-colors">Book a Ride
+                Now</a></li>
+            <li><a href="how-to-book.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">How
+                to Book (Phone/App)</a></li>
+            <li><a href="fare-calculator.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Fare &amp; Meter
+                Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions & Rental -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Ride Services</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="booking.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">City
+                Cruiser Bike Rental</a></li>
+            <li><a href="booking.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Urban
+                E-Bike Hire</a></li>
+            <li><a href="corporate.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Corporate Commute
+                Shuttles</a>
+            </li>
+            <li><a href="safety.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Police-Verified
+                Drivers</a>
+            </li>
+            <li><a href="contact.html#driver"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Join as Driver
+                Partner</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Compliance & Trust -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Regulatory Standards</h4>
+          <ul class="space-y-2.5 text-xs text-purple-200">
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> 100% RTO Gazette Meters
+            </li>
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> Instant Deposit Refund
+            </li>
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> CE Certified Helmets
+            </li>
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> 24/7 Mobile Roadside
+              Rescue</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-purple-300">
+        <p>&copy; 2026 AutoPulse Mobility Technologies Pvt. Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Rental Agreement</a>
+          <a href="#" class="hover:text-white transition-colors">Safety Charter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button Component -->
+  <button type="button" class="scroll-to-top-btn" aria-label="Scroll to top" title="Scroll to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

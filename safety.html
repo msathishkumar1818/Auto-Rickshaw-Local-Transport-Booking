@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Features & Driver Verification | Police-Cleared Fleet - AutoPulse</title>
+  <meta name="description"
+    content="Every AutoPulse driver is 100% police-verified and background cleared. Search driver credentials live, explore our 7-point verification system, SOS telematics, and Pink Auto women fleet.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FAF5FF',
+              100: '#F3E8FF',
+              200: '#E9D5FF',
+              300: '#D8B4FE',
+              400: '#C084FC',
+              500: '#A855F7',
+              600: '#9333EA',
+              700: '#7E22CE',
+              800: '#6B21A8',
+              900: '#581C87',
+              950: '#3B0764',
+            },
+            violet: {
+              50: '#FAF8FF',
+              100: '#F5F3FF',
+              200: '#EDE9FE',
+              300: '#DDD6FE',
+              400: '#C4B5FD',
+              500: '#8B5CF6',
+              600: '#7C3AED',
+              700: '#6D28D9',
+              800: '#5B21B6',
+              900: '#4C1D95',
+              950: '#2E1065',
+            },
+            purple: {
+              50: '#FAF5FF',
+              100: '#F3E8FF',
+              200: '#E9D5FF',
+              300: '#D8B4FE',
+              400: '#C084FC',
+              500: '#A855F7',
+              600: '#9333EA',
+              700: '#7E22CE',
+              800: '#6B21A8',
+              900: '#581C87',
+              950: '#3B0764',
+            },
+            darkpurple: {
+              800: '#1E1038',
+              900: '#180D2D',
+              950: '#0C0517',
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-white dark:bg-[#0C0517] text-[#1A0B2E] dark:text-purple-100 antialiased transition-colors duration-200">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container-custom">
+      <div class="nav-desktop-row">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0 text-decoration-none group">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 flex items-center justify-center shadow-md shadow-violet-500/25 group-hover:scale-105 transition-transform text-white">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-heading font-extrabold text-2xl tracking-tight text-[#1A0B2E] dark:text-white leading-none">Auto<span
+                class="text-violet-600 dark:text-violet-400">Pulse</span></span>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-purple-800 dark:text-purple-300">Urban
+              Transit Network</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="desktop-nav nav-links-wrap">
+          <div class="nav-item-dropdown">
+            <a href="index.html" class="nav-link">
+              <span>Home</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="index.html" class="nav-dropdown-link">
+                <span class="w-2 h-2 rounded-full bg-purple-200 dark:bg-purple-800"></span> Home 1 (Feeder & City)
+              </a>
+              <a href="home-2.html" class="nav-dropdown-link">
+                <span class="w-2 h-2 rounded-full bg-purple-200 dark:bg-purple-800"></span> Home 2 (Express Night & Bento)
+              </a>
+            </div>
+          </div>
+
+          <a href="how-to-book.html" class="nav-link">How to Book</a>
+          <a href="fare-calculator.html" class="nav-link">Fare Calculator</a>
+          <a href="safety.html" class="nav-link active">Safety Features</a>
+          <a href="corporate.html" class="nav-link">Corporate Accounts</a>
+          <a href="contact.html" class="nav-link">Contact </a>
+        </nav>
+
+        <!-- Desktop Actions -->
+        <div class="desktop-actions header-actions">
+          <button type="button" class="theme-toggle-btn util-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon"></span>
+          </button>
+          <button type="button" class="rtl-toggle-btn util-btn font-bold text-xs" aria-label="Toggle RTL layout">
+            <span class="dir-label">RTL</span>
+          </button>
+          <a href="booking.html" class="btn-primary">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+            </svg>
+            <span>Book a Ride</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button (Strictly Only on Mobile/Tablet < 1024px) -->
+        <button type="button" class="mobile-menu-btn mobile-menu-toggle lg:hidden" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg class="w-6 h-6 icon-hamburger" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="w-6 h-6 icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION MENU (Below Fixed Header) ==================== -->
+  <div id="mobile-backdrop" class="mobile-menu-backdrop"></div>
+  <nav id="mobile-drawer" class="mobile-menu-drawer" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-menu-scroll">
+      <!-- Navigation Links -->
+      <div class="mobile-nav-group space-y-1">
+        <!-- Home Submenu -->
+        <div>
+          <button type="button"
+            class="mobile-subnav-toggle mobile-nav-link"
+            aria-expanded="false">
+            <span>Home</span>
+            <svg class="w-4 h-4 toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mobile-subnav">
+            <a href="index.html" class="mobile-subnav-link">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-300 dark:bg-purple-700"></span>
+              <span>Home 1: Feeder &amp; City</span>
+            </a>
+            <a href="home-2.html" class="mobile-subnav-link">
+              <span class="w-1.5 h-1.5 rounded-full bg-purple-300 dark:bg-purple-700"></span>
+              <span>Home 2: Express Night &amp; Bento</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="how-to-book.html" class="mobile-nav-link">How to Book</a>
+        <a href="fare-calculator.html" class="mobile-nav-link">Fare Calculator</a>
+        <a href="safety.html" class="mobile-nav-link active">Safety Features</a>
+        <a href="corporate.html" class="mobile-nav-link">Corporate Accounts</a>
+        <a href="contact.html" class="mobile-nav-link">Contact &amp; Driver Partner</a>
+      </div>
+
+      <!-- Preferences inside scrollable area -->
+      <div class="mobile-util-box space-y-3 mt-4">
+        <span
+          class="text-xs font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 block">Preferences</span>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-medium text-[#1A0B2E] dark:text-purple-200">Theme</span>
+          <button type="button"
+            class="theme-toggle-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <span class="theme-icon"></span>
+            <span class="theme-label">Dark Mode</span>
+          </button>
+        </div>
+        <div class="flex items-center justify-between pt-1">
+          <span class="text-sm font-medium text-[#1A0B2E] dark:text-purple-200">Reading Direction</span>
+          <button type="button"
+            class="rtl-toggle-btn flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            <span>Layout:</span>
+            <span class="dir-label font-bold text-violet-600 dark:text-violet-400">RTL</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Drawer CTA Button -->
+      <div class="pt-4 mt-2">
+        <a href="booking.html" class="btn-primary w-full text-center">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+          </svg>
+          <span>Book a Ride</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN 8 SECTIONS (SAFETY - EDITORIAL REDESIGN) ==================== -->
+  <main id="main-content">
+
+    <!-- ----------------------------------------------------
+         SECTION 1: HERO — ASYMMETRIC EDITORIAL SAFETY STATEMENT & LIVE COMMAND BAR
+    ----------------------------------------------------- -->
+    <section class="relative pt-12 pb-20 sm:pt-16 sm:pb-28 overflow-hidden bg-white dark:bg-[#0C0517]">
+      <!-- Ambient Glow Orbs -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-violet-500/15 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-purple-600/10 blur-3xl pointer-events-none"></div>
+
+      <div class="container-custom relative">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/30 text-violet-700 dark:text-violet-300 text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            100% Police Verified &bull; Active Telematics Protocol
+          </div>
+
+          <h1 class="hero-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#1A0B2E] dark:text-white tracking-tight leading-[1.08]">
+            Zero Guesswork. <br>
+            <span class="bg-gradient-to-r from-violet-600 via-purple-500 to-violet-400 bg-clip-text text-transparent">Every Driver Cleared.</span>
+          </h1>
+
+          <p class="text-base sm:text-xl text-purple-900 dark:text-purple-200 max-w-2xl mx-auto font-normal leading-relaxed">
+            Never step into an unverified vehicle again. AutoPulse combines criminal background screening, quarterly biometric verification, and sealed IoT meters for uncompromised passenger security.
+          </p>
+
+          <!-- Interactive Live Command Search Bar -->
+          <div class="pt-4 max-w-2xl mx-auto">
+            <div class="p-2 sm:p-3 rounded-2xl sm:rounded-full bg-[#FAF8FF] dark:bg-[#180D2D] border-2 border-violet-500/50 shadow-2xl flex flex-col sm:flex-row items-center gap-2">
+              <div class="flex items-center gap-3 px-4 py-2 w-full sm:w-auto flex-1">
+                <svg class="w-5 h-5 text-violet-600 dark:text-violet-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <form id="driver-verify-form" class="w-full">
+                  <input type="text" id="driver-verify-input" value="DL-1RE-7810"
+                    placeholder="Search Plate e.g. DL-1RE-7810 or Badge ID"
+                    class="w-full bg-transparent text-sm font-bold uppercase text-[#1A0B2E] dark:text-white placeholder-purple-400 focus:outline-none">
+                </form>
+              </div>
+              <button type="submit" form="driver-verify-form" class="btn-primary w-full sm:w-auto py-3 px-7 rounded-xl sm:rounded-full text-xs font-extrabold shadow-lg shrink-0">
+                Verify Clearance &rarr;
+              </button>
+            </div>
+
+            <!-- Quick Pill Selectors -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mt-4 text-xs">
+              <span class="text-purple-700 dark:text-purple-300 font-semibold text-[11px]">Inspect Sample Badges:</span>
+              <button type="button" class="verify-test-pill px-3 py-1 rounded-full bg-purple-50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-purple-900 dark:text-purple-200 font-mono font-bold hover:border-violet-500 transition-colors" data-plate="DL-1RE-7810">DL-1RE-7810</button>
+              <button type="button" class="verify-test-pill px-3 py-1 rounded-full bg-purple-50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-purple-900 dark:text-purple-200 font-mono font-bold hover:border-violet-500 transition-colors" data-plate="KA-01-E-2024">KA-01-E-2024</button>
+              <button type="button" class="verify-test-pill px-3 py-1 rounded-full bg-purple-50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-purple-900 dark:text-purple-200 font-mono font-bold hover:border-violet-500 transition-colors" data-plate="MH-02-ER-1947">MH-02-ER-1947</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 2: THE 4-PHASE PROTECTION JOURNEY (CONNECTED PATH TIMELINE — NO CARDS)
+    ----------------------------------------------------- -->
+    <section class="section-py bg-[#FAF8FF] dark:bg-[#130924] relative overflow-hidden">
+      <div class="container-custom">
+        <div class="max-w-3xl mb-16">
+          <span class="brand-badge mb-3">End-To-End Security</span>
+          <h2 class="section-heading text-3xl sm:text-5xl font-extrabold text-[#1A0B2E] dark:text-white leading-tight">
+            How You're Protected <br><span class="text-violet-600 dark:text-violet-400">At Every Meter of Your Trip</span>
+          </h2>
+          <p class="text-purple-900 dark:text-purple-200 mt-3 text-base sm:text-lg">
+            Safety isn't a post-ride feedback score. It's a continuous, multi-checkpoint chain of custody operating from before you step in until you reach your doorstep.
+          </p>
+        </div>
+
+        <!-- Vertical Continuous Timeline Stream -->
+        <div class="relative max-w-4xl mx-auto">
+          <!-- Flow Line -->
+          <div class="safety-path-connector hidden sm:block"></div>
+
+          <div class="space-y-12 sm:space-y-16">
+            <!-- Phase 01 -->
+            <div class="relative flex flex-col sm:flex-row gap-6 sm:gap-12 items-start group">
+              <div class="w-12 h-12 rounded-2xl bg-violet-600 text-white font-heading font-extrabold text-lg flex items-center justify-center shrink-0 shadow-lg shadow-violet-500/30 z-10">
+                01
+              </div>
+              <div class="space-y-2 flex-1 pb-6 border-b border-purple-200/60 dark:border-[#341A59]/60">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">Phase 01 &bull; Pre-Onboarding</span>
+                  <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Mandatory Clearance</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold font-heading text-[#1A0B2E] dark:text-white">
+                  State Police Database Integration &amp; Residential Vetting
+                </h3>
+                <p class="text-sm sm:text-base text-purple-900 dark:text-purple-200 leading-relaxed">
+                  Before driving a single meter on AutoPulse, every partner is screened against state criminal archives, residential physical address checks are completed by third-party auditors, and commercial RTO passenger badges (held for minimum 3 years) are verified.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 02 -->
+            <div class="relative flex flex-col sm:flex-row gap-6 sm:gap-12 items-start group">
+              <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white font-heading font-extrabold text-lg flex items-center justify-center shrink-0 shadow-lg shadow-purple-500/30 z-10">
+                02
+              </div>
+              <div class="space-y-2 flex-1 pb-6 border-b border-purple-200/60 dark:border-[#341A59]/60">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Phase 02 &bull; Boarding &amp; Departure</span>
+                  <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300">Biometric Sync</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold font-heading text-[#1A0B2E] dark:text-white">
+                  Daily Biometric Login &amp; Holographic Seal Inspection
+                </h3>
+                <p class="text-sm sm:text-base text-purple-900 dark:text-purple-200 leading-relaxed">
+                  Drivers authenticate each morning with fingerprint and facial biometric recognition, preventing profile-sharing. Passengers can visually inspect the tamper-proof RTO holographic seal on the digital meter console.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 03 -->
+            <div class="relative flex flex-col sm:flex-row gap-6 sm:gap-12 items-start group">
+              <div class="w-12 h-12 rounded-2xl bg-violet-700 text-white font-heading font-extrabold text-lg flex items-center justify-center shrink-0 shadow-lg shadow-violet-600/30 z-10">
+                03
+              </div>
+              <div class="space-y-2 flex-1 pb-6 border-b border-purple-200/60 dark:border-[#341A59]/60">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400">Phase 03 &bull; In-Transit Protection</span>
+                  <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300">Real-Time Radar</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold font-heading text-[#1A0B2E] dark:text-white">
+                  Geofenced Deviation Shield &amp; 1-Tap Family WhatsApp Ping
+                </h3>
+                <p class="text-sm sm:text-base text-purple-900 dark:text-purple-200 leading-relaxed">
+                  Our Central Telematics Command Room tracks vehicle velocity, route adherence, and sudden halts. If route variance exceeds 200 meters, automated safety check protocols engage immediately. Passengers can share a 1-tap live map URL with family over WhatsApp with no apps required.
+                </p>
+              </div>
+            </div>
+
+            <!-- Phase 04 -->
+            <div class="relative flex flex-col sm:flex-row gap-6 sm:gap-12 items-start group">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-heading font-extrabold text-lg flex items-center justify-center shrink-0 shadow-lg shadow-emerald-500/30 z-10">
+                04
+              </div>
+              <div class="space-y-2 flex-1">
+                <div class="flex flex-wrap items-center gap-3">
+                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Phase 04 &bull; Arrival &amp; Governance</span>
+                  <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Zero Incident Record</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold font-heading text-[#1A0B2E] dark:text-white">
+                  Sealed Digital Receipt &amp; 24-Point Monthly Workshop Re-Audit
+                </h3>
+                <p class="text-sm sm:text-base text-purple-900 dark:text-purple-200 leading-relaxed">
+                  Final fare is generated directly from the encrypted IoT wheel sensor and transmitted to your phone. Vehicles must pass our monthly 24-point chassis, brake shoe, and rain-blind inspections to maintain platform certification.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 3: INTERACTIVE 4-LAYER SAFETY SHIELD VISUALIZER (SPLIT SCREEN — NO CARDS)
+    ----------------------------------------------------- -->
+    <section class="section-py bg-white dark:bg-[#0C0517]">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Left: Layer Selector Tabs & Dynamic Copy -->
+          <div class="lg:col-span-6 space-y-6">
+            <span class="brand-badge">Interactive Multi-Shield</span>
+            <h2 class="section-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A0B2E] dark:text-white">
+              The 4 Layers of the AutoPulse Shield
+            </h2>
+            <p class="text-sm sm:text-base text-purple-900 dark:text-purple-200 leading-relaxed">
+              Explore how our redundant layers of physical, digital, and regulatory protections interact dynamically to maintain our 99.98% zero-incident benchmark.
+            </p>
+
+            <!-- Tab Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-2">
+              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-violet-600 text-white shadow-lg shadow-violet-500/30 border-2 border-violet-600" data-layer="criminal">
+                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 01</span>
+                <span>Police &amp; Biometric Clearance</span>
+              </button>
+              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-[#FAF8FF] dark:bg-[#180D2D] text-[#1A0B2E] dark:text-white border-2 border-purple-200 dark:border-[#341A59] hover:border-violet-500" data-layer="telematics">
+                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 02</span>
+                <span>IoT Telematics &amp; SOS Shield</span>
+              </button>
+              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-[#FAF8FF] dark:bg-[#180D2D] text-[#1A0B2E] dark:text-white border-2 border-purple-200 dark:border-[#341A59] hover:border-violet-500" data-layer="structural">
+                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 03</span>
+                <span>24-Point Vehicle Health Audit</span>
+              </button>
+              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-[#FAF8FF] dark:bg-[#180D2D] text-[#1A0B2E] dark:text-white border-2 border-purple-200 dark:border-[#341A59] hover:border-violet-500" data-layer="pinkfleet">
+                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 04</span>
+                <span>"Pink Auto" Female Safety Fleet</span>
+              </button>
+            </div>
+
+            <!-- Dynamic Readout -->
+            <div class="pt-4 border-t border-purple-200 dark:border-[#341A59] space-y-3">
+              <div class="flex items-center gap-2">
+                <span id="safety-layer-badge" class="px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300">
+                  Zero Criminal Record Mandate
+                </span>
+              </div>
+              <h4 id="safety-layer-title" class="text-xl font-bold font-heading text-[#1A0B2E] dark:text-white">
+                Layer 1: Police Background &amp; Biometric Clearance
+              </h4>
+              <p id="safety-layer-desc" class="text-xs sm:text-sm text-purple-900 dark:text-purple-200 leading-relaxed">
+                Direct API integration with State Police Control Bureau. Every driver undergoes residential physical address checks, RTO passenger commercial badge validation, and quarterly biometric fingerprint synchronization.
+              </p>
+
+              <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs font-bold">
+                <div class="p-2.5 rounded-xl bg-purple-50 dark:bg-[#130924] border border-purple-200 dark:border-[#341A59]">
+                  <span id="safety-spec-1" class="text-violet-600 dark:text-violet-400 block font-heading">100% Police Cleared</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-purple-50 dark:bg-[#130924] border border-purple-200 dark:border-[#341A59]">
+                  <span id="safety-spec-2" class="text-violet-600 dark:text-violet-400 block font-heading">RTO 3+ Yr Badge</span>
+                </div>
+                <div class="p-2.5 rounded-xl bg-purple-50 dark:bg-[#130924] border border-purple-200 dark:border-[#341A59]">
+                  <span id="safety-spec-3" class="text-violet-600 dark:text-violet-400 block font-heading">Quarterly Biometrics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Animated Radar Disc & Telemetry Console -->
+          <div class="lg:col-span-6 flex flex-col items-center justify-center relative">
+            <div class="relative flex items-center justify-center p-8 sm:p-12">
+              <!-- Radar Graphic with Spinning Beam -->
+              <div class="safety-radar-disc bg-gradient-to-tr from-violet-600/10 via-[#180D2D]/20 to-purple-600/10 shadow-2xl">
+                <div class="safety-radar-beam"></div>
+                <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-violet-600/20 border-2 border-violet-500 flex flex-col items-center justify-center text-center p-2 z-10 shadow-lg">
+                  <span class="text-[9px] font-bold text-violet-400 uppercase tracking-wider">STATUS</span>
+                  <span class="text-xs sm:text-sm font-extrabold text-white">LIVE 24/7</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping mt-1"></span>
+                </div>
+              </div>
+
+              <!-- Floating Live Telemetry Labels -->
+              <div class="absolute top-4 right-4 px-3 py-1.5 rounded-xl bg-[#180D2D] border border-violet-500/40 text-[10px] font-mono text-violet-300 shadow-xl hidden sm:block">
+                GPS LATENCY: 12ms
+              </div>
+              <div class="absolute bottom-4 left-4 px-3 py-1.5 rounded-xl bg-[#180D2D] border border-violet-500/40 text-[10px] font-mono text-purple-300 shadow-xl hidden sm:block">
+                POLICE DIAL 112: SYNCED
+              </div>
+            </div>
+
+            <!-- Terminal Status Strip -->
+            <div class="w-full max-w-md p-3.5 rounded-xl bg-[#180D2D] border border-[#341A59] text-center font-mono text-xs text-violet-300 shadow-lg">
+              <span id="safety-radar-status-text" class="tracking-wider">POLICE CLEARANCE: SECURE</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+   <!-- ---------------------------------------------------- 
+     SECTION 4: OVERSIZED TYPOGRAPHIC IMPACT WALL & SLA METRICS
+----------------------------------------------------- -->
+<section class="section-py bg-[#0C0517] text-white relative overflow-hidden compact-sla-section">
+
+  <!-- Background Ambient Grid -->
+  <div class="absolute inset-0 bg-[radial-gradient(#7C3AED_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none"></div>
+
+  <div class="container-custom relative">
+
+    <div class="max-w-4xl mx-auto text-center mb-10 sm:mb-12 space-y-2 sla-heading">
+
+      <span class="inline-block px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/30 text-xs font-bold uppercase tracking-wider">
+        Verified Performance
+      </span>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white">
+        Safety Measured In Milliseconds, Not Slogans
+      </h2>
+
+      <p class="text-purple-200 text-sm sm:text-base max-w-xl mx-auto">
+        Our safety operations are continuously audited by independent transport safety boards.
+      </p>
+
+    </div>
+
+
+    <!-- Oversized Typography Metrics Strip -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+
+      <!-- Metric 1 -->
+      <div class="sla-metric space-y-1">
+
+        <div class="sla-value text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-violet-400 tracking-tight">
+          99.98%
+        </div>
+
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-purple-200 block">
+          Zero-Incident Trips
+        </span>
+
+        <p class="text-[11px] text-purple-300">
+          Across 1.8 million passenger rides completed.
+        </p>
+
+      </div>
+
+
+      <!-- Metric 2 -->
+      <div class="sla-metric space-y-1">
+
+        <div class="sla-value text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-violet-400 tracking-tight">
+          &lt; 6.5m
+        </div>
+
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-purple-200 block">
+          Average SOS Response
+        </span>
+
+        <p class="text-[11px] text-purple-300">
+          Direct integration with city police patrol vans.
+        </p>
+
+      </div>
+
+
+      <!-- Metric 3 -->
+      <div class="sla-metric space-y-1">
+
+        <div class="sla-value text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-violet-400 tracking-tight">
+          100%
+        </div>
+
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-purple-200 block">
+          Police Badge Cleared
+        </span>
+
+        <p class="text-[11px] text-purple-300">
+          Zero unvetted driver partners ever onboarded.
+        </p>
+
+      </div>
+
+
+      <!-- Metric 4 -->
+      <div class="sla-metric space-y-1">
+
+        <div class="sla-value text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading text-violet-400 tracking-tight">
+          4,800+
+        </div>
+
+        <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-purple-200 block">
+          Active Telematics Nodes
+        </span>
+
+        <p class="text-[11px] text-purple-300">
+          Real-time GPS streams pinging every 2 seconds.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- ----------------------------------------------------
+         SECTION 5: THE "PINK AUTO" INITIATIVE (MAGAZINE EDITORIAL SPREAD — NO CARDS)
+    ----------------------------------------------------- -->
+    <section id="women" class="section-py bg-gradient-to-b from-purple-500/10 via-white dark:via-[#0C0517] to-white dark:to-[#0C0517]">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Left Image Narrative -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-purple-200 dark:border-[#341A59]">
+              <img src="assets/images/sections/safety_driver.jpg"
+                alt="Female Driver Partner Conducting Pre-Ride Safety Check"
+                class="w-full h-[420px] object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#180D2D] via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white space-y-1">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider bg-violet-600 px-2.5 py-1 rounded-full text-white">Dedicated Women Fleet</span>
+                
+                <p class="text-xs text-purple-200">Operating across major metro hubs and college campus corridors.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Editorial Content -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300">
+              <span class="w-2 h-2 rounded-full bg-violet-600"></span>
+              Gender Equity &bull; Women Passenger Charter
+            </div>
+
+            <h2 class="section-heading text-3xl sm:text-5xl font-extrabold text-[#1A0B2E] dark:text-white leading-tight">
+              The "Pink Auto" Dedicated Fleet &amp; Late-Night Protocol
+            </h2>
+
+            <p class="text-base sm:text-lg text-purple-900 dark:text-purple-200 leading-relaxed">
+              We believe safe urban mobility is a fundamental right. AutoPulse champions women driver entrepreneurship while providing solo female commuters with guaranteed late-night dispatch priority, masked phone numbers, and direct escalation to dedicated women safety officers.
+            </p>
+
+            <!-- Key Safeguards Narrative List -->
+            <div class="space-y-4 pt-2 border-t border-purple-200 dark:border-[#341A59]">
+              <div class="flex items-start gap-4">
+                <span class="w-7 h-7 rounded-xl bg-violet-500/20 text-violet-600 dark:text-violet-400 font-bold flex items-center justify-center shrink-0 text-sm">✓</span>
+                <div>
+                  <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">Late-Night Dispatch Priority</h4>
+                  <p class="text-xs text-purple-900 dark:text-purple-200 mt-0.5">Automated queue elevation for female solo travelers hailing after 9:00 PM.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="w-7 h-7 rounded-xl bg-violet-500/20 text-violet-600 dark:text-violet-400 font-bold flex items-center justify-center shrink-0 text-sm">✓</span>
+                <div>
+                  <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">Secure Cloud Phone Masking</h4>
+                  <p class="text-xs text-purple-900 dark:text-purple-200 mt-0.5">Driver and rider telephone numbers are encrypted via virtual proxy during in-trip coordination.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="w-7 h-7 rounded-xl bg-violet-500/20 text-violet-600 dark:text-violet-400 font-bold flex items-center justify-center shrink-0 text-sm">✓</span>
+                <div>
+                  <h4 class="font-bold text-sm text-[#1A0B2E] dark:text-white">24/7 Female Safety Officer Hotline</h4>
+                  <p class="text-xs text-purple-900 dark:text-purple-200 mt-0.5">Dedicated desk on 1800-419-AUTO staffed exclusively by trained women security personnel.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-4">
+              <a href="how-to-book.html" class="btn-primary">
+                <span>Request Pink Auto Ride &rarr;</span>
+              </a>
+              <span class="text-xs font-semibold text-purple-700 dark:text-purple-300">Available at all 32 Transit Hubs</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 6: HARDWARE ENGINEERING & TAMPER-PROOF IOT METERS (TECHNICAL BLUEPRINT — NO CARDS)
+    ----------------------------------------------------- -->
+    <section class="section-py bg-[#FAF8FF] dark:bg-[#130924] blueprint-grid">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+          <span class="brand-badge">Hardware Architecture</span>
+          <h2 class="section-heading text-3xl sm:text-5xl font-extrabold text-[#1A0B2E] dark:text-white leading-tight">
+            Sealed IoT Telematics Console: <br><span class="text-violet-600 dark:text-violet-400">Zero Fare Manipulation</span>
+          </h2>
+          <p class="text-sm sm:text-base text-purple-900 dark:text-purple-200 max-w-xl mx-auto">
+            Traditional mechanical and cable meters could be tampered with fast gears. AutoPulse hardware is digitally sealed, encrypted, and cross-referenced with satellite GPS in real time.
+          </p>
+        </div>
+
+        <!-- Blueprint Schematic Layout -->
+        <div class="max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl bg-white dark:bg-[#180D2D] border-2 border-purple-200 dark:border-[#341A59] shadow-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <span class="w-8 h-8 rounded-xl bg-violet-600 text-white font-mono font-bold flex items-center justify-center shrink-0 text-xs">01</span>
+                <div>
+                  <h4 class="font-bold text-sm sm:text-base text-[#1A0B2E] dark:text-white">Dual GPS &amp; Odometer Verification</h4>
+                  <p class="text-xs text-purple-900 dark:text-purple-200 mt-1">Cross-references physical wheel rotations against satellite coordinates. Any discrepancy over 1.5% auto-freezes the meter and alerts control.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="w-8 h-8 rounded-xl bg-violet-600 text-white font-mono font-bold flex items-center justify-center shrink-0 text-xs">02</span>
+                <div>
+                  <h4 class="font-bold text-sm sm:text-base text-[#1A0B2E] dark:text-white">RTO Holographic Physical Seal</h4>
+                  <p class="text-xs text-purple-900 dark:text-purple-200 mt-1">Every unit is encased with a tamper-evident holographic serial seal scanned during monthly depot compliance audits.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="w-8 h-8 rounded-xl bg-violet-600 text-white font-mono font-bold flex items-center justify-center shrink-0 text-xs">03</span>
+                <div>
+                  <h4 class="font-bold text-sm sm:text-base text-[#1A0B2E] dark:text-white">Instant Screen &amp; SMS Broadcast</h4>
+                  <p class="text-xs text-purple-900 dark:text-purple-200 mt-1">Meter fare calculates exclusively on the official RTO gazetted tariff and broadcasts simultaneously to the rider's phone and SMS receipt.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technical Spec Readout Box -->
+            <div class="p-6 rounded-2xl bg-[#FAF8FF] dark:bg-[#130924] border border-purple-200 dark:border-[#341A59] font-mono text-xs space-y-3">
+              <div class="flex justify-between items-center pb-2 border-b border-purple-200 dark:border-[#341A59]">
+                <span class="text-violet-600 dark:text-violet-400 font-bold uppercase">METER HARDWARE SPEC</span>
+                <span class="text-emerald-600 dark:text-emerald-400 font-bold">RTO GAZETTE APPROVED</span>
+              </div>
+              <div class="flex justify-between text-purple-900 dark:text-purple-200"><span>Processor:</span> <span>Arm Cortex-M4 Secure IoT</span></div>
+              <div class="flex justify-between text-purple-900 dark:text-purple-200"><span>Connectivity:</span> <span>Dual 4G LTE eSIM + GPS L1/L5</span></div>
+              <div class="flex justify-between text-purple-900 dark:text-purple-200"><span>Encryption:</span> <span>AES-256 Cloud Token Sync</span></div>
+              <div class="flex justify-between text-purple-900 dark:text-purple-200"><span>Emergency Button:</span> <span>Hardwired to Police Dispatch</span></div>
+              <div class="pt-2 border-t border-purple-200 dark:border-[#341A59] text-[11px] text-purple-700 dark:text-purple-300">
+                &bull; Auto-calibrated daily against Central Transport Bureau tariff tables.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 7: POLICE & VERIFICATION DOSSIER SHOWCASE (THE ONLY CARD SECTION ON THE PAGE)
+    ----------------------------------------------------- -->
+    <section class="section-py bg-white dark:bg-[#0C0517]">
+      <div class="container-custom max-w-4xl">
+        <div class="text-center mb-10 space-y-2">
+          <span class="brand-badge mb-2">Live Verification Engine</span>
+          <h2 class="section-heading text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white">
+            Inspect Official Driver Clearance Records
+          </h2>
+          <p class="text-sm sm:text-base text-purple-900 dark:text-purple-200">
+            Real-time credential search connected to our central transit clearance database.
+          </p>
+        </div>
+
+        <!-- Verification Result Card (Populated Dynamically by JS) -->
+        <div id="driver-verify-result"></div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------
+         SECTION 8: EMERGENCY HELPLINE & SAFE RIDE PLEDGE (CINEMATIC DARK BANNER)
+    ----------------------------------------------------- -->
+    <section class="section-py bg-gradient-to-r from-violet-950 via-[#180D2D] to-purple-950 text-white">
+      <div class="container-custom">
+        <div class="p-8 sm:p-12 rounded-3xl bg-[#130924]/90 border border-[#341A59] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+          <div class="space-y-3 max-w-xl">
+            <span class="px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/40 text-xs font-bold uppercase tracking-wider">
+              24/7 Security Assurance
+            </span>
+            <h3 class="text-2xl sm:text-4xl font-extrabold font-heading text-white">
+              Take The Safe Commuter Pledge With AutoPulse
+            </h3>
+            <p class="text-xs sm:text-sm text-purple-200 leading-relaxed">
+              Save our emergency hotline <strong>1800-419-AUTO</strong> in your speed dial. Download the rider safety guide or book your verified police-cleared auto right now.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
+            <a href="tel:18004192886" class="btn-primary w-full sm:w-auto text-xs py-3 px-6 shadow-xl">
+              <span>Emergency SOS: 1800-419-AUTO</span>
+            </a>
+            <a href="fare-calculator.html" class="btn-secondary text-white border-[#341A59] hover:border-violet-400 w-full sm:w-auto text-xs py-3 px-6 shadow-xl">
+              <span>Book Verified Ride &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== CONSISTENT GLOBAL FOOTER ==================== -->
+  <footer class="bg-[#0C0517] text-white text-sm pt-16 pb-12 border-t border-[#341A59]">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#341A59]">
+
+        <!-- Brand Summary with matching logo icon -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 flex items-center justify-center text-white font-bold shadow-md shadow-violet-500/25">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+              </svg>
+            </div>
+            <div class="flex flex-col leading-none">
+              <span class="font-heading font-extrabold text-2xl text-white leading-none">Auto<span
+                  class="text-violet-400">Pulse</span></span>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-purple-400/80">Urban Transit
+                Network</span>
+            </div>
+          </a>
+          <p class="text-xs sm:text-sm text-purple-200 max-w-sm leading-relaxed">
+            The premier platform for metered auto rickshaw hailing, zero-emission e-rickshaws, and city cruiser bicycle
+            rentals across 32 transit hubs.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-violet-300 font-semibold">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-violet-400"></span> 24/7 Helpline: 1800-419-AUTO
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Navigation</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="text-purple-200 hover:text-white transition-colors font-medium">Home 1:
+                Feeder &amp; City</a></li>
+            <li><a href="home-2.html" class="text-purple-200 hover:text-white transition-colors font-medium">Home 2:
+                Express Night</a></li>
+            <li><a href="booking.html" class="text-violet-300 font-bold hover:underline transition-colors">Book a Ride
+                Now</a></li>
+            <li><a href="how-to-book.html" class="text-purple-200 hover:text-white transition-colors font-medium">How
+                to Book (Phone/App)</a></li>
+            <li><a href="fare-calculator.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Fare &amp; Meter
+                Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions & Rental -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Ride Services</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="booking.html" class="text-purple-200 hover:text-white transition-colors font-medium">City
+                Cruiser Bike Rental</a></li>
+            <li><a href="booking.html" class="text-purple-200 hover:text-white transition-colors font-medium">Urban
+                E-Bike Hire</a></li>
+            <li><a href="corporate.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Corporate Commute Shuttles</a>
+            </li>
+            <li><a href="safety.html"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Police-Verified Drivers</a>
+            </li>
+            <li><a href="contact.html#driver"
+                class="text-purple-200 hover:text-white transition-colors font-medium">Join as Driver Partner</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Compliance & Trust -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Regulatory Standards</h4>
+          <ul class="space-y-2.5 text-xs text-purple-200">
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> 100% RTO Gazette Meters</li>
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> Instant Deposit Refund</li>
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> CE Certified Helmets</li>
+            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> 24/7 Mobile Roadside Rescue</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-purple-300">
+        <p>&copy; 2026 AutoPulse Mobility Technologies Pvt. Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Rental Agreement</a>
+          <a href="#" class="hover:text-white transition-colors">Safety Charter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button Component -->
+  <button type="button" class="scroll-to-top-btn" aria-label="Scroll to top" title="Scroll to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
