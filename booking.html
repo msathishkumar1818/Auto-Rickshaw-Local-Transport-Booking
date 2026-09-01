@@ -76,9 +76,61 @@
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script>
+    // Quick Theme & Direction sync to prevent FOUC
+    (function() {
+      const savedTheme = localStorage.getItem('autopulse_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const savedDir = localStorage.getItem('autopulse_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
 </head>
 
 <body class="bg-white dark:bg-[#0C0517] text-[#1A0B2E] dark:text-purple-100 antialiased transition-colors duration-200">
+
+  <!-- ==================== PAGE PRELOADER COMPONENT ==================== -->
+  <div id="page-preloader" class="page-preloader" aria-label="Loading page">
+    <div class="preloader-card">
+      <!-- Orbiting Rings & Brand Emblem -->
+      <div class="preloader-emblem-wrap">
+        <div class="preloader-pulse-ring"></div>
+        <div class="preloader-orbit-ring"></div>
+        <div class="preloader-emblem">
+          <svg class="preloader-icon-svg" viewBox="0 0 24 24">
+            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Brand Typography -->
+      <div class="preloader-brand">
+        Auto<span class="brand-highlight">Pulse</span>
+      </div>
+      <p class="preloader-tagline">Urban Transit Network</p>
+
+      <!-- Dynamic Progress Track -->
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-progress-bar"></div>
+        </div>
+        <div class="preloader-status">
+          <span class="preloader-status-text">Calibrating RTO Gazette Meters</span>
+          <span class="preloader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ==================== HEADER (Desktop: Strict 1-Line | Sticky) ==================== -->
   <header class="site-header">
@@ -105,7 +157,7 @@
         <!-- Desktop Navigation Links (Strict 1-Line) -->
         <nav class="desktop-nav nav-links-wrap">
           <div class="nav-item-dropdown">
-            <a href="index.html" class="nav-link">
+            <a href="javascript:void(0)" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">
               <span>Home</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -252,20 +304,17 @@
           <p class="text-purple-900 dark:text-purple-200 text-base sm:text-lg max-w-2xl mx-auto">
             Choose from agile City Cruiser Bikes, high-torque E-Bikes, Tandem rides, or smart metered electric autos.
             Transparent pricing, zero hidden deposits, and instant booking confirmation.
-          </p>
-
-          <!-- Visual Progress Stepper -->
+          </p>          <!-- Visual Progress Stepper -->
           <div class="grid grid-cols-3 gap-2 sm:gap-6 pt-4 max-w-2xl mx-auto text-left">
-            <div class="p-3 rounded-2xl bg-violet-500/10 border border-violet-500/30 dark:bg-[#180D2D]">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400 block">Step
-                01</span>
+            <div class="p-3 rounded-2xl bg-[#FAF8FF] border border-purple-200 dark:border-[#341A59] dark:bg-[#130924] hover:border-violet-500 transition-all">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 block">Step 01</span>
               <h4 class="font-bold text-xs sm:text-sm text-[#1A0B2E] dark:text-white">Choose Ride &amp; Time</h4>
             </div>
-            <div class="p-3 rounded-2xl bg-[#FAF8FF] border border-purple-200 dark:border-[#341A59] dark:bg-[#130924]">
+            <div class="p-3 rounded-2xl bg-[#FAF8FF] border border-purple-200 dark:border-[#341A59] dark:bg-[#130924] hover:border-violet-500 transition-all">
               <span class="text-[10px] font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 block">Step 02</span>
               <h4 class="font-bold text-xs sm:text-sm text-[#1A0B2E] dark:text-white">Location &amp; Extras</h4>
             </div>
-            <div class="p-3 rounded-2xl bg-[#FAF8FF] border border-purple-200 dark:border-[#341A59] dark:bg-[#130924]">
+            <div class="p-3 rounded-2xl bg-[#FAF8FF] border border-purple-200 dark:border-[#341A59] dark:bg-[#130924] hover:border-violet-500 transition-all">
               <span class="text-[10px] font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 block">Step 03</span>
               <h4 class="font-bold text-xs sm:text-sm text-[#1A0B2E] dark:text-white">Confirm &amp; Collect</h4>
             </div>
@@ -299,14 +348,14 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <!-- City Bike -->
                   <label
-                    class="p-4 rounded-2xl border-2 border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer hover:border-violet-500 transition-all bg-[#FAF8FF] dark:bg-[#130924] has-[:checked]:border-violet-600 has-[:checked]:bg-violet-500/10">
+                    class="interactive-card p-4 rounded-2xl border border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer bg-[#FAF8FF] dark:bg-[#130924]">
                     <div class="flex items-start justify-between">
                       <div>
                         <strong class="text-sm font-bold text-[#1A0B2E] dark:text-white block">City Cruiser
                           Bike</strong>
                         <span class="text-xs text-purple-700 dark:text-purple-300">7-Speed Shimano &bull; Basket</span>
                       </div>
-                      <input type="radio" name="vehicle_choice" value="city-bike" checked class="accent-violet-600 mt-1">
+                      <input type="radio" name="vehicle_choice" value="city-bike" class="accent-violet-600 mt-1">
                     </div>
                     <div
                       class="mt-4 pt-2 border-t border-purple-200 dark:border-[#341A59] flex justify-between items-center text-xs">
@@ -317,7 +366,7 @@
 
                   <!-- E-Bike -->
                   <label
-                    class="p-4 rounded-2xl border-2 border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer hover:border-violet-500 transition-all bg-[#FAF8FF] dark:bg-[#130924] has-[:checked]:border-violet-600 has-[:checked]:bg-violet-500/10">
+                    class="interactive-card p-4 rounded-2xl border border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer bg-[#FAF8FF] dark:bg-[#130924]">
                     <div class="flex items-start justify-between">
                       <div>
                         <div class="flex items-center gap-1.5">
@@ -338,7 +387,7 @@
 
                   <!-- Tandem Bike -->
                   <label
-                    class="p-4 rounded-2xl border-2 border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer hover:border-violet-500 transition-all bg-[#FAF8FF] dark:bg-[#130924] has-[:checked]:border-violet-600 has-[:checked]:bg-violet-500/10">
+                    class="interactive-card p-4 rounded-2xl border border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer bg-[#FAF8FF] dark:bg-[#130924]">
                     <div class="flex items-start justify-between">
                       <div>
                         <strong class="text-sm font-bold text-[#1A0B2E] dark:text-white block">Tandem Bike
@@ -356,7 +405,7 @@
 
                   <!-- Green E-Rickshaw -->
                   <label
-                    class="p-4 rounded-2xl border-2 border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer hover:border-violet-500 transition-all bg-[#FAF8FF] dark:bg-[#130924] has-[:checked]:border-violet-600 has-[:checked]:bg-violet-500/10">
+                    class="interactive-card p-4 rounded-2xl border border-purple-200 dark:border-[#341A59] flex flex-col justify-between cursor-pointer bg-[#FAF8FF] dark:bg-[#130924]">
                     <div class="flex items-start justify-between">
                       <div>
                         <div class="flex items-center gap-1.5">
@@ -401,12 +450,11 @@
                   </label>
 
                   <label
-                    class="p-3 rounded-xl border-2 border-violet-600 text-center cursor-pointer bg-violet-500/10 dark:bg-[#130924] hover:border-violet-500 has-[:checked]:border-violet-600 has-[:checked]:bg-violet-500/15">
-                    <input type="radio" name="rental_duration" value="full-day" checked
+                    class="p-3 rounded-xl border border-purple-200 dark:border-[#341A59] text-center cursor-pointer bg-[#FAF8FF] dark:bg-[#130924] hover:border-violet-500 has-[:checked]:border-violet-600 has-[:checked]:bg-violet-500/10">
+                    <input type="radio" name="rental_duration" value="full-day"
                       class="accent-violet-600 sr-only">
                     <strong class="text-xs block text-[#1A0B2E] dark:text-white font-bold">Full Day</strong>
-                    <span class="text-[10px] text-violet-600 dark:text-violet-400 font-semibold">8 Hours &bull;
-                      Best</span>
+                    <span class="text-[10px] text-purple-700 dark:text-purple-300 font-medium">8 Hours</span>
                   </label>
 
                   <label

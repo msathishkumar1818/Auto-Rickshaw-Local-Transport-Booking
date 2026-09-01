@@ -75,9 +75,61 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <script>
+    // Quick Theme & Direction sync to prevent FOUC
+    (function() {
+      const savedTheme = localStorage.getItem('autopulse_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const savedDir = localStorage.getItem('autopulse_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
 </head>
 
 <body class="bg-white dark:bg-[#0C0517] text-[#1A0B2E] dark:text-purple-100 antialiased transition-colors duration-200">
+
+  <!-- ==================== PAGE PRELOADER COMPONENT ==================== -->
+  <div id="page-preloader" class="page-preloader" aria-label="Loading page">
+    <div class="preloader-card">
+      <!-- Orbiting Rings & Brand Emblem -->
+      <div class="preloader-emblem-wrap">
+        <div class="preloader-pulse-ring"></div>
+        <div class="preloader-orbit-ring"></div>
+        <div class="preloader-emblem">
+          <svg class="preloader-icon-svg" viewBox="0 0 24 24">
+            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Brand Typography -->
+      <div class="preloader-brand">
+        Auto<span class="brand-highlight">Pulse</span>
+      </div>
+      <p class="preloader-tagline">Urban Transit Network</p>
+
+      <!-- Dynamic Progress Track -->
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-progress-bar"></div>
+        </div>
+        <div class="preloader-status">
+          <span class="preloader-status-text">Calibrating RTO Gazette Meters</span>
+          <span class="preloader-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ==================== HEADER ==================== -->
   <header class="site-header">
@@ -104,7 +156,7 @@
         <!-- Desktop Nav -->
         <nav class="desktop-nav nav-links-wrap">
           <div class="nav-item-dropdown">
-            <a href="index.html" class="nav-link">
+            <a href="javascript:void(0)" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">
               <span>Home</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -286,7 +338,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Hub 1 -->
           <div
-            class="p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
+            class="interactive-card p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
             <span
               class="text-[10px] font-bold uppercase bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300 px-2 py-0.5 rounded">Central
               Hub</span>
@@ -317,7 +369,7 @@
 
           <!-- Hub 2 -->
           <div
-            class="p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
+            class="interactive-card p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
             <span
               class="text-[10px] font-bold uppercase bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 px-2 py-0.5 rounded">Tech
               Corridor</span>
@@ -348,7 +400,7 @@
 
           <!-- Hub 3 -->
           <div
-            class="p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
+            class="interactive-card p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
             <span
               class="text-[10px] font-bold uppercase bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300 px-2 py-0.5 rounded">Eco
               Depot</span>
@@ -379,7 +431,7 @@
 
           <!-- Hub 4 -->
           <div
-            class="p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
+            class="interactive-card p-6 rounded-2xl bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] shadow-sm">
             <span
               class="text-[10px] font-bold uppercase bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300 px-2 py-0.5 rounded">Express
               Hub</span>

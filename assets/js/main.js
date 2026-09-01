@@ -191,6 +191,85 @@
     }
   }
 
+  // --- 4b. Desktop / Tablet Dropdown Click & Hover Management ---
+  function initDesktopDropdowns() {
+    const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+
+    dropdownItems.forEach(item => {
+      const trigger = item.querySelector('.nav-link');
+      const menu = item.querySelector('.nav-dropdown-menu');
+      if (!trigger || !menu) return;
+
+      trigger.setAttribute('role', 'button');
+      trigger.setAttribute('aria-haspopup', 'true');
+      trigger.setAttribute('aria-expanded', 'false');
+
+      // Click to toggle dropdown
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isOpen = item.classList.contains('open');
+
+        // Close any other open dropdowns first
+        dropdownItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('open');
+            const otherMenu = otherItem.querySelector('.nav-dropdown-menu');
+            if (otherMenu) otherMenu.classList.remove('show');
+            const otherTrigger = otherItem.querySelector('.nav-link');
+            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          menu.classList.remove('show');
+          trigger.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('open');
+          menu.classList.add('show');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Close when clicking any link inside dropdown
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          item.classList.remove('open');
+          menu.classList.remove('show');
+          trigger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+
+    // Close dropdown on click outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item-dropdown')) {
+        dropdownItems.forEach(item => {
+          item.classList.remove('open');
+          const menu = item.querySelector('.nav-dropdown-menu');
+          if (menu) menu.classList.remove('show');
+          const trigger = item.querySelector('.nav-link');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    // Close dropdown on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdownItems.forEach(item => {
+          item.classList.remove('open');
+          const menu = item.querySelector('.nav-dropdown-menu');
+          if (menu) menu.classList.remove('show');
+          const trigger = item.querySelector('.nav-link');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+  }
+
   function initMobileDrawer() {
     const toggleBtns = document.querySelectorAll('.mobile-menu-btn, .mobile-menu-open');
     const closeBtns = document.querySelectorAll('.mobile-menu-close');
@@ -198,8 +277,20 @@
     const backdrop = document.getElementById('mobile-backdrop');
     const subnavToggles = document.querySelectorAll('.mobile-subnav-toggle');
 
+    function resetAllSubnavs() {
+      subnavToggles.forEach(toggle => {
+        const subnav = toggle.nextElementSibling;
+        const icon = toggle.querySelector('.toggle-icon');
+        if (subnav) subnav.classList.remove('open');
+        if (icon) icon.classList.remove('rotate-180');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    }
+
     function openDrawer() {
       if (!drawer || !backdrop) return;
+      // Always reset submenus to closed when opening mobile menu
+      resetAllSubnavs();
       drawer.classList.add('active');
       backdrop.classList.add('active');
       document.body.classList.add('drawer-open');
@@ -222,7 +313,12 @@
         btn.classList.remove('active');
         btn.setAttribute('aria-expanded', 'false');
       });
+      // Reset all submenus when drawer closes
+      resetAllSubnavs();
     }
+
+    // Ensure initial state on page load is fully closed
+    resetAllSubnavs();
 
     toggleBtns.forEach(btn => {
       btn.setAttribute('aria-expanded', 'false');
@@ -1194,6 +1290,7 @@
     initTheme();
     initDirection();
     initScrollToTop();
+    initDesktopDropdowns();
     initMobileDrawer();
     initActiveNav();
     initDedicatedBooking();
@@ -1215,7 +1312,122 @@
     document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
       btn.addEventListener('click', toggleDirection);
     });
+
+    initPageLoader();
   });
+
+  // --- Universal Page Preloader Logic ---
+  function initPageLoader() {
+    const preloader = document.getElementById('page-preloader');
+    if (!preloader) return;
+
+    const progressBar = preloader.querySelector('.preloader-progress-bar');
+    const statusText = preloader.querySelector('.preloader-status-text');
+    let isDismissed = false;
+
+    // Lock page scroll initially
+    document.body.classList.add('preloader-locked');
+
+    // Status updates
+    const statuses = [
+      'Calibrating RTO Gazette Meters',
+      'Connecting Urban Transit Hub',
+      'Locating Nearby Auto Fleets',
+      'Ready to Ride'
+    ];
+
+    let statusIndex = 0;
+    const statusInterval = setInterval(() => {
+      if (isDismissed) {
+        clearInterval(statusInterval);
+        return;
+      }
+      statusIndex = (statusIndex + 1) % statuses.length;
+      if (statusText) {
+        statusText.textContent = statuses[statusIndex];
+      }
+    }, 450);
+
+    // Dynamic progress bar increments
+    if (progressBar) {
+      progressBar.style.width = '30%';
+      setTimeout(() => {
+        if (!isDismissed) progressBar.style.width = '65%';
+      }, 180);
+      setTimeout(() => {
+        if (!isDismissed) progressBar.style.width = '88%';
+      }, 420);
+    }
+
+    function dismissLoader() {
+      if (isDismissed) return;
+      isDismissed = true;
+      clearInterval(statusInterval);
+
+      if (progressBar) {
+        progressBar.style.width = '100%';
+      }
+      if (statusText) {
+        statusText.textContent = 'Welcome to AutoPulse';
+      }
+
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        document.body.classList.remove('preloader-locked');
+
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 600);
+      }, 250);
+    }
+
+    // Dismiss on window load or after max safety timeout
+    if (document.readyState === 'complete') {
+      setTimeout(dismissLoader, 350);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(dismissLoader, 200);
+      });
+      // Safety fallback timeout (guarantees preloader never hangs)
+      setTimeout(dismissLoader, 1400);
+    }
+
+    // Handle browser back/forward cache (bfcache)
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        preloader.classList.add('fade-out');
+        preloader.style.display = 'none';
+        document.body.classList.remove('preloader-locked');
+      }
+    });
+
+    // Smooth page transitions for internal links
+    const internalLinks = document.querySelectorAll('a[href]:not([target="_blank"]):not([href^="#"]):not([href^="tel:"]):not([href^="mailto:"]):not([href^="javascript:"])');
+    internalLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Skip dropdown triggers and mobile accordion toggles
+        if (link.closest('.nav-item-dropdown > .nav-link') || link.classList.contains('mobile-subnav-toggle') || link.getAttribute('role') === 'button') {
+          return;
+        }
+
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        // Skip if modifier key is pressed (Ctrl/Cmd/Shift)
+        if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+
+        // Check if destination is internal HTML page
+        const isHtmlPage = href.endsWith('.html') || href.includes('.html?') || href.includes('.html#');
+        if (isHtmlPage && !href.startsWith('http://') && !href.startsWith('https://')) {
+          // Trigger smooth exit transition
+          preloader.style.display = 'flex';
+          preloader.classList.remove('fade-out');
+          if (progressBar) progressBar.style.width = '45%';
+          if (statusText) statusText.textContent = 'Navigating...';
+        }
+      });
+    });
+  }
 
 })();
 
@@ -1306,72 +1518,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   tabs.forEach((tab, index) => {
-
-    tab.addEventListener("click", () => {
-
+    tab.addEventListener("mouseenter", () => {
       activateAnatomy(
         tab.dataset.anatomy,
         index
       );
-
     });
-
-  });
-
-
-  /* =======================================================
-     AUTO ROTATION
-     Stops when user interacts
-  ======================================================== */
-
-  let autoRotate = true;
-
-  let currentIndex = 0;
-
-
-  const rotateJourney = () => {
-
-    if (!autoRotate) return;
-
-    currentIndex =
-      (currentIndex + 1) % tabs.length;
-
-    activateAnatomy(
-      tabs[currentIndex].dataset.anatomy,
-      currentIndex
-    );
-
-  };
-
-
-  let rotationTimer =
-    setInterval(
-      rotateJourney,
-      5000
-    );
-
-
-  tabs.forEach(tab => {
 
     tab.addEventListener("click", () => {
-
-      autoRotate = false;
-
-      clearInterval(rotationTimer);
-
+      activateAnatomy(
+        tab.dataset.anatomy,
+        index
+      );
     });
-
   });
-
-
-  /* =======================================================
-     Initial state
-  ======================================================== */
-
-  activateAnatomy(
-    "request",
-    0
-  );
 
 });
 

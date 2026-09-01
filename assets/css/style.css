@@ -328,7 +328,7 @@ html.dark .nav-link.active {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 220px;
+  min-width: 230px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
@@ -336,8 +336,11 @@ html.dark .nav-link.active {
   padding: 0.5rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.2s ease;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.2s ease;
   z-index: 100;
 }
 
@@ -346,10 +349,23 @@ html.dark .nav-dropdown-menu {
   border-color: #341A59;
 }
 
-.nav-item-dropdown:hover .nav-dropdown-menu {
+/* Open on hover OR when toggled by click */
+.nav-item-dropdown:hover .nav-dropdown-menu,
+.nav-item-dropdown.open .nav-dropdown-menu,
+.nav-dropdown-menu.show {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
+}
+
+.nav-item-dropdown .nav-link svg {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item-dropdown:hover .nav-link svg,
+.nav-item-dropdown.open .nav-link svg {
+  transform: rotate(180deg);
 }
 
 .nav-dropdown-link {
@@ -458,9 +474,13 @@ html.dark .util-btn {
 
 /* Interactive Card Hover Effects */
 .interactive-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
+  position: relative;
 }
 
 html.dark .interactive-card {
@@ -470,8 +490,13 @@ html.dark .interactive-card {
 
 .interactive-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 12px 28px -6px rgba(124, 58, 237, 0.18), 0 4px 12px rgba(124, 58, 237, 0.08);
   border-color: var(--color-primary);
+}
+
+html.dark .interactive-card:hover {
+  box-shadow: 0 12px 28px -6px rgba(124, 58, 237, 0.3), 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-color: #8B5CF6;
 }
 
 /* Scroll-to-Top Button */
@@ -693,6 +718,44 @@ html.dark[dir="rtl"] .mobile-menu-drawer {
 html.dark .mobile-util-box {
   background-color: #180D2D;
   border-color: #341A59;
+}
+
+/* Mobile Subnav Accordion (Closed by default) */
+.mobile-subnav-toggle .toggle-icon {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-subnav-toggle .toggle-icon.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.mobile-subnav {
+  padding-left: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.2s ease, 
+              margin 0.3s ease;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mobile-subnav.open {
+  max-height: 250px;
+  opacity: 1;
+  pointer-events: auto;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+[dir="rtl"] .mobile-subnav {
+  padding-left: 0;
+  padding-right: 0.75rem;
 }
 
 /* ==========================================================================
@@ -3082,3 +3145,291 @@ html.dark .contact-map-iframe {
   }
 
 }
+
+
+/* ==========================================================================
+   AUTOPULSE - UNIVERSAL HIGH-PERFORMANCE PAGE LOADER
+   ========================================================================== */
+
+.page-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAF8FF;
+  background-image: 
+    radial-gradient(circle at 50% 40%, rgba(124, 58, 237, 0.14) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(109, 40, 217, 0.06) 0%, transparent 45%);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.55s ease;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  will-change: opacity, transform;
+}
+
+html.dark .page-preloader {
+  background-color: #0C0517;
+  background-image: 
+    radial-gradient(circle at 50% 40%, rgba(124, 58, 237, 0.26) 0%, transparent 65%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(91, 33, 182, 0.18) 0%, transparent 50%);
+}
+
+.page-preloader.fade-out {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: scale(1.025);
+}
+
+.preloader-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.25rem 2rem;
+  max-width: 360px;
+  width: 90%;
+  position: relative;
+  user-select: none;
+}
+
+/* Central Emblem & Orbital Rings */
+.preloader-emblem-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Outer Orbit Glow Ring */
+.preloader-orbit-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px dashed rgba(124, 58, 237, 0.35);
+  animation: preloader-spin 12s linear infinite;
+}
+
+html.dark .preloader-orbit-ring {
+  border-color: rgba(168, 85, 247, 0.45);
+}
+
+/* Fast Accent Pulse Ring */
+.preloader-pulse-ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent, rgba(124, 58, 237, 0.6), transparent 80%);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+  animation: preloader-spin 2s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.6));
+}
+
+/* Emblem Box */
+.preloader-emblem {
+  width: 76px;
+  height: 76px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #7C3AED 0%, #9333EA 50%, #A855F7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 
+    0 12px 28px -6px rgba(124, 58, 237, 0.55),
+    0 4px 12px rgba(168, 85, 247, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  position: relative;
+  z-index: 2;
+  animation: preloader-float 2.4s ease-in-out infinite;
+}
+
+.preloader-icon-svg {
+  width: 42px;
+  height: 42px;
+  fill: currentColor;
+  animation: preloader-auto-drive 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Brand Title & Shimmer */
+.preloader-brand {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #1A0B2E;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.dark .preloader-brand {
+  color: #FFFFFF;
+}
+
+.preloader-brand .brand-highlight {
+  background: linear-gradient(135deg, #7C3AED, #A855F7, #C084FC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.preloader-tagline {
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #6B21A8;
+  margin-bottom: 1.5rem;
+}
+
+html.dark .preloader-tagline {
+  color: #C084FC;
+}
+
+/* Progress Track & Animated Fill */
+.preloader-progress-wrap {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.preloader-progress-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(124, 58, 237, 0.12);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+html.dark .preloader-progress-track {
+  background: rgba(168, 85, 247, 0.18);
+}
+
+.preloader-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7C3AED 0%, #A855F7 50%, #C084FC 100%);
+  border-radius: 9999px;
+  position: relative;
+  transition: width 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.75);
+}
+
+.preloader-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  background: #FFFFFF;
+  opacity: 0.8;
+  filter: blur(2px);
+  border-radius: 9999px;
+}
+
+/* Live Status Text with Animated Dots */
+.preloader-status {
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #581C87;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-height: 1.25rem;
+}
+
+html.dark .preloader-status {
+  color: #DDD6FE;
+}
+
+.preloader-dots {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.preloader-dots span {
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background-color: #7C3AED;
+  animation: preloader-dot-pulse 1.2s infinite ease-in-out both;
+}
+
+html.dark .preloader-dots span {
+  background-color: #C084FC;
+}
+
+.preloader-dots span:nth-child(1) { animation-delay: -0.32s; }
+.preloader-dots span:nth-child(2) { animation-delay: -0.16s; }
+.preloader-dots span:nth-child(3) { animation-delay: 0s; }
+
+/* Keyframe Animations */
+@keyframes preloader-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes preloader-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes preloader-auto-drive {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-1.5px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(0.5px) rotate(0.5deg);
+  }
+  75% {
+    transform: translateY(-1px) rotate(1deg);
+  }
+}
+
+@keyframes preloader-dot-pulse {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+body.preloader-locked {
+  overflow: hidden !important;
+}
+
