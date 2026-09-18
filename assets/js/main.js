@@ -128,10 +128,10 @@
 
     const desktopDropdownLinks = document.querySelectorAll('.nav-dropdown-menu .nav-dropdown-link');
     desktopDropdownLinks.forEach(link => {
-      link.classList.remove('active', 'font-semibold', 'text-violet-600', 'dark:text-violet-400');
+      link.classList.remove('active', 'font-semibold', 'text-amber-600', 'dark:text-amber-400');
       const dot = link.querySelector('span');
       if (dot) {
-        dot.className = 'w-2 h-2 rounded-full bg-purple-200 dark:bg-purple-800 transition-colors';
+        dot.className = 'w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700 transition-colors';
       }
     });
 
@@ -142,10 +142,10 @@
       desktopDropdownLinks.forEach(link => {
         const href = link.getAttribute('href') || '';
         if (href.endsWith(currentPage) || href === currentPage) {
-          link.classList.add('active', 'font-semibold', 'text-violet-600', 'dark:text-violet-400');
+          link.classList.add('active', 'font-semibold', 'text-amber-600', 'dark:text-amber-400');
           const dot = link.querySelector('span');
           if (dot) {
-            dot.className = 'w-2 h-2 rounded-full bg-violet-600';
+            dot.className = 'w-2 h-2 rounded-full bg-amber-500';
           }
         }
       });
@@ -545,32 +545,32 @@
     if (!modal) {
       modal = document.createElement('div');
       modal.id = 'booking-confirmation-modal';
-      modal.className = 'fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-[#0C0517]/85 backdrop-blur-md animate-fade-in';
+      modal.className = 'fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md animate-fade-in';
       document.body.appendChild(modal);
     }
 
     modal.innerHTML = `
-      <div class="bg-white dark:bg-[#180D2D] text-[#1A0B2E] dark:text-white rounded-3xl p-8 max-w-lg w-full border-2 border-violet-500 shadow-2xl space-y-6">
+      <div class="bg-white dark:bg-[#1E293B] text-slate-900 dark:text-white rounded-3xl p-8 max-w-lg w-full border-2 border-amber-500 shadow-2xl space-y-6">
         <div class="text-center space-y-2">
-          <div class="w-16 h-16 rounded-full bg-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center text-3xl mx-auto font-bold">
+          <div class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-3xl mx-auto font-bold">
             ✓
           </div>
-          <span class="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400 block">Booking Confirmed</span>
-          <h3 class="text-2xl font-extrabold font-heading text-[#1A0B2E] dark:text-white">Your Ride Is Reserved!</h3>
-          <p class="text-xs text-purple-700/70 dark:text-purple-300/70">Confirmation SMS & pickup barcode sent to your mobile phone.</p>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 block">Booking Confirmed</span>
+          <h3 class="text-2xl font-extrabold font-heading text-slate-900 dark:text-white">Your Ride Is Reserved!</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400">Confirmation SMS & pickup barcode sent to your mobile phone.</p>
         </div>
 
-        <div class="bg-[#FAF8FF] dark:bg-[#130924] p-5 rounded-2xl border border-purple-200 dark:border-[#341A59] space-y-2.5 text-xs">
-          <div class="flex justify-between"><span class="text-purple-700/70 dark:text-purple-300/70">Booking Reference:</span> <strong class="font-mono text-sm text-violet-600 dark:text-violet-400">${details.ref}</strong></div>
-          <div class="flex justify-between"><span class="text-purple-700/70 dark:text-purple-300/70">Reserved Vehicle:</span> <strong>${details.vehicle}</strong></div>
-          <div class="flex justify-between"><span class="text-purple-700/70 dark:text-purple-300/70">Pickup Date:</span> <strong>${details.date}</strong></div>
-          <div class="flex justify-between"><span class="text-purple-700/70 dark:text-purple-300/70">Rental Duration:</span> <strong>${details.duration}</strong></div>
-          <div class="flex justify-between"><span class="text-purple-700/70 dark:text-purple-300/70">Pickup Location:</span> <strong>${details.location}</strong></div>
-          <div class="flex justify-between pt-2 border-t border-purple-200 dark:border-[#341A59] text-sm font-bold">
+        <div class="bg-slate-50 dark:bg-[#0B0F17] p-5 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-2.5 text-xs">
+          <div class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Booking Reference:</span> <strong class="font-mono text-sm text-amber-600 dark:text-amber-400">${details.ref}</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Reserved Vehicle:</span> <strong>${details.vehicle}</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Pickup Date:</span> <strong>${details.date}</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Rental Duration:</span> <strong>${details.duration}</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Pickup Location:</span> <strong>${details.location}</strong></div>
+          <div class="flex justify-between pt-2 border-t border-slate-200 dark:border-slate-700 text-sm font-bold">
             <span>Total Payable Amount:</span>
-            <span class="text-violet-600 dark:text-violet-400 text-base">${details.total}</span>
+            <span class="text-amber-600 dark:text-amber-400 text-base">${details.total}</span>
           </div>
-          <div class="text-[11px] text-purple-600/70 dark:text-purple-400/70 pt-1">
+          <div class="text-[11px] text-slate-500 dark:text-slate-400 pt-1">
             <strong>Return Protocol:</strong> ${details.returnDeadline}
           </div>
         </div>
@@ -651,7 +651,7 @@
       if (meterDigitKm) meterDigitKm.textContent = distance.toFixed(1);
       if (meterStatus) {
         meterStatus.textContent = isNight ? 'NIGHT TARIFF (25%)' : 'HIRED - STANDARD';
-        meterStatus.className = isNight ? 'digital-led-violet font-mono text-xs' : 'digital-led-electric font-mono text-xs';
+        meterStatus.className = isNight ? 'digital-led-amber font-mono text-xs' : 'digital-led-electric font-mono text-xs';
       }
     }
 
@@ -706,8 +706,8 @@
       
       const bubble = document.createElement('div');
       bubble.className = isUser 
-        ? 'bg-violet-600 text-white text-xs md:text-sm rounded-2xl rounded-tr-none px-4 py-2.5 max-w-[82%] shadow-sm font-sans'
-        : 'bg-white dark:bg-[#180D2D] text-[#1A0B2E] dark:text-purple-100 text-xs md:text-sm rounded-2xl rounded-tl-none px-4 py-2.5 max-w-[82%] shadow-sm border border-purple-200 dark:border-[#341A59] font-sans';
+        ? 'bg-amber-500 text-slate-950 font-bold text-xs md:text-sm rounded-2xl rounded-tr-none px-4 py-2.5 max-w-[82%] shadow-sm font-sans'
+        : 'bg-white dark:bg-[#1E293B] text-slate-900 dark:text-slate-100 text-xs md:text-sm rounded-2xl rounded-tl-none px-4 py-2.5 max-w-[82%] shadow-sm border border-slate-200 dark:border-slate-700 font-sans';
       
       bubble.innerHTML = text;
       msgDiv.appendChild(bubble);
@@ -777,27 +777,27 @@
       const match = mockDatabase[cleanQ] || mockDatabase['DL-1RE-7810'];
 
       resultCard.innerHTML = `
-        <div class="p-6 md:p-8 bg-white dark:bg-[#180D2D] rounded-3xl border-2 border-violet-500 shadow-2xl transition-all animate-fade-in">
+        <div class="p-6 md:p-8 bg-white dark:bg-[#1E293B] rounded-3xl border-2 border-amber-500 shadow-2xl transition-all animate-fade-in">
           <div class="flex flex-col md:flex-row items-center gap-6">
             <div class="relative shrink-0">
-              <img src="${match.photo}" alt="${match.name}" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-4 border-violet-500 shadow-lg">
+              <img src="${match.photo}" alt="${match.name}" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-4 border-amber-500 shadow-lg">
               <span class="absolute -bottom-2 -right-2 w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs font-bold shadow">✓</span>
             </div>
             <div class="flex-1 text-center md:text-left space-y-1.5">
               <div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                <h4 class="text-xl font-extrabold text-[#1A0B2E] dark:text-white font-heading">${match.name}</h4>
-                <span class="bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5 text-violet-600 dark:text-violet-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <h4 class="text-xl font-extrabold text-slate-900 dark:text-white font-heading">${match.name}</h4>
+                <span class="bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                   POLICE VERIFIED BADGE
                 </span>
               </div>
-              <p class="text-xs sm:text-sm text-purple-900 dark:text-purple-200"><strong>Badge Number:</strong> <span class="font-mono font-semibold">${match.badge}</span></p>
-              <p class="text-xs sm:text-sm text-purple-900 dark:text-purple-200"><strong>Vehicle Plate:</strong> <span class="font-mono font-bold text-violet-600 dark:text-violet-400">${cleanQ}</span> &bull; ${match.vehicle}</p>
-              <p class="text-xs sm:text-sm text-purple-900 dark:text-purple-200"><strong>Safety Clearance:</strong> ${match.policeVerified} &bull; ${match.depot}</p>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300"><strong>Badge Number:</strong> <span class="font-mono font-semibold">${match.badge}</span></p>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300"><strong>Vehicle Plate:</strong> <span class="font-mono font-bold text-amber-600 dark:text-amber-400">${cleanQ}</span> &bull; ${match.vehicle}</p>
+              <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300"><strong>Safety Clearance:</strong> ${match.policeVerified} &bull; ${match.depot}</p>
             </div>
-            <div class="text-center md:text-right bg-[#FAF8FF] dark:bg-[#130924] p-4 sm:p-5 rounded-2xl border border-purple-200 dark:border-[#341A59] min-w-[160px] shrink-0">
-              <span class="text-[10px] text-purple-700 dark:text-purple-300 uppercase font-bold tracking-wider block">Rider Rating</span>
-              <span class="text-xl font-extrabold text-violet-600 dark:text-violet-400 font-heading block mt-0.5">${match.rating}</span>
+            <div class="text-center md:text-right bg-slate-50 dark:bg-[#0B0F17] p-4 sm:p-5 rounded-2xl border border-slate-200 dark:border-slate-700 min-w-[160px] shrink-0">
+              <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider block">Rider Rating</span>
+              <span class="text-xl font-extrabold text-amber-600 dark:text-amber-400 font-heading block mt-0.5">${match.rating}</span>
               <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 block mt-1">Audit: ${match.inspectionStatus}</span>
             </div>
           </div>
@@ -889,12 +889,12 @@
         if (!data) return;
 
         layerBtns.forEach(b => {
-          b.classList.remove('bg-violet-600', 'text-white', 'shadow-lg', 'shadow-violet-500/30', 'border-violet-600');
-          b.classList.add('bg-[#FAF8FF]', 'dark:bg-[#180D2D]', 'text-[#1A0B2E]', 'dark:text-white', 'border-purple-200', 'dark:border-[#341A59]');
+          b.classList.remove('bg-amber-500', 'text-slate-950', 'font-bold', 'shadow-lg', 'shadow-amber-500/30', 'border-amber-500');
+          b.classList.add('bg-slate-50', 'dark:bg-[#1E293B]', 'text-slate-900', 'dark:text-white', 'border-slate-200', 'dark:border-slate-700');
         });
 
-        btn.classList.add('bg-violet-600', 'text-white', 'shadow-lg', 'shadow-violet-500/30', 'border-violet-600');
-        btn.classList.remove('bg-[#FAF8FF]', 'dark:bg-[#180D2D]', 'text-[#1A0B2E]', 'dark:text-white', 'border-purple-200', 'dark:border-[#341A59]');
+        btn.classList.add('bg-amber-500', 'text-slate-950', 'font-bold', 'shadow-lg', 'shadow-amber-500/30', 'border-amber-500');
+        btn.classList.remove('bg-slate-50', 'dark:bg-[#1E293B]', 'text-slate-900', 'dark:text-white', 'border-slate-200', 'dark:border-slate-700');
 
         if (titleEl) titleEl.textContent = data.title;
         if (badgeEl) badgeEl.textContent = data.badge;
@@ -961,7 +961,7 @@
         stat1: 'Every 3 Mins',
         stat2: '100% Zero Wait',
         stat3: 'Dedicated Campus Bay',
-        route: 'Route: Metro Purple Line Bay 2 ➔ Tech Boulevard Gate 3 (1.8 km loop)'
+        route: 'Route: Metro Amber Line Bay 2 ➔ Tech Boulevard Gate 3 (1.8 km loop)'
       },
       'residential-pool': {
         title: 'Smart Residential Cluster Pooled Commute',
@@ -999,12 +999,12 @@
         if (!data) return;
 
         modBtns.forEach(b => {
-          b.classList.remove('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-500/25');
-          b.classList.add('bg-white', 'dark:bg-[#180D2D]', 'text-[#1A0B2E]', 'dark:text-purple-200', 'border-purple-200', 'dark:border-[#341A59]');
+          b.classList.remove('bg-amber-500', 'text-slate-950', 'font-bold', 'shadow-md', 'shadow-amber-500/25');
+          b.classList.add('bg-white', 'dark:bg-[#1E293B]', 'text-slate-900', 'dark:text-slate-200', 'border-slate-200', 'dark:border-slate-700');
         });
 
-        btn.classList.add('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-500/25');
-        btn.classList.remove('bg-white', 'dark:bg-[#180D2D]', 'text-[#1A0B2E]', 'dark:text-purple-200', 'border-purple-200', 'dark:border-[#341A59]');
+        btn.classList.add('bg-amber-500', 'text-slate-950', 'font-bold', 'shadow-md', 'shadow-amber-500/25');
+        btn.classList.remove('bg-white', 'dark:bg-[#1E293B]', 'text-slate-900', 'dark:text-slate-200', 'border-slate-200', 'dark:border-slate-700');
 
         if (titleEl) titleEl.textContent = data.title;
         if (tagEl) tagEl.textContent = data.tag;
@@ -1071,12 +1071,12 @@
         if (!data) return;
 
         deptBtns.forEach(b => {
-          b.classList.remove('bg-violet-600', 'text-white', 'font-bold');
-          b.classList.add('bg-[#130924]', 'text-purple-300');
+          b.classList.remove('bg-amber-500', 'text-slate-950', 'font-bold');
+          b.classList.add('bg-slate-800', 'text-slate-300');
         });
 
-        btn.classList.add('bg-violet-600', 'text-white', 'font-bold');
-        btn.classList.remove('bg-[#130924]', 'text-purple-300');
+        btn.classList.add('bg-amber-500', 'text-slate-950', 'font-bold');
+        btn.classList.remove('bg-slate-800', 'text-slate-300');
 
         if (deptNameEl) deptNameEl.textContent = data.name;
         if (ridesEl) ridesEl.textContent = data.rides;
@@ -1098,19 +1098,15 @@
     if (!tabCustomer || !tabDriver) return;
 
     tabCustomer.addEventListener('click', () => {
-      tabCustomer.classList.add('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-500/25');
-      tabCustomer.classList.remove('bg-transparent', 'text-purple-700', 'dark:text-purple-300');
-      tabDriver.classList.remove('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-500/25');
-      tabDriver.classList.add('bg-transparent', 'text-purple-700', 'dark:text-purple-300');
+      tabCustomer.classList.add('active');
+      tabDriver.classList.remove('active');
       if (formCustomer) formCustomer.classList.remove('hidden');
       if (formDriver) formDriver.classList.add('hidden');
     });
 
     tabDriver.addEventListener('click', () => {
-      tabDriver.classList.add('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-500/25');
-      tabDriver.classList.remove('bg-transparent', 'text-purple-700', 'dark:text-purple-300');
-      tabCustomer.classList.remove('bg-violet-600', 'text-white', 'shadow-md', 'shadow-violet-500/25');
-      tabCustomer.classList.add('bg-transparent', 'text-purple-700', 'dark:text-purple-300');
+      tabDriver.classList.add('active');
+      tabCustomer.classList.remove('active');
       if (formDriver) formDriver.classList.remove('hidden');
       if (formCustomer) formCustomer.classList.add('hidden');
     });
@@ -1248,11 +1244,11 @@
 
         // Button state classes
         hubButtons.forEach(b => {
-          b.classList.remove('bg-violet-600', 'text-white', 'shadow-sm', 'active');
-          b.classList.add('bg-white', 'dark:bg-[#130924]', 'text-purple-900', 'dark:text-purple-200');
+          b.classList.remove('bg-amber-500', 'text-slate-950', 'font-bold', 'shadow-sm', 'active');
+          b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-900', 'dark:text-slate-200');
         });
-        btn.classList.add('bg-violet-600', 'text-white', 'shadow-sm', 'active');
-        btn.classList.remove('bg-white', 'dark:bg-[#130924]', 'text-purple-900', 'dark:text-purple-200');
+        btn.classList.add('bg-amber-500', 'text-slate-950', 'font-bold', 'shadow-sm', 'active');
+        btn.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-900', 'dark:text-slate-200');
 
         // Update Text Info
         if (titleEl) titleEl.textContent = data.title;
@@ -1279,6 +1275,318 @@
     }
   }
 
+  // --- Login Modal System ---
+  function initLoginModal() {
+    let backdrop = document.getElementById('login-modal');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.id = 'login-modal';
+      backdrop.className = 'login-modal-backdrop';
+      backdrop.setAttribute('role', 'dialog');
+      backdrop.setAttribute('aria-modal', 'true');
+      backdrop.setAttribute('aria-label', 'Sign In to AutoPulse');
+      backdrop.innerHTML = `
+        <div class="login-modal-dialog">
+          <!-- Modal Header -->
+          <div class="p-6 pb-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 font-bold shadow-sm">
+                <svg class="w-4 h-4 text-slate-950" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-lg text-slate-900 dark:text-white leading-tight">Auto<span class="text-amber-500">Pulse</span> Login</h3>
+                <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">Choose your account type</span>
+              </div>
+            </div>
+            <button type="button" class="login-modal-close w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-amber-600 flex items-center justify-center transition-colors" aria-label="Close modal">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Role Tabs -->
+          <div class="flex border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
+            <button type="button" class="login-tab-btn active" data-login-tab="commuter">Commuter</button>
+            <button type="button" class="login-tab-btn" data-login-tab="driver">Driver Partner</button>
+            <button type="button" class="login-tab-btn" data-login-tab="corporate">Corporate</button>
+          </div>
+
+          <!-- Tab Contents -->
+          <div class="p-6 space-y-4">
+            <!-- Commuter Form -->
+            <form id="login-form-commuter" class="login-tab-panel space-y-4">
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Mobile Phone Number</label>
+                <div class="relative flex items-center">
+                  <span class="absolute left-3 font-bold text-xs text-slate-500 dark:text-slate-400">+91</span>
+                  <input type="tel" placeholder="Enter 10-digit mobile" maxlength="10" required class="w-full pl-12 pr-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+                </div>
+              </div>
+              <div class="otp-row hidden">
+                <label class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Enter 4-Digit OTP</label>
+                <input type="text" placeholder="1234" maxlength="4" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm text-center font-bold tracking-widest text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+              <button type="submit" class="btn-primary w-full py-2.5 text-center font-bold text-sm shadow-md shadow-amber-500/20">
+                <span>Send Verification OTP</span>
+              </button>
+              <div class="relative flex py-1 items-center">
+                <div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+                <span class="flex-shrink mx-3 text-[11px] font-semibold text-slate-400">or</span>
+                <div class="flex-grow border-t border-slate-200 dark:border-slate-700"></div>
+              </div>
+              <button type="button" class="w-full py-2 px-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 hover:border-amber-500 text-xs font-bold text-slate-800 dark:text-white flex items-center justify-center gap-2 transition-all">
+                <svg class="w-4 h-4" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                <span>Continue with Google</span>
+              </button>
+            </form>
+
+            <!-- Driver Form -->
+            <form id="login-form-driver" class="login-tab-panel hidden space-y-4">
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Captain Mobile or Badge ID</label>
+                <input type="text" placeholder="e.g. AP-CAP-9081 or Mobile" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">4-Digit Security PIN</label>
+                <input type="password" placeholder="••••" maxlength="4" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+              <button type="submit" class="btn-primary w-full py-2.5 text-center font-bold text-sm shadow-md shadow-amber-500/20">
+                <span>Captain Partner Sign In</span>
+              </button>
+              <div class="text-center pt-1">
+                <a href="contact.html#driver" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline">New driver? Register vehicle fleet &rarr;</a>
+              </div>
+            </form>
+
+            <!-- Corporate Form -->
+            <form id="login-form-corporate" class="login-tab-panel hidden space-y-4">
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Work Email</label>
+                <input type="email" placeholder="name@company.com" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Password</label>
+                <input type="password" placeholder="••••••••" required class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+              </div>
+              <button type="submit" class="btn-primary w-full py-2.5 text-center font-bold text-sm shadow-md shadow-amber-500/20">
+                <span>Enterprise Dashboard Sign In</span>
+              </button>
+              <div class="text-center pt-1">
+                <a href="corporate.html" class="text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline">Request corporate billing account &rarr;</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(backdrop);
+    }
+
+    function openModal() {
+      backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      const input = backdrop.querySelector('input:not([type="hidden"])');
+      if (input) setTimeout(() => input.focus(), 100);
+    }
+
+    function closeModal() {
+      backdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Attach open triggers to any .btn-login or a[href="#login"]
+    document.querySelectorAll('.btn-login, [data-action="login"], a[href="#login"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    // Close button & outside click
+    const closeBtn = backdrop.querySelector('.login-modal-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeModal();
+    });
+
+    // Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && backdrop.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // Tab switching
+    const tabBtns = backdrop.querySelectorAll('.login-tab-btn');
+    const panels = {
+      commuter: backdrop.querySelector('#login-form-commuter'),
+      driver: backdrop.querySelector('#login-form-driver'),
+      corporate: backdrop.querySelector('#login-form-corporate')
+    };
+
+    tabBtns.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabBtns.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.getAttribute('data-login-tab');
+        Object.keys(panels).forEach(k => {
+          if (panels[k]) {
+            panels[k].classList.toggle('hidden', k !== target);
+          }
+        });
+      });
+    });
+
+    // Handle submissions
+    const commuterForm = backdrop.querySelector('#login-form-commuter');
+    if (commuterForm) {
+      commuterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const otpRow = commuterForm.querySelector('.otp-row');
+        const submitBtn = commuterForm.querySelector('button[type="submit"] span');
+        if (otpRow && otpRow.classList.contains('hidden')) {
+          otpRow.classList.remove('hidden');
+          submitBtn.textContent = 'Verify OTP & Log In';
+          showToast('OTP sent: 4829 (Demo code)');
+        } else {
+          showToast('Welcome back! Logged in as Commuter');
+          setTimeout(closeModal, 500);
+        }
+      });
+    }
+
+    const driverForm = backdrop.querySelector('#login-form-driver');
+    if (driverForm) {
+      driverForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('Welcome Captain! Driver terminal activated');
+        setTimeout(closeModal, 500);
+      });
+    }
+
+    const corporateForm = backdrop.querySelector('#login-form-corporate');
+    if (corporateForm) {
+      corporateForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showToast('Welcome! Corporate fleet portal logged in');
+        setTimeout(closeModal, 500);
+      });
+    }
+  }
+
+  // --- Hero Section Vehicle Showcase Switcher ---
+  function initHeroVehicleSwitcher() {
+    const stageImg = document.getElementById('hero-stage-img');
+    const badgeTitle = document.getElementById('hero-badge-title');
+    const badgeCap = document.getElementById('hero-badge-cap');
+    const badgeRate = document.getElementById('hero-badge-rate');
+    const descName = document.getElementById('hero-desc-name');
+    const descText = document.getElementById('hero-desc-text');
+    const fareDisplay = document.getElementById('hero-fare-display');
+    const rateFormula = document.getElementById('hero-rate-formula');
+
+    if (!stageImg) return;
+
+    const vehicles = {
+      cng: {
+        title: 'Standard Metered CNG Auto',
+        name: 'Classic 3-Wheeler Auto',
+        desc: 'Calibrated electronic meter, zero bargaining, doorstep city transit.',
+        cap: '3 Passengers',
+        ratePill: '₹30 Base • ₹15/km',
+        rateFormula: 'Govt RTO Gazette Tariff: ₹30 + ₹15/km',
+        estimatedFare: '₹70.50',
+        img: 'assets/images/sections/cng_auto.jpg',
+        alt: 'Modern yellow and green CNG Auto Rickshaw with digital meter outside metro station'
+      },
+      electric: {
+        title: 'Green E-Rickshaw (EV)',
+        name: '100% Electric Eco-Auto',
+        desc: 'Silent zero-emission ride, solar battery swap, ideal for neighborhood lanes.',
+        cap: '4 Passengers',
+        ratePill: '₹25 Base • ₹13.50/km',
+        rateFormula: 'Eco Clean Tariff: ₹25 + ₹13.50/km (10% Eco Discount)',
+        estimatedFare: '₹61.50',
+        img: 'assets/images/sections/e_rickshaw.jpg',
+        alt: 'Modern green electric e-rickshaw at clean EV charging transit station'
+      },
+      shared: {
+        title: 'Shared Metro Feeder ("Share-Rick")',
+        name: 'High-Frequency Metro Feeder',
+        desc: 'Fixed-route shared shuttle every 90 seconds connecting metro bays and hubs.',
+        cap: '6 Passengers',
+        ratePill: '₹15 Flat Base • ₹4.50/km',
+        rateFormula: 'Shared Corridors: ₹15 Flat Base + ₹4.50/km per seat',
+        estimatedFare: '₹20.00',
+        img: 'assets/images/sections/shared_feeder.jpg',
+        alt: 'Shared Metro Feeder Auto Rickshaws lined up outside Metro Station terminal'
+      },
+      prime: {
+        title: 'Prime Comfort Executive Auto',
+        name: 'Executive Comfort Cabin',
+        desc: 'Plush cushioned leatherette seating, USB mobile fast-charging & spacious boot.',
+        cap: '3 Passengers + Luggage',
+        ratePill: '₹35 Base • ₹18/km',
+        rateFormula: 'Prime Tariff: ₹35 + ₹18/km with Fast USB & AC Airflow',
+        estimatedFare: '₹83.50',
+        img: 'assets/images/sections/prime_auto.jpg',
+        alt: 'Prime Comfort Executive Auto Rickshaw with plush seating and smartphone dock'
+      }
+    };
+
+    function selectVehicle(key) {
+      const data = vehicles[key];
+      if (!data) return;
+
+      stageImg.style.opacity = '0.3';
+      setTimeout(() => {
+        stageImg.src = data.img;
+        stageImg.alt = data.alt;
+        stageImg.style.opacity = '1';
+      }, 120);
+
+      if (badgeTitle) badgeTitle.textContent = data.title;
+      if (badgeCap) badgeCap.textContent = data.cap;
+      if (badgeRate) badgeRate.textContent = data.ratePill;
+      if (descName) descName.textContent = data.name;
+      if (descText) descText.textContent = data.desc;
+      if (fareDisplay) fareDisplay.textContent = data.estimatedFare;
+      if (rateFormula) rateFormula.textContent = data.rateFormula;
+
+      document.querySelectorAll('.hero-vehicle-btn').forEach(b => {
+        const isMatch = b.getAttribute('data-hero-vehicle') === key;
+        b.classList.toggle('active', isMatch);
+        b.classList.toggle('border-2', isMatch);
+        b.classList.toggle('border-amber-500', isMatch);
+        b.classList.toggle('bg-amber-50', isMatch);
+        b.classList.toggle('dark:bg-amber-950/40', isMatch);
+      });
+
+      document.querySelectorAll('.hero-thumb-btn').forEach(b => {
+        const isMatch = b.getAttribute('data-hero-thumb') === key;
+        b.classList.toggle('active', isMatch);
+        b.classList.toggle('border-2', isMatch);
+        b.classList.toggle('border-amber-500', isMatch);
+      });
+    }
+
+    document.querySelectorAll('.hero-vehicle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-hero-vehicle');
+        selectVehicle(key);
+      });
+    });
+
+    document.querySelectorAll('.hero-thumb-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-hero-thumb');
+        selectVehicle(key);
+      });
+    });
+  }
+
   window.AutoPulse = {
     showToast: showToast,
     toggleTheme: toggleTheme,
@@ -1287,24 +1595,37 @@
 
   // --- DOM Ready Init ---
   document.addEventListener('DOMContentLoaded', () => {
-    initTheme();
-    initDirection();
-    initScrollToTop();
-    initDesktopDropdowns();
-    initMobileDrawer();
-    initActiveNav();
-    initDedicatedBooking();
-    initFareCalculator();
-    initWhatsAppSimulator();
-    initDriverVerification();
-    initSafetyRadarShield();
-    initCorporateCalculator();
-    initCorporateModalities();
-    initEnterpriseTerminal();
-    initContactTabs();
-    initContactInteractiveMap();
-    initFormHandlers();
-    initFaqAccordions();
+    // 1. Immediately kick off Page Loader dismissal so it never hangs
+    initPageLoader();
+
+    const safeInit = (fn, name) => {
+      try {
+        fn();
+      } catch (err) {
+        console.warn(`[AutoPulse] Module ${name} error:`, err);
+      }
+    };
+
+    safeInit(initTheme, 'Theme');
+    safeInit(initDirection, 'Direction');
+    safeInit(initScrollToTop, 'ScrollToTop');
+    safeInit(initDesktopDropdowns, 'DesktopDropdowns');
+    safeInit(initMobileDrawer, 'MobileDrawer');
+    safeInit(initActiveNav, 'ActiveNav');
+    safeInit(initLoginModal, 'LoginModal');
+    safeInit(initHeroVehicleSwitcher, 'HeroVehicleSwitcher');
+    safeInit(initDedicatedBooking, 'DedicatedBooking');
+    safeInit(initFareCalculator, 'FareCalculator');
+    safeInit(initWhatsAppSimulator, 'WhatsAppSimulator');
+    safeInit(initDriverVerification, 'DriverVerification');
+    safeInit(initSafetyRadarShield, 'SafetyRadarShield');
+    safeInit(initCorporateCalculator, 'CorporateCalculator');
+    safeInit(initCorporateModalities, 'CorporateModalities');
+    safeInit(initEnterpriseTerminal, 'EnterpriseTerminal');
+    safeInit(initContactTabs, 'ContactTabs');
+    safeInit(initContactInteractiveMap, 'ContactInteractiveMap');
+    safeInit(initFormHandlers, 'FormHandlers');
+    safeInit(initFaqAccordions, 'FaqAccordions');
 
     document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
       btn.addEventListener('click', toggleTheme);
@@ -1312,8 +1633,6 @@
     document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
       btn.addEventListener('click', toggleDirection);
     });
-
-    initPageLoader();
   });
 
   // --- Universal Page Preloader Logic ---
@@ -1381,51 +1700,19 @@
       }, 250);
     }
 
-    // Dismiss on window load or after max safety timeout
-    if (document.readyState === 'complete') {
-      setTimeout(dismissLoader, 350);
-    } else {
-      window.addEventListener('load', () => {
-        setTimeout(dismissLoader, 200);
-      });
-      // Safety fallback timeout (guarantees preloader never hangs)
-      setTimeout(dismissLoader, 1400);
+    // Dismiss on window load, DOM ready, or after strict safety timeout
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(dismissLoader, 200);
     }
+    window.addEventListener('load', () => {
+      setTimeout(dismissLoader, 100);
+    });
+    // Strict safety fallback timeout (guarantees preloader never hangs under any condition)
+    setTimeout(dismissLoader, 500);
 
     // Handle browser back/forward cache (bfcache)
     window.addEventListener('pageshow', (event) => {
-      if (event.persisted) {
-        preloader.classList.add('fade-out');
-        preloader.style.display = 'none';
-        document.body.classList.remove('preloader-locked');
-      }
-    });
-
-    // Smooth page transitions for internal links
-    const internalLinks = document.querySelectorAll('a[href]:not([target="_blank"]):not([href^="#"]):not([href^="tel:"]):not([href^="mailto:"]):not([href^="javascript:"])');
-    internalLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        // Skip dropdown triggers and mobile accordion toggles
-        if (link.closest('.nav-item-dropdown > .nav-link') || link.classList.contains('mobile-subnav-toggle') || link.getAttribute('role') === 'button') {
-          return;
-        }
-
-        const href = link.getAttribute('href');
-        if (!href) return;
-
-        // Skip if modifier key is pressed (Ctrl/Cmd/Shift)
-        if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
-
-        // Check if destination is internal HTML page
-        const isHtmlPage = href.endsWith('.html') || href.includes('.html?') || href.includes('.html#');
-        if (isHtmlPage && !href.startsWith('http://') && !href.startsWith('https://')) {
-          // Trigger smooth exit transition
-          preloader.style.display = 'flex';
-          preloader.classList.remove('fade-out');
-          if (progressBar) progressBar.style.width = '45%';
-          if (statusText) statusText.textContent = 'Navigating...';
-        }
-      });
+      dismissLoader();
     });
   }
 

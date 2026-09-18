@@ -1,17 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Book | Phone, WhatsApp, App & Web Options - AutoPulse</title>
+  <title>AutoPulse - Urban Transit Network | How to Book</title>
   <meta name="description"
     content="Discover how to book an AutoPulse auto rickshaw via toll-free phone, interactive WhatsApp chatbot, mobile app, or instant browser web booking. 100% metered fares.">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  <!-- Favicon Matching Header Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg?v=2">
+  <link rel="apple-touch-icon" href="assets/images/icons/favicon.svg?v=2">
 
-  <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,48 +21,17 @@
         extend: {
           colors: {
             brand: {
-              50: '#FAF5FF',
-              100: '#F3E8FF',
-              200: '#E9D5FF',
-              300: '#D8B4FE',
-              400: '#C084FC',
-              500: '#A855F7',
-              600: '#9333EA',
-              700: '#7E22CE',
-              800: '#6B21A8',
-              900: '#581C87',
-              950: '#3B0764',
-            },
-            violet: {
-              50: '#FAF8FF',
-              100: '#F5F3FF',
-              200: '#EDE9FE',
-              300: '#DDD6FE',
-              400: '#C4B5FD',
-              500: '#8B5CF6',
-              600: '#7C3AED',
-              700: '#6D28D9',
-              800: '#5B21B6',
-              900: '#4C1D95',
-              950: '#2E1065',
-            },
-            purple: {
-              50: '#FAF5FF',
-              100: '#F3E8FF',
-              200: '#E9D5FF',
-              300: '#D8B4FE',
-              400: '#C084FC',
-              500: '#A855F7',
-              600: '#9333EA',
-              700: '#7E22CE',
-              800: '#6B21A8',
-              900: '#581C87',
-              950: '#3B0764',
-            },
-            darkpurple: {
-              800: '#1E1038',
-              900: '#180D2D',
-              950: '#0C0517',
+              50: '#FFFBEB',
+              100: '#FEF3C7',
+              200: '#FDE68A',
+              300: '#FCD34D',
+              400: '#FBBF24',
+              500: '#F59E0B',
+              600: '#D97706',
+              700: '#B45309',
+              800: '#92400E',
+              900: '#78350F',
+              950: '#451A03',
             }
           },
           fontFamily: {
@@ -92,44 +62,53 @@
   </script>
 </head>
 
-<body class="bg-white dark:bg-[#0C0517] text-[#1A0B2E] dark:text-purple-100 antialiased transition-colors duration-200">
+<body class="bg-white dark:bg-[#0B0F17] text-[#0F172A] dark:text-slate-100 antialiased transition-colors duration-200">
 
   <!-- ==================== PAGE PRELOADER COMPONENT ==================== -->
   <div id="page-preloader" class="page-preloader" aria-label="Loading page">
     <div class="preloader-card">
-      <!-- Orbiting Rings & Brand Emblem -->
       <div class="preloader-emblem-wrap">
         <div class="preloader-pulse-ring"></div>
         <div class="preloader-orbit-ring"></div>
         <div class="preloader-emblem">
-          <svg class="preloader-icon-svg" viewBox="0 0 24 24">
+          <svg class="preloader-icon-svg w-8 h-8 text-[#0F172A]" viewBox="0 0 24 24" fill="currentColor">
             <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
           </svg>
         </div>
       </div>
-
-      <!-- Brand Typography -->
-      <div class="preloader-brand">
-        Auto<span class="brand-highlight">Pulse</span>
+      <div class="preloader-brand font-extrabold text-xl text-[#0F172A] dark:text-white">
+        Auto<span class="text-amber-500">Pulse</span>
       </div>
-      <p class="preloader-tagline">Urban Transit Network</p>
-
-      <!-- Dynamic Progress Track -->
-      <div class="preloader-progress-wrap">
-        <div class="preloader-progress-track">
-          <div class="preloader-progress-bar"></div>
+      <p class="preloader-tagline text-xs font-semibold text-slate-500 dark:text-slate-400">Urban Transit Network</p>
+      <div class="preloader-progress-wrap mt-3 w-full">
+        <div class="preloader-progress-track bg-slate-100 dark:bg-slate-800 rounded-full h-1.5 overflow-hidden">
+          <div class="preloader-progress-bar bg-amber-500 h-full w-0 transition-all duration-300"></div>
         </div>
-        <div class="preloader-status">
+        <div class="preloader-status mt-2 text-[11px] font-bold text-slate-600 dark:text-slate-300">
           <span class="preloader-status-text">Calibrating RTO Gazette Meters</span>
-          <span class="preloader-dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    (function() {
+      var hideLoader = function() {
+        var p = document.getElementById('page-preloader');
+        if (p && !p.classList.contains('fade-out')) {
+          p.classList.add('fade-out');
+          document.body.classList.remove('preloader-locked');
+          setTimeout(function() { p.style.display = 'none'; }, 400);
+        }
+      };
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(hideLoader, 350);
+      } else {
+        window.addEventListener('DOMContentLoaded', function() { setTimeout(hideLoader, 250); });
+        window.addEventListener('load', function() { setTimeout(hideLoader, 100); });
+        setTimeout(hideLoader, 800);
+      }
+    })();
+  </script>
 
   <!-- ==================== HEADER ==================== -->
   <header class="site-header">
@@ -138,18 +117,17 @@
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 shrink-0 text-decoration-none group">
           <div
-            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 flex items-center justify-center shadow-md shadow-violet-500/25 group-hover:scale-105 transition-transform text-white">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center shadow-md shadow-amber-500/25 group-hover:scale-105 transition-transform text-[#0F172A]">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
             </svg>
           </div>
           <div class="flex flex-col">
             <span
-              class="font-heading font-extrabold text-2xl tracking-tight text-[#1A0B2E] dark:text-white leading-none">Auto<span
-                class="text-violet-600 dark:text-violet-400">Pulse</span></span>
-            <span class="text-[10px] font-semibold uppercase tracking-wider text-purple-800 dark:text-purple-300">Urban
-              Transit Network</span>
+              class="brand-logo-text font-heading font-extrabold text-2xl tracking-tight text-[#0F172A] dark:text-white leading-none">Auto<span
+                class="text-amber-500">Pulse</span></span>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Local Auto Booking</span>
           </div>
         </a>
 
@@ -158,25 +136,26 @@
           <div class="nav-item-dropdown">
             <a href="javascript:void(0)" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">
               <span>Home</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </a>
             <div class="nav-dropdown-menu">
               <a href="index.html" class="nav-dropdown-link">
-                <span class="w-2 h-2 rounded-full bg-purple-200 dark:bg-purple-800"></span> Home 1 (Feeder & City)
+                <span class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></span> Home 1 (Feeder &amp; City)
               </a>
               <a href="home-2.html" class="nav-dropdown-link">
-                <span class="w-2 h-2 rounded-full bg-purple-200 dark:bg-purple-800"></span> Home 2 (Express Night & Bento)
+                <span class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></span> Home 2 (Express Night)
               </a>
             </div>
           </div>
 
+          <a href="about.html" class="nav-link">About</a>
           <a href="how-to-book.html" class="nav-link active">How to Book</a>
           <a href="fare-calculator.html" class="nav-link">Fare Calculator</a>
           <a href="safety.html" class="nav-link">Safety Features</a>
           <a href="corporate.html" class="nav-link">Corporate Accounts</a>
-          <a href="contact.html" class="nav-link">Contact </a>
+          <a href="contact.html" class="nav-link">Contact</a>
         </nav>
 
         <!-- Desktop Actions -->
@@ -187,6 +166,14 @@
           <button type="button" class="rtl-toggle-btn util-btn font-bold text-xs" aria-label="Toggle RTL layout">
             <span class="dir-label">RTL</span>
           </button>
+          <!-- Header Login Button -->
+          <a href="#login" class="btn-login" aria-label="Login to AutoPulse" role="button">
+            <svg class="w-4 h-4 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            <span>Login</span>
+          </a>
           <a href="booking.html" class="btn-primary">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
@@ -226,47 +213,55 @@
           </button>
           <div class="mobile-subnav">
             <a href="index.html" class="mobile-subnav-link">
-              <span class="w-1.5 h-1.5 rounded-full bg-purple-300 dark:bg-purple-700"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               <span>Home 1: Feeder &amp; City</span>
             </a>
             <a href="home-2.html" class="mobile-subnav-link">
-              <span class="w-1.5 h-1.5 rounded-full bg-purple-300 dark:bg-purple-700"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               <span>Home 2: Express Night &amp; Bento</span>
             </a>
           </div>
         </div>
 
+        <a href="about.html" class="mobile-nav-link">About Us</a>
         <a href="how-to-book.html" class="mobile-nav-link active">How to Book</a>
         <a href="fare-calculator.html" class="mobile-nav-link">Fare Calculator</a>
         <a href="safety.html" class="mobile-nav-link">Safety Features</a>
         <a href="corporate.html" class="mobile-nav-link">Corporate Accounts</a>
-        <a href="contact.html" class="mobile-nav-link">Contact &amp; Driver Partner</a>
+        <a href="contact.html" class="mobile-nav-link">Contact </a>
       </div>
 
       <!-- Preferences inside scrollable area -->
       <div class="mobile-util-box space-y-3 mt-4">
         <span
-          class="text-xs font-bold uppercase tracking-wider text-purple-700 dark:text-purple-300 block">Preferences</span>
+          class="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 block">Preferences</span>
         <div class="flex items-center justify-between">
-          <span class="text-sm font-medium text-[#1A0B2E] dark:text-purple-200">Theme</span>
+          <span class="text-sm font-medium text-[#0F172A] dark:text-slate-200">Theme</span>
           <button type="button"
-            class="theme-toggle-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            class="theme-toggle-btn flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155]">
             <span class="theme-icon"></span>
             <span class="theme-label">Dark Mode</span>
           </button>
         </div>
         <div class="flex items-center justify-between pt-1">
-          <span class="text-sm font-medium text-[#1A0B2E] dark:text-purple-200">Reading Direction</span>
+          <span class="text-sm font-medium text-[#0F172A] dark:text-slate-200">Reading Direction</span>
           <button type="button"
-            class="rtl-toggle-btn flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
+            class="rtl-toggle-btn flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155]">
             <span>Layout:</span>
-            <span class="dir-label font-bold text-violet-600 dark:text-violet-400">RTL</span>
+            <span class="dir-label font-bold text-amber-500 dark:text-amber-400">RTL</span>
           </button>
         </div>
       </div>
 
-      <!-- Drawer CTA Button -->
-      <div class="pt-4 mt-2">
+      <!-- Drawer Action Buttons -->
+      <div class="pt-4 mt-2 space-y-2">
+        <a href="#login" class="btn-login w-full justify-center text-center py-2.5" role="button">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          <span>Login / Account</span>
+        </a>
         <a href="booking.html" class="btn-primary w-full text-center">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
@@ -288,62 +283,62 @@
 
       <div class="container-custom relative z-10">
         <!-- Top Live Badge & Quick Anchor Strip -->
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-12 border-b border-purple-200/80 dark:border-[#341A59]">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-12 border-b border-slate-200/80 dark:border-[#334155]">
           <div class="flex items-center gap-3">
             <span class="pulse-dot"></span>
-            <span class="text-xs uppercase tracking-widest font-extrabold text-violet-700 dark:text-violet-300">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-amber-700 dark:text-amber-300">
               AutoPulse Master Hailing Guide
             </span>
           </div>
 
           <!-- Channel Jump Ribbon (Clean Text Links with Underline Effects) -->
-          <div class="flex flex-wrap items-center gap-6 text-xs font-bold text-purple-900 dark:text-purple-200">
-            <span class="text-purple-600 dark:text-purple-400 uppercase tracking-wider font-semibold">Jump to Channel:</span>
-            <a href="#channel-whatsapp" class="hover:text-violet-600 dark:hover:text-violet-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-violet-500">WhatsApp Bot</a>
-            <a href="#channel-phone" class="hover:text-violet-600 dark:hover:text-violet-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-violet-500">Voice 1800 IVR</a>
-            <a href="#channel-app" class="hover:text-violet-600 dark:hover:text-violet-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-violet-500">Rider App</a>
-            <a href="#channel-web" class="hover:text-violet-600 dark:hover:text-violet-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-violet-500">Instant Web</a>
+          <div class="flex flex-wrap items-center gap-6 text-xs font-bold text-slate-900 dark:text-slate-200">
+            <span class="text-slate-600 dark:text-slate-400 uppercase tracking-wider font-semibold">Jump to Channel:</span>
+            <a href="#channel-whatsapp" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-amber-500">WhatsApp Bot</a>
+            <a href="#channel-phone" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-amber-500">Voice 1800 IVR</a>
+            <a href="#channel-app" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-amber-500">Rider App</a>
+            <a href="#channel-web" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors pb-0.5 border-b-2 border-transparent hover:border-amber-500">Instant Web</a>
           </div>
         </div>
 
         <!-- Big Bold Editorial Header & Asymmetric Visual Split -->
         <div class="pt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div class="lg:col-span-7 space-y-6">
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#1A0B2E] dark:text-white leading-[1.08]">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0F172A] dark:text-white leading-[1.08]">
               Seamless Hailing.
-              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 dark:from-violet-400 dark:via-purple-300 dark:to-violet-200">
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-500 to-indigo-600 dark:from-amber-400 dark:via-amber-300 dark:to-amber-200">
                 Zero Street Friction.
               </span>
             </h1>
-            <p class="text-base sm:text-lg lg:text-xl text-purple-900 dark:text-purple-200 leading-relaxed max-w-2xl">
+            <p class="text-base sm:text-lg lg:text-xl text-slate-900 dark:text-slate-200 leading-relaxed max-w-2xl">
               Whether you are tapping your phone screen at a metro gate, messaging via WhatsApp, or dialing our 24/7 toll-free IVR, booking an AutoPulse rickshaw follows a transparent, guaranteed statutory meter journey.
             </p>
 
             <!-- Quick Stat Bar Strip -->
-            <div class="pt-4 grid grid-cols-3 gap-6 border-t border-purple-200 dark:border-[#341A59]">
+            <div class="pt-4 grid grid-cols-3 gap-6 border-t border-slate-200 dark:border-[#334155]">
               <div>
-                <span class="text-2xl sm:text-3xl font-extrabold text-violet-600 dark:text-violet-400 font-heading block">30 sec</span>
-                <span class="text-xs text-purple-800 dark:text-purple-300 font-medium">Avg. Booking Time</span>
+                <span class="text-2xl sm:text-3xl font-extrabold text-amber-500 dark:text-amber-400 font-heading block">30 sec</span>
+                <span class="text-xs text-slate-800 dark:text-slate-300 font-medium">Avg. Booking Time</span>
               </div>
               <div>
-                <span class="text-2xl sm:text-3xl font-extrabold text-[#1A0B2E] dark:text-white font-heading block">2.8 min</span>
-                <span class="text-xs text-purple-800 dark:text-purple-300 font-medium">Fast City Arrival</span>
+                <span class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white font-heading block">2.8 min</span>
+                <span class="text-xs text-slate-800 dark:text-slate-300 font-medium">Fast City Arrival</span>
               </div>
               <div>
-                <span class="text-2xl sm:text-3xl font-extrabold text-violet-600 dark:text-violet-400 font-heading block">₹0</span>
-                <span class="text-xs text-purple-800 dark:text-purple-300 font-medium">Hidden Surge Surcharge</span>
+                <span class="text-2xl sm:text-3xl font-extrabold text-amber-500 dark:text-amber-400 font-heading block">&#8377;0</span>
+                <span class="text-xs text-slate-800 dark:text-slate-300 font-medium">Hidden Surge Surcharge</span>
               </div>
             </div>
           </div>
 
           <!-- Right: Floating Editorial Image with Angled Backdrop -->
           <div class="lg:col-span-5 relative">
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#180D2D]">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E293B]">
               <img src="assets/images/sections/how_to_book.jpg" alt="Passenger smoothly hailing AutoPulse on mobile"
                 class="w-full h-[380px] sm:h-[440px] object-cover filter brightness-[0.98] hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0C0517]/80 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B0F17]/80 via-transparent to-transparent"></div>
               <div class="absolute bottom-6 left-6 right-6 text-white text-xs space-y-1">
-                <span class="text-violet-300 font-bold uppercase tracking-wider block text-[10px]">Verified Dispatch</span>
+                <span class="text-amber-300 font-bold uppercase tracking-wider block text-[10px]">Verified Dispatch</span>
                 <p class="text-sm font-bold">Over 18,400 daily rides coordinated across 32 metro zones.</p>
               </div>
             </div>
@@ -354,705 +349,276 @@
     </section>
 
     <!-- =========================================================
-     SECTION 2 — RIDE ANATOMY
-     Completely Fresh Interactive Layout
-     No Cards • No Timeline • No Giant Numbers
-========================================================= -->
-
-<section
-  id="ride-anatomy"
-  class="ride-anatomy-section relative overflow-hidden
-         bg-[#FAF8FF] dark:bg-[#130924]"
->
-
-  <!-- =======================================================
-       BACKGROUND ATMOSPHERE
-  ======================================================== -->
-
-  <div class="ride-anatomy-bg pointer-events-none absolute inset-0">
-
-    <div class="anatomy-orb anatomy-orb-one"></div>
-
-    <div class="anatomy-grid"></div>
-
-    <div class="anatomy-crosshair anatomy-crosshair-one"></div>
-    <div class="anatomy-crosshair anatomy-crosshair-two"></div>
-
-  </div>
-
-
-  <div class="container-custom relative z-10">
-
-
-    <!-- =====================================================
-         TOP INTRO
-    ====================================================== -->
-
-    <div
-      class="anatomy-intro reveal"
-    >
-
-      <div class="anatomy-intro-label">
-
-        <span class="anatomy-live-dot"></span>
-
-        <span>
-          HOW AUTOPULSE WORKS
-        </span>
-
-      </div>
-
-
-      <h2 class="anatomy-heading">
-
-        A smarter ride is
-        <span>working underneath.</span>
-
-      </h2>
-
-
-      <p class="anatomy-intro-copy">
-
-        What feels like a simple auto ride is actually a
-        coordinated sequence of location intelligence,
-        captain verification, live fare tracking and instant
-        settlement.
-
-      </p>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         MAIN EXPERIENCE
-    ====================================================== -->
-
-    <div class="anatomy-experience">
-
-
-      <!-- ===================================================
-           LEFT — STAGE SELECTOR
-      ==================================================== -->
-
-      <aside class="anatomy-selector">
-
-        <div class="selector-caption">
-          RIDE SYSTEM
+         SECTION 2 &mdash; 4-STEP EASY BOOKING PROCESS
+         Clear, Step-by-Step Customer Instructions with Visuals
+    ========================================================= -->
+    <section id="how-it-works-steps" class="py-20 lg:py-28 bg-slate-50 dark:bg-slate-950/60 border-y border-slate-200 dark:border-slate-800/80 relative overflow-hidden">
+      <div class="container-custom relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-700/50 text-amber-900 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-4">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span>Simple Customer Guide</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+            How to Book Your Ride in <span class="text-amber-600 dark:text-amber-400">4 Simple Steps</span>
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            No endless cancellations, zero surge surges, and no bargaining at the curb. Whether using our web booking, WhatsApp bot, or Metro kiosks, booking takes under 60 seconds.
+          </p>
         </div>
 
+        <!-- 4-Step Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+          
+          <!-- STEP 1 -->
+          <div class="booking-step-card bg-white dark:bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="step-badge w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center shadow-sm">
+                  01
+                </span>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400">Step 1</span>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2.5">
+                Set Pickup &amp; Destination
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Enter your doorstep address or pick your designated Metro Station exit gate. Tap <em>&ldquo;Current Location&rdquo;</em> for 1-tap auto-detect.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80">
+              <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5">
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>GPS 3-metre pinpoint accuracy</span>
+                </li>
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Metro Gate exit landmark sync</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-        <button
-          class="anatomy-tab"
-          data-anatomy="request"
-          type="button"
-        >
+          <!-- STEP 2 -->
+          <div class="booking-step-card bg-white dark:bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="step-badge w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center shadow-sm">
+                  02
+                </span>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400">Step 2</span>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2.5">
+                Select Auto Category
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Choose the best ride for your trip: Metered CNG Auto, Green E-Rickshaw, Shared Metro Feeder (&#8377;15), or Prime Comfort.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80">
+              <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5">
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>100% Regulated meter fares</span>
+                </li>
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Exact upfront fare estimate</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-          <span class="tab-line"></span>
+          <!-- STEP 3 -->
+          <div class="booking-step-card bg-white dark:bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="step-badge w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center shadow-sm">
+                  03
+                </span>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400">Step 3</span>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2.5">
+                Match &amp; OTP Verification
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                A verified Captain nearby confirms in &lt;15 seconds. You receive Captain photo, registration plate, and a 4-digit start OTP.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80">
+              <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5">
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Live GPS auto approach tracker</span>
+                </li>
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>4-Digit trip security OTP</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-          <span class="tab-text">
-            <small>01</small>
-            Request
-          </span>
-
-          <span class="tab-arrow">
-            ↗
-          </span>
-
-        </button>
-
-
-        <button
-          class="anatomy-tab"
-          data-anatomy="match"
-          type="button"
-        >
-
-          <span class="tab-line"></span>
-
-          <span class="tab-text">
-            <small>02</small>
-            Match
-          </span>
-
-          <span class="tab-arrow">
-            ↗
-          </span>
-
-        </button>
-
-
-        <button
-          class="anatomy-tab"
-          data-anatomy="ride"
-          type="button"
-        >
-
-          <span class="tab-line"></span>
-
-          <span class="tab-text">
-            <small>03</small>
-            Ride
-          </span>
-
-          <span class="tab-arrow">
-            ↗
-          </span>
-
-        </button>
-
-
-        <button
-          class="anatomy-tab"
-          data-anatomy="finish"
-          type="button"
-        >
-
-          <span class="tab-line"></span>
-
-          <span class="tab-text">
-            <small>04</small>
-            Finish
-          </span>
-
-          <span class="tab-arrow">
-            ↗
-          </span>
-
-        </button>
-
-
-        <div class="selector-footer">
-
-          <span class="selector-footer-dot"></span>
-
-          <span>
-            SYSTEM ONLINE
-          </span>
+          <!-- STEP 4 -->
+          <div class="booking-step-card bg-white dark:bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="step-badge w-12 h-12 rounded-xl bg-amber-500 text-slate-950 font-black text-xl flex items-center justify-center shadow-sm">
+                  04
+                </span>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400">Step 4</span>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2.5">
+                Hop In &amp; Pay Fair Meter
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                Share your OTP to start the digital trip meter. At your destination, pay the exact metered amount via UPI QR or cash. Zero commission taken from driver.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800/80">
+              <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5">
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>GPay / PhonePe / Paytm / Cash</span>
+                </li>
+                <li class="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                  <svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  <span>Instant digital receipt on SMS/WhatsApp</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
         </div>
 
-      </aside>
+        <!-- Real Fleet Options Showcase Banner -->
+        <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 lg:p-10 border border-slate-200 dark:border-slate-800 shadow-sm mb-12">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400 block mb-1">Fleet Selection Available In App</span>
+              <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Choose Your Transport Vehicle</h3>
+            </div>
+            <a href="fare-calculator.html" class="inline-flex items-center gap-2 text-sm font-bold text-amber-600 dark:text-amber-400 hover:text-amber-700">
+              <span>View City Rate Card</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
 
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Fleet Item 1 -->
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 bg-slate-50 dark:bg-slate-950/50 flex flex-col justify-between">
+              <div>
+                <div class="aspect-video w-full rounded-xl overflow-hidden mb-4 bg-slate-200 dark:bg-slate-800">
+                  <img src="assets/img/cng-auto.jpg" onerror="this.onerror=null; this.src='assets/img/hero-auto-1.jpg'" alt="CNG Meter Auto Rickshaw" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-between mb-1">
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Standard CNG Auto</h4>
+                  <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-2 py-0.5 rounded-full">Meter Rate</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Up to 3 passengers &bull; Direct doorstep point-to-point &bull; Calibrated meter fare</p>
+              </div>
+              <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 pt-3 border-t border-slate-200 dark:border-slate-800">
+                &#8377;30 Base (2 km) + &#8377;15/km
+              </div>
+            </div>
 
+            <!-- Fleet Item 2 -->
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 bg-slate-50 dark:bg-slate-950/50 flex flex-col justify-between">
+              <div>
+                <div class="aspect-video w-full rounded-xl overflow-hidden mb-4 bg-slate-200 dark:bg-slate-800">
+                  <img src="assets/img/electric-auto.jpg" onerror="this.onerror=null; this.src='assets/img/hero-auto-2.jpg'" alt="Green Electric E-Rickshaw" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-between mb-1">
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Electric E-Rickshaw</h4>
+                  <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-2 py-0.5 rounded-full">Zero Emission</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">100% Battery powered &bull; Ultra silent &amp; green &bull; Perfect for &lt; 4km local trips</p>
+              </div>
+              <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 pt-3 border-t border-slate-200 dark:border-slate-800">
+                &#8377;20 Base (1.5 km) + &#8377;12/km
+              </div>
+            </div>
 
-      <!-- ===================================================
-           CENTER — HERO OBJECT
-      ==================================================== -->
+            <!-- Fleet Item 3 -->
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 bg-slate-50 dark:bg-slate-950/50 flex flex-col justify-between">
+              <div>
+                <div class="aspect-video w-full rounded-xl overflow-hidden mb-4 bg-slate-200 dark:bg-slate-800">
+                  <img src="assets/img/shared-feeder.jpg" onerror="this.onerror=null; this.src='assets/img/hero-auto-1.jpg'" alt="Metro Feeder Shared Auto" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-between mb-1">
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Shared Metro Feeder</h4>
+                  <span class="text-xs font-bold text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-950/60 px-2 py-0.5 rounded-full">Fixed &#8377;15-&#8377;25</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Connecting 42 Metro stations to residential hubs &bull; Departs every 3 mins</p>
+              </div>
+              <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 pt-3 border-t border-slate-200 dark:border-slate-800">
+                Flat &#8377;15 / &#8377;25 per seat
+              </div>
+            </div>
 
-      <div class="anatomy-visual">
+            <!-- Fleet Item 4 -->
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 bg-slate-50 dark:bg-slate-950/50 flex flex-col justify-between">
+              <div>
+                <div class="aspect-video w-full rounded-xl overflow-hidden mb-4 bg-slate-200 dark:bg-slate-800">
+                  <img src="assets/img/prime-auto.jpg" onerror="this.onerror=null; this.src='assets/img/hero-auto-2.jpg'" alt="Prime Comfort Auto" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-between mb-1">
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Prime Comfort Auto</h4>
+                  <span class="text-xs font-bold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-950/60 px-2 py-0.5 rounded-full">Top 5% Captains</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Spacious legroom &bull; Phone charging port &bull; Top rated drivers with 4.85+ ...</p>
+              </div>
+              <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 pt-3 border-t border-slate-200 dark:border-slate-800">
+                Standard Meter + &#8377;10 Prime
+              </div>
+            </div>
 
-
-        <!-- rotating outer orbit -->
-
-        <div class="visual-orbit orbit-one"></div>
-
-        <div class="visual-orbit orbit-two"></div>
-
-
-        <!-- radial marks -->
-
-        <div class="visual-radial radial-top"></div>
-        <div class="visual-radial radial-right"></div>
-        <div class="visual-radial radial-bottom"></div>
-        <div class="visual-radial radial-left"></div>
-
-
-        <!-- Main auto silhouette -->
-
-        <div class="auto-stage">
-
-          <div class="auto-glow"></div>
-
-          <div class="auto-shadow"></div>
-
-
-          <svg
-            class="auto-svg"
-            viewBox="0 0 500 360"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-
-            <!-- roof -->
-
-            <path
-              d="M132 183
-                 C146 116 190 72 250 72
-                 C310 72 354 116 368 183"
-              stroke="currentColor"
-              stroke-width="6"
-              stroke-linecap="round"
-            />
-
-
-            <!-- canopy -->
-
-            <path
-              d="M125 184
-                 H375
-                 C389 184 400 195 400 209
-                 V244
-                 H100
-                 V209
-                 C100 195 111 184 125 184Z"
-              fill="currentColor"
-              opacity=".08"
-            />
-
-            <path
-              d="M125 184H375"
-              stroke="currentColor"
-              stroke-width="6"
-              stroke-linecap="round"
-            />
-
-
-            <!-- windshield -->
-
-            <path
-              d="M170 181
-                 C182 130 210 108 250 108
-                 C290 108 318 130 330 181"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-
-
-            <!-- windshield split -->
-
-            <path
-              d="M250 110V180"
-              stroke="currentColor"
-              stroke-width="3"
-              opacity=".5"
-            />
-
-
-            <!-- body -->
-
-            <path
-              d="M78 244
-                 H422
-                 C434 244 442 254 442 266
-                 V283
-                 H58
-                 V266
-                 C58 254 66 244 78 244Z"
-              fill="currentColor"
-              opacity=".12"
-            />
-
-            <path
-              d="M78 244H422"
-              stroke="currentColor"
-              stroke-width="6"
-              stroke-linecap="round"
-            />
-
-
-            <!-- lower body -->
-
-            <path
-              d="M58 283H442"
-              stroke="currentColor"
-              stroke-width="6"
-              stroke-linecap="round"
-            />
-
-
-            <!-- left wheel -->
-
-            <circle
-              cx="128"
-              cy="286"
-              r="29"
-              fill="#FAF8FF"
-              stroke="currentColor"
-              stroke-width="6"
-              class="auto-wheel"
-            />
-
-            <circle
-              cx="128"
-              cy="286"
-              r="8"
-              fill="currentColor"
-            />
-
-
-            <!-- right wheel -->
-
-            <circle
-              cx="372"
-              cy="286"
-              r="29"
-              fill="#FAF8FF"
-              stroke="currentColor"
-              stroke-width="6"
-              class="auto-wheel"
-            />
-
-            <circle
-              cx="372"
-              cy="286"
-              r="8"
-              fill="currentColor"
-            />
-
-
-            <!-- head lamp -->
-
-            <rect
-              x="70"
-              y="220"
-              width="30"
-              height="16"
-              rx="8"
-              fill="currentColor"
-              opacity=".5"
-            />
-
-
-            <!-- tail lamp -->
-
-            <rect
-              x="400"
-              y="220"
-              width="30"
-              height="16"
-              rx="8"
-              fill="currentColor"
-              opacity=".5"
-            />
-
-          </svg>
-
-
-          <!-- live signal -->
-
-          <div class="auto-signal signal-one"></div>
-          <div class="auto-signal signal-two"></div>
-          <div class="auto-signal signal-three"></div>
-
+          </div>
         </div>
 
-
-        <!-- =================================================
-             FLOATING DATA POINTS
-        ================================================== -->
-
-        <div
-          class="anatomy-hotspot hotspot-location"
-          data-hotspot="request"
-        >
-
-          <span class="hotspot-pulse"></span>
-
-          <span class="hotspot-line"></span>
-
-          <span class="hotspot-label">
-            <b>LOCATION</b>
-            GPS PIN
-          </span>
-
-        </div>
-
-
-        <div
-          class="anatomy-hotspot hotspot-identity"
-          data-hotspot="match"
-        >
-
-          <span class="hotspot-pulse"></span>
-
-          <span class="hotspot-line"></span>
-
-          <span class="hotspot-label">
-            <b>CAPTAIN</b>
-            VERIFIED
-          </span>
-
-        </div>
-
-
-        <div
-          class="anatomy-hotspot hotspot-meter"
-          data-hotspot="ride"
-        >
-
-          <span class="hotspot-pulse"></span>
-
-          <span class="hotspot-line"></span>
-
-          <span class="hotspot-label">
-            <b>METER</b>
-            LIVE FARE
-          </span>
-
-        </div>
-
-
-        <div
-          class="anatomy-hotspot hotspot-payment"
-          data-hotspot="finish"
-        >
-
-          <span class="hotspot-pulse"></span>
-
-          <span class="hotspot-line"></span>
-
-          <span class="hotspot-label">
-            <b>PAYMENT</b>
-            DIGITAL
-          </span>
-
-        </div>
-
-
-        <!-- bottom coordinate -->
-
-        <div class="visual-coordinate">
-          <span>11° 01' 47"N</span>
-          <i></i>
-          <span>76° 57' 30"E</span>
+        <!-- Call to Action Banner -->
+        <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-3xl p-8 sm:p-10 text-slate-950 flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg shadow-amber-500/20">
+          <div class="space-y-2 text-center md:text-left">
+            <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Ready for your first hassle-free ride?</h3>
+            <p class="text-slate-900 font-medium text-sm sm:text-base">Experience fair metered fares with no surge pricing and zero driver cancellations.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <a href="booking.html" class="px-6 py-3.5 rounded-xl bg-slate-950 text-white font-bold text-sm hover:bg-slate-900 transition-colors shadow-md">
+              Book a Ride Now
+            </a>
+            <a href="#channel-whatsapp" class="px-5 py-3.5 rounded-xl bg-white text-slate-950 font-bold text-sm hover:bg-slate-100 transition-colors shadow-sm">
+              Use WhatsApp Bot
+            </a>
+          </div>
         </div>
 
       </div>
-
-
-
-      <!-- ===================================================
-           RIGHT — DYNAMIC INFORMATION
-      ==================================================== -->
-
-      <div class="anatomy-info">
-
-
-        <div class="info-counter">
-
-          <span class="counter-current">
-            01
-          </span>
-
-          <span class="counter-slash">
-            /
-          </span>
-
-          <span>
-            04
-          </span>
-
-        </div>
-
-
-        <!-- REQUEST -->
-
-        <div
-          class="anatomy-content active"
-          data-content="request"
-        >
-
-          <span class="content-eyebrow">
-            ORIGIN REQUEST
-          </span>
-
-          <h3>
-            It starts with
-            <strong>one location.</strong>
-          </h3>
-
-          <p>
-            Tell AutoPulse where you are through WhatsApp,
-            the app, your browser or a simple phone call.
-            The system translates your location into a
-            precise pickup point.
-          </p>
-
-
-          <div class="content-data">
-
-            <div>
-              <small>INPUT</small>
-              <b>GPS / ADDRESS</b>
-            </div>
-
-            <div>
-              <small>RESPONSE</small>
-              <b>INSTANT</b>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- MATCH -->
-
-        <div
-          class="anatomy-content"
-          data-content="match"
-        >
-
-          <span class="content-eyebrow">
-            CAPTAIN MATCH
-          </span>
-
-          <h3>
-            The right person
-            <strong>meets the ride.</strong>
-          </h3>
-
-          <p>
-            Before boarding, you see the assigned captain,
-            vehicle registration, rating and arrival status.
-            A secure OTP completes the identity handshake.
-          </p>
-
-
-          <div class="content-data">
-
-            <div>
-              <small>IDENTITY</small>
-              <b>VERIFIED</b>
-            </div>
-
-            <div>
-              <small>ARRIVAL</small>
-              <b>LIVE ETA</b>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- RIDE -->
-
-        <div
-          class="anatomy-content"
-          data-content="ride"
-        >
-
-          <span class="content-eyebrow">
-            LIVE COMMUTE
-          </span>
-
-          <h3>
-            Every kilometre
-            <strong>stays visible.</strong>
-          </h3>
-
-          <p>
-            Once you board, the digital meter activates.
-            Distance and fare progression remain visible
-            throughout the journey, removing guesswork
-            from the ride.
-          </p>
-
-
-          <div class="content-data">
-
-            <div>
-              <small>METER</small>
-              <b>DIGITAL</b>
-            </div>
-
-            <div>
-              <small>TRACKING</small>
-              <b>REAL-TIME</b>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- FINISH -->
-
-        <div
-          class="anatomy-content"
-          data-content="finish"
-        >
-
-          <span class="content-eyebrow">
-            FINAL SETTLEMENT
-          </span>
-
-          <h3>
-            Arrive.
-            <strong>Pay. Done.</strong>
-          </h3>
-
-          <p>
-            Complete payment through UPI or cash and
-            receive your fare breakdown and digital
-            receipt without waiting for anything else.
-          </p>
-
-
-          <div class="content-data">
-
-            <div>
-              <small>PAYMENT</small>
-              <b>UPI / CASH</b>
-            </div>
-
-            <div>
-              <small>RECEIPT</small>
-              <b>INSTANT</b>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- Bottom line -->
-
-        <div class="info-progress">
-
-          <div class="progress-track">
-            <span></span>
-          </div>
-
-          <span class="progress-text">
-            SYSTEM FLOW
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         BOTTOM STATEMENT
-    ====================================================== -->
-
-    <div class="anatomy-bottom reveal">
-
-      <div class="bottom-mark">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <p>
-        Simple on the surface.
-        <strong>Intelligent underneath.</strong>
-      </p>
-
-      <span class="bottom-status">
-        AUTOPULSE / ACTIVE
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
 
@@ -1061,37 +627,37 @@
          SECTION 3: INTERACTIVE CHANNELS DEEP DIVE (Editorial Asymmetric Layout)
          WhatsApp Bot Simulator + Toll-Free Phone + App + Web
     ----------------------------------------------------- -->
-    <section class="py-20 lg:py-28 bg-white dark:bg-[#0C0517]">
+    <section class="py-20 lg:py-28 bg-white dark:bg-[#0B0F17]">
       <div class="container-custom">
 
         <!-- Channel 1: WhatsApp Bot Interactive Showcase (Asymmetric Split) -->
-        <div id="channel-whatsapp" class="pb-24 border-b border-purple-200/80 dark:border-[#341A59]">
+        <div id="channel-whatsapp" class="pb-24 border-b border-slate-200/80 dark:border-[#334155]">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
             <div class="lg:col-span-6 space-y-6">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300 text-xs font-bold">
-                <span class="w-2 h-2 rounded-full bg-violet-600 animate-ping"></span>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-slate-900 text-amber-800 dark:text-amber-300 text-xs font-bold">
+                <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
                 <span>Channel Focus: 3-Click Messaging</span>
               </div>
 
-              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A0B2E] dark:text-white tracking-tight leading-tight">
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white tracking-tight leading-tight">
                 Hail via WhatsApp in Under 30 Seconds
               </h2>
 
-              <p class="text-base text-purple-900 dark:text-purple-200 leading-relaxed">
-                Save phone storage and skip heavy app downloads. Simply message <strong class="text-violet-600 dark:text-violet-400 font-bold">"Hi" to +91 91080 28886</strong>. Our verified AI dispatcher identifies your location and connects your ride with statutory zero surge.
+              <p class="text-base text-slate-900 dark:text-slate-200 leading-relaxed">
+                Save phone storage and skip heavy app downloads. Simply message <strong class="text-amber-500 dark:text-amber-400 font-bold">"Hi" to +91 91080 28886</strong>. Our verified AI dispatcher identifies your location and connects your ride with statutory zero surge.
               </p>
 
               <!-- Interactive Trial Controller (Clickable pills) -->
               <div class="pt-4 space-y-3">
-                <span class="text-xs uppercase font-extrabold tracking-wider text-purple-700 dark:text-purple-400 block">
+                <span class="text-xs uppercase font-extrabold tracking-wider text-slate-700 dark:text-slate-400 block">
                   Interactive Chat Simulator (Test Below):
                 </span>
                 <div class="flex flex-wrap gap-2.5">
                   <button type="button"
-                    class="wa-preset-pill px-4 py-2 rounded-xl text-xs font-bold bg-purple-50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-[#1A0B2E] dark:text-purple-200 hover:border-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-all flex items-center gap-2"
+                    class="wa-preset-pill px-4 py-2 rounded-xl text-xs font-bold bg-slate-50 dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] text-[#0F172A] dark:text-slate-200 hover:border-amber-500 hover:text-amber-500 dark:hover:text-amber-400 transition-all flex items-center gap-2"
                     data-step="loc">
-                    <svg class="w-4 h-4 text-violet-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -1099,9 +665,9 @@
                   </button>
 
                   <button type="button"
-                    class="wa-preset-pill px-4 py-2 rounded-xl text-xs font-bold bg-purple-50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-[#1A0B2E] dark:text-purple-200 hover:border-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-all flex items-center gap-2"
+                    class="wa-preset-pill px-4 py-2 rounded-xl text-xs font-bold bg-slate-50 dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] text-[#0F172A] dark:text-slate-200 hover:border-amber-500 hover:text-amber-500 dark:hover:text-amber-400 transition-all flex items-center gap-2"
                     data-step="dest">
-                    <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="9" />
                       <circle cx="12" cy="12" r="5" />
                     </svg>
@@ -1109,9 +675,9 @@
                   </button>
 
                   <button type="button"
-                    class="wa-preset-pill px-4 py-2 rounded-xl text-xs font-bold bg-purple-50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-[#1A0B2E] dark:text-purple-200 hover:border-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-all flex items-center gap-2"
+                    class="wa-preset-pill px-4 py-2 rounded-xl text-xs font-bold bg-slate-50 dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] text-[#0F172A] dark:text-slate-200 hover:border-amber-500 hover:text-amber-500 dark:hover:text-amber-400 transition-all flex items-center gap-2"
                     data-step="confirm">
-                    <svg class="w-4 h-4 text-violet-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                     <span>3. Confirm Auto Ride</span>
@@ -1119,22 +685,22 @@
                 </div>
               </div>
 
-              <div class="pt-2 flex items-center gap-6 text-xs font-semibold text-purple-700 dark:text-purple-300">
-                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-violet-500"></span> Verified Meta Business Bot</span>
-                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-violet-500"></span> End-to-End Encrypted</span>
+              <div class="pt-2 flex items-center gap-6 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Verified Meta Business Bot</span>
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> End-to-End Encrypted</span>
               </div>
             </div>
 
             <!-- WhatsApp Phone Mockup Frame -->
             <div class="lg:col-span-6 flex justify-center">
-              <div class="w-full max-w-sm rounded-[2.5rem] bg-[#180D2D] p-3.5 shadow-2xl border-4 border-[#341A59] text-white">
-                <div class="flex justify-between items-center text-purple-200 text-[10px] px-4 py-1 mb-2 font-mono">
+              <div class="w-full max-w-sm rounded-[2.5rem] bg-[#1E293B] p-3.5 shadow-2xl border-4 border-[#334155] text-white">
+                <div class="flex justify-between items-center text-slate-200 text-[10px] px-4 py-1 mb-2 font-mono">
                   <span>10:24 AM</span>
                   <span class="flex items-center gap-1">5G 98%</span>
                 </div>
 
                 <!-- Chat Header -->
-                <div class="bg-gradient-to-r from-violet-700 to-purple-800 text-white p-3 rounded-t-2xl flex items-center gap-3">
+                <div class="bg-gradient-to-r from-amber-500 to-amber-600 text-white p-3 rounded-t-2xl flex items-center gap-3">
                   <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white font-extrabold text-sm">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
@@ -1143,27 +709,27 @@
                   <div class="flex-1">
                     <div class="flex items-center gap-1">
                       <span class="font-bold text-xs">AutoPulse Transit Bot</span>
-                      <span class="text-violet-300 text-[11px]">✓</span>
+                      <span class="text-amber-300 text-[11px]">&#10003;</span>
                     </div>
-                    <span class="text-[10px] text-purple-200 block">Online • Instant WhatsApp Hail</span>
+                    <span class="text-[10px] text-slate-200 block">Online &bull; Instant WhatsApp Hail</span>
                   </div>
                 </div>
 
                 <!-- Chat History Box -->
-                <div id="wa-chat-container" class="bg-[#FAF8FF] dark:bg-[#0C0517] p-4 h-72 overflow-y-auto space-y-3 font-sans text-xs">
+                <div id="wa-chat-container" class="bg-[#F8FAFC] dark:bg-[#0B0F17] p-4 h-72 overflow-y-auto space-y-3 font-sans text-xs">
                   <div class="flex justify-start">
-                    <div class="bg-white dark:bg-[#180D2D] text-[#1A0B2E] dark:text-purple-100 rounded-2xl rounded-tl-none px-4 py-2.5 max-w-[82%] shadow-sm border border-purple-200 dark:border-[#341A59]">
+                    <div class="bg-white dark:bg-[#1E293B] text-[#0F172A] dark:text-slate-100 rounded-2xl rounded-tl-none px-4 py-2.5 max-w-[82%] shadow-sm border border-slate-200 dark:border-[#334155]">
                       Namaste! Welcome to AutoPulse. Where can we take you today? Tap any quick pill on the left or type your destination!
                     </div>
                   </div>
                 </div>
 
                 <!-- Chat Footer Input -->
-                <div class="bg-[#F5F3FF] dark:bg-[#130924] p-2 rounded-b-2xl flex items-center gap-2 border-t border-purple-200 dark:border-[#341A59]">
+                <div class="bg-[#F5F3FF] dark:bg-[#0F172A] p-2 rounded-b-2xl flex items-center gap-2 border-t border-slate-200 dark:border-[#334155]">
                   <input type="text" placeholder="Type message..." readonly
-                    class="w-full bg-white dark:bg-[#180D2D] px-3 py-2 rounded-full text-xs text-[#1A0B2E] dark:text-purple-200 focus:outline-none border border-purple-200 dark:border-[#341A59]">
+                    class="w-full bg-white dark:bg-[#1E293B] px-3 py-2 rounded-full text-xs text-[#0F172A] dark:text-slate-200 focus:outline-none border border-slate-200 dark:border-[#334155]">
                   <button type="button"
-                    class="w-8 h-8 rounded-full bg-violet-600 text-white flex items-center justify-center text-xs shrink-0 font-bold shadow-md shadow-violet-600/30"
+                    class="w-8 h-8 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-xs shrink-0 font-bold shadow-md shadow-amber-500/25"
                     onclick="window.AutoPulse.showToast('Tap the interactive pills on the left to demo the bot!')">
                     &rarr;
                   </button>
@@ -1175,49 +741,49 @@
         </div>
 
         <!-- Channel 2: Voice IVR & 1800 Central Dispatch (Editorial Story Split) -->
-        <div id="channel-phone" class="py-20 border-b border-purple-200/80 dark:border-[#341A59]">
+        <div id="channel-phone" class="py-20 border-b border-slate-200/80 dark:border-[#334155]">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <!-- Left Editorial Narrative -->
             <div class="lg:col-span-5 space-y-6">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-slate-900 text-amber-800 dark:text-amber-300">
                 Channel Focus: Universal Voice Hotline
               </span>
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white tracking-tight">
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
                 No Smartphone? Dial Toll-Free 1800-419-AUTO
               </h2>
-              <p class="text-base text-purple-900 dark:text-purple-200 leading-relaxed">
+              <p class="text-base text-slate-900 dark:text-slate-200 leading-relaxed">
                 Mobility belongs to every citizen. Senior commuters, hospital patients, or travelers with dead phone batteries can speak with our centralized city dispatch operators 24 hours a day, 7 days a week.
               </p>
-              <div class="p-6 rounded-2xl bg-[#FAF8FF] dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59]">
-                <span class="text-xs uppercase font-bold text-purple-700 dark:text-purple-300 block mb-1">Direct Human Dispatch</span>
-                <span class="text-3xl font-extrabold text-violet-600 dark:text-violet-400 font-heading block">1800-419-AUTO</span>
-                <span class="text-xs text-purple-800 dark:text-purple-200 mt-1 block">Multilingual Operators: Hindi, English, Kannada, Tamil, Telugu, Marathi</span>
+              <div class="p-6 rounded-2xl bg-[#F8FAFC] dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155]">
+                <span class="text-xs uppercase font-bold text-slate-700 dark:text-slate-300 block mb-1">Direct Human Dispatch</span>
+                <span class="text-3xl font-extrabold text-amber-500 dark:text-amber-400 font-heading block">1800-419-AUTO</span>
+                <span class="text-xs text-slate-800 dark:text-slate-200 mt-1 block">Multilingual Operators: Hindi, English, Kannada, Tamil, Telugu, Marathi</span>
               </div>
             </div>
 
             <!-- Right 3 Editorial Steps (No Boxy Cards) -->
             <div class="lg:col-span-7 space-y-6">
               <div class="editorial-rule-row flex gap-6 items-start">
-                <span class="text-3xl font-black text-violet-600 dark:text-violet-400 font-heading shrink-0">01</span>
+                <span class="text-3xl font-black text-amber-500 dark:text-amber-400 font-heading shrink-0">01</span>
                 <div>
-                  <h4 class="text-lg font-bold text-[#1A0B2E] dark:text-white mb-1">Instant Connection</h4>
-                  <p class="text-sm text-purple-900 dark:text-purple-200">Dial from any standard landline or mobile. Calls connect directly to our city control desk in under 15 seconds.</p>
+                  <h4 class="text-lg font-bold text-[#0F172A] dark:text-white mb-1">Instant Connection</h4>
+                  <p class="text-sm text-slate-900 dark:text-slate-200">Dial from any standard landline or mobile. Calls connect directly to our city control desk in under 15 seconds.</p>
                 </div>
               </div>
 
               <div class="editorial-rule-row flex gap-6 items-start">
-                <span class="text-3xl font-black text-violet-600 dark:text-violet-400 font-heading shrink-0">02</span>
+                <span class="text-3xl font-black text-amber-500 dark:text-amber-400 font-heading shrink-0">02</span>
                 <div>
-                  <h4 class="text-lg font-bold text-[#1A0B2E] dark:text-white mb-1">State Landmark or Metro Exit</h4>
-                  <p class="text-sm text-purple-900 dark:text-purple-200">Tell the operator your current location, hospital entrance, or apartment gate. The operator locates the closest auto.</p>
+                  <h4 class="text-lg font-bold text-[#0F172A] dark:text-white mb-1">State Landmark or Metro Exit</h4>
+                  <p class="text-sm text-slate-900 dark:text-slate-200">Tell the operator your current location, hospital entrance, or apartment gate. The operator locates the closest auto.</p>
                 </div>
               </div>
 
               <div class="editorial-rule-row flex gap-6 items-start">
-                <span class="text-3xl font-black text-violet-600 dark:text-violet-400 font-heading shrink-0">03</span>
+                <span class="text-3xl font-black text-amber-500 dark:text-amber-400 font-heading shrink-0">03</span>
                 <div>
-                  <h4 class="text-lg font-bold text-[#1A0B2E] dark:text-white mb-1">Standard SMS Confirmation</h4>
-                  <p class="text-sm text-purple-900 dark:text-purple-200">Receive driver name, phone number, vehicle plate, and arrival time via basic SMS. No internet access required.</p>
+                  <h4 class="text-lg font-bold text-[#0F172A] dark:text-white mb-1">Standard SMS Confirmation</h4>
+                  <p class="text-sm text-slate-900 dark:text-slate-200">Receive driver name, phone number, vehicle plate, and arrival time via basic SMS. No internet access required.</p>
                 </div>
               </div>
             </div>
@@ -1229,45 +795,45 @@
 
           <!-- Left: Mobile App Feature Spotlight -->
           <div id="channel-app" class="lg:col-span-6 space-y-6">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-slate-900 text-amber-800 dark:text-amber-300">
               Channel Focus: Native Mobile Experience
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white tracking-tight">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
               AutoPulse Rider App for iOS &amp; Android
             </h2>
-            <p class="text-base text-purple-900 dark:text-purple-200 leading-relaxed">
+            <p class="text-base text-slate-900 dark:text-slate-200 leading-relaxed">
               Designed for everyday office commuters and frequent riders. Enjoy 1-tap booking, turn-by-turn vehicle tracking, scheduled rides up to 7 days ahead, and emergency contact sharing.
             </p>
 
             <div class="space-y-4 pt-2">
-              <div class="flex items-center gap-3 text-sm text-[#1A0B2E] dark:text-purple-200 font-semibold">
-                <div class="w-6 h-6 rounded-full bg-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">✓</div>
+              <div class="flex items-center gap-3 text-sm text-[#0F172A] dark:text-slate-200 font-semibold">
+                <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 flex items-center justify-center shrink-0">&#10003;</div>
                 <span>Live radar map displaying exact auto positions and RTO meters</span>
               </div>
-              <div class="flex items-center gap-3 text-sm text-[#1A0B2E] dark:text-purple-200 font-semibold">
-                <div class="w-6 h-6 rounded-full bg-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">✓</div>
+              <div class="flex items-center gap-3 text-sm text-[#0F172A] dark:text-slate-200 font-semibold">
+                <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 flex items-center justify-center shrink-0">&#10003;</div>
                 <span>Auto-debit wallet or seamless UPI pay at end of ride</span>
               </div>
-              <div class="flex items-center gap-3 text-sm text-[#1A0B2E] dark:text-purple-200 font-semibold">
-                <div class="w-6 h-6 rounded-full bg-violet-500/20 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">✓</div>
+              <div class="flex items-center gap-3 text-sm text-[#0F172A] dark:text-slate-200 font-semibold">
+                <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 flex items-center justify-center shrink-0">&#10003;</div>
                 <span>Instant police background badge inspection for female commuter safety</span>
               </div>
             </div>
 
             <div class="flex flex-wrap items-center gap-4 pt-4">
-              <a href="#" class="px-5 py-3 rounded-2xl bg-[#0C0517] dark:bg-[#180D2D] text-white flex items-center gap-3 border border-[#341A59] hover:border-violet-500 transition-colors"
+              <a href="#" class="px-5 py-3 rounded-2xl bg-[#0B0F17] dark:bg-[#1E293B] text-white flex items-center gap-3 border border-[#334155] hover:border-amber-500 transition-colors"
                 onclick="event.preventDefault(); window.AutoPulse.showToast('Redirecting to Apple App Store...');">
-                <span class="text-2xl font-bold"></span>
+                <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.38c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.98.6-2.61 1.34-.56.64-.99 1.69-.86 2.71 1 .08 2.02-.51 2.55-1.2z"/></svg>
                 <div class="text-left">
-                  <span class="text-[10px] text-purple-300 block leading-none">Download on</span>
+                  <span class="text-[10px] text-slate-300 block leading-none">Download on</span>
                   <span class="text-xs font-bold leading-tight">Apple App Store</span>
                 </div>
               </a>
-              <a href="#" class="px-5 py-3 rounded-2xl bg-[#0C0517] dark:bg-[#180D2D] text-white flex items-center gap-3 border border-[#341A59] hover:border-violet-500 transition-colors"
+              <a href="#" class="px-5 py-3 rounded-2xl bg-[#0B0F17] dark:bg-[#1E293B] text-white flex items-center gap-3 border border-[#334155] hover:border-amber-500 transition-colors"
                 onclick="event.preventDefault(); window.AutoPulse.showToast('Redirecting to Google Play Store...');">
-                <span class="text-2xl">▶</span>
+                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14.5 8.5c.67.4.67 1.37 0 1.77L4.6 21.3c-.66.49-1.6.02-1.6-.8z"/></svg>
                 <div class="text-left">
-                  <span class="text-[10px] text-purple-300 block leading-none">Get it on</span>
+                  <span class="text-[10px] text-slate-300 block leading-none">Get it on</span>
                   <span class="text-xs font-bold leading-tight">Google Play</span>
                 </div>
               </a>
@@ -1276,13 +842,13 @@
 
           <!-- Right: Instant Web Fast-Hail Console (Clean Editorial Form) -->
           <div id="channel-web" class="lg:col-span-6 space-y-6">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-slate-900 text-amber-800 dark:text-amber-300">
               Channel Focus: Instant Browser Dispatch
             </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white tracking-tight">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
               Hail Directly in Your Browser
             </h2>
-            <p class="text-base text-purple-900 dark:text-purple-200/85 leading-relaxed">
+            <p class="text-base text-slate-900 dark:text-slate-200/85 leading-relaxed">
               Booking from your office desktop or tablet? Dispatch nearest metered rickshaw immediately without installing anything.
             </p>
 
@@ -1290,27 +856,27 @@
               onsubmit="event.preventDefault(); window.AutoPulse.showToast('Browser dispatch confirmed! Driver dispatched to pickup point.'); this.reset();">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 dark:text-purple-300 mb-1.5">Pickup Point</label>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-300 mb-1.5">Pickup Point</label>
                   <input type="text" required placeholder="e.g. Indiranagar Metro Gate 1"
-                    class="w-full px-4 py-3 rounded-xl bg-purple-50/50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-sm text-[#1A0B2E] dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500">
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50/50 dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] text-sm text-[#0F172A] dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
                 </div>
                 <div>
-                  <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 dark:text-purple-300 mb-1.5">Drop Destination</label>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-300 mb-1.5">Drop Destination</label>
                   <input type="text" required placeholder="e.g. Embassy GolfLinks Gate 2"
-                    class="w-full px-4 py-3 rounded-xl bg-purple-50/50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-sm text-[#1A0B2E] dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500">
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50/50 dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] text-sm text-[#0F172A] dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 dark:text-purple-300 mb-1.5">Mobile Number</label>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-300 mb-1.5">Mobile Number</label>
                   <input type="tel" required pattern="[0-9]{10}" placeholder="98765 43210"
-                    class="w-full px-4 py-3 rounded-xl bg-purple-50/50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-sm text-[#1A0B2E] dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500">
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50/50 dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] text-sm text-[#0F172A] dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
                 </div>
                 <div>
-                  <label class="block text-xs font-bold uppercase tracking-wider text-purple-900 dark:text-purple-300 mb-1.5">Vehicle Fleet Preference</label>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-slate-300 mb-1.5">Vehicle Fleet Preference</label>
                   <select
-                    class="w-full px-4 py-3 rounded-xl bg-purple-50/50 dark:bg-[#180D2D] border border-purple-200 dark:border-[#341A59] text-sm text-[#1A0B2E] dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500">
+                    class="w-full px-4 py-3 rounded-xl bg-slate-50/50 dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] text-sm text-[#0F172A] dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
                     <option value="electric">Green E-Rickshaw (Eco Tariff)</option>
                     <option value="cng">Standard CNG Auto (City Classic)</option>
                     <option value="prime">Prime Comfort (4.9 Rated Captain)</option>
@@ -1318,7 +884,7 @@
                 </div>
               </div>
 
-              <button type="submit" class="w-full btn-primary py-3.5 text-sm font-bold shadow-lg shadow-violet-500/25 mt-2">
+              <button type="submit" class="w-full btn-primary py-3.5 text-sm font-bold shadow-lg shadow-amber-500/25 mt-2">
                 Dispatch Metered Auto Now &rarr;
               </button>
             </form>
@@ -1332,46 +898,46 @@
     <!-- ----------------------------------------------------
          SECTION 4: PAYMENT SPECTRUM (Non-Card Horizontal Strip)
     ----------------------------------------------------- -->
-    <section class="py-16 bg-[#FAF8FF] dark:bg-[#130924] border-y border-purple-200/80 dark:border-[#341A59]">
+    <section class="py-16 bg-[#F8FAFC] dark:bg-[#0F172A] border-y border-slate-200/80 dark:border-[#334155]">
       <div class="container-custom">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-12">
           <div>
-            <span class="text-xs uppercase font-extrabold tracking-widest text-violet-600 dark:text-violet-400 block mb-1">
+            <span class="text-xs uppercase font-extrabold tracking-widest text-amber-500 dark:text-amber-400 block mb-1">
               Frictionless Settlement
             </span>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#1A0B2E] dark:text-white">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] dark:text-white">
               Every Payment Mode Supported
             </h3>
           </div>
-          <p class="text-sm text-purple-900 dark:text-purple-200 max-w-md">
+          <p class="text-sm text-slate-900 dark:text-slate-200 max-w-md">
             Never worry about carrying exact change. All AutoPulse vehicles are equipped with universal payment gateways.
           </p>
         </div>
 
         <!-- 4 Wide Linear Columns with Minimalist Icons & Clean Dividers -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="space-y-2 border-l-2 border-violet-500/30 pl-4">
-            <span class="text-xs font-extrabold text-violet-600 dark:text-violet-400 uppercase tracking-wide block">01 • UPI Dashboard QR</span>
-            <h4 class="text-base font-bold text-[#1A0B2E] dark:text-white">Any Bank or App</h4>
-            <p class="text-xs text-purple-800 dark:text-purple-300">Scan personalized pilot QR with Google Pay, PhonePe, Paytm, or BHIM.</p>
+          <div class="space-y-2 border-l-2 border-amber-500/30 pl-4">
+            <span class="text-xs font-extrabold text-amber-500 dark:text-amber-400 uppercase tracking-wide block">01 &bull; UPI Dashboard QR</span>
+            <h4 class="text-base font-bold text-[#0F172A] dark:text-white">Any Bank or App</h4>
+            <p class="text-xs text-slate-800 dark:text-slate-300">Scan personalized pilot QR with Google Pay, PhonePe, Paytm, or BHIM.</p>
           </div>
 
-          <div class="space-y-2 border-l-2 border-violet-500/30 pl-4">
-            <span class="text-xs font-extrabold text-violet-600 dark:text-violet-400 uppercase tracking-wide block">02 • Transit Smart Card</span>
-            <h4 class="text-base font-bold text-[#1A0B2E] dark:text-white">Tap &amp; Go RFID</h4>
-            <p class="text-xs text-purple-800 dark:text-purple-300">Tap city metro card or AutoPulse commute pass on the dashboard NFC reader.</p>
+          <div class="space-y-2 border-l-2 border-amber-500/30 pl-4">
+            <span class="text-xs font-extrabold text-amber-500 dark:text-amber-400 uppercase tracking-wide block">02 &bull; Transit Smart Card</span>
+            <h4 class="text-base font-bold text-[#0F172A] dark:text-white">Tap &amp; Go RFID</h4>
+            <p class="text-xs text-slate-800 dark:text-slate-300">Tap city metro card or AutoPulse commute pass on the dashboard NFC reader.</p>
           </div>
 
-          <div class="space-y-2 border-l-2 border-violet-500/30 pl-4">
-            <span class="text-xs font-extrabold text-violet-600 dark:text-violet-400 uppercase tracking-wide block">03 • Exact Meter Cash</span>
-            <h4 class="text-base font-bold text-[#1A0B2E] dark:text-white">Always Welcomed</h4>
-            <p class="text-xs text-purple-800 dark:text-purple-300">Drivers maintain small denomination change pouches for prompt change.</p>
+          <div class="space-y-2 border-l-2 border-amber-500/30 pl-4">
+            <span class="text-xs font-extrabold text-amber-500 dark:text-amber-400 uppercase tracking-wide block">03 &bull; Exact Meter Cash</span>
+            <h4 class="text-base font-bold text-[#0F172A] dark:text-white">Always Welcomed</h4>
+            <p class="text-xs text-slate-800 dark:text-slate-300">Drivers maintain small denomination change pouches for prompt change.</p>
           </div>
 
-          <div class="space-y-2 border-l-2 border-violet-500/30 pl-4">
-            <span class="text-xs font-extrabold text-violet-600 dark:text-violet-400 uppercase tracking-wide block">04 • Corporate Invoicing</span>
-            <h4 class="text-base font-bold text-[#1A0B2E] dark:text-white">Centralized Billing</h4>
-            <p class="text-xs text-purple-800 dark:text-purple-300">Employees quote their corporate code with monthly consolidated GST invoices.</p>
+          <div class="space-y-2 border-l-2 border-amber-500/30 pl-4">
+            <span class="text-xs font-extrabold text-amber-500 dark:text-amber-400 uppercase tracking-wide block">04 &bull; Corporate Invoicing</span>
+            <h4 class="text-base font-bold text-[#0F172A] dark:text-white">Centralized Billing</h4>
+            <p class="text-xs text-slate-800 dark:text-slate-300">Employees quote their corporate code with monthly consolidated GST invoices.</p>
           </div>
         </div>
       </div>
@@ -1381,35 +947,35 @@
          SECTION 5: PASSENGER RIGHTS & TARIFF POLICIES (Editorial Rules Table)
          Clean Minimalist Table with Visual Badges (Replaces Boxy Cards)
     ----------------------------------------------------- -->
-    <section class="py-20 lg:py-28 bg-white dark:bg-[#0C0517]">
+    <section class="py-20 lg:py-28 bg-white dark:bg-[#0B0F17]">
       <div class="container-custom">
         <div class="max-w-3xl mb-12">
-          <span class="text-xs uppercase font-extrabold tracking-widest text-violet-600 dark:text-violet-400 block mb-2">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-500 dark:text-amber-400 block mb-2">
             Transparent Charter
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1A0B2E] dark:text-white tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F172A] dark:text-white tracking-tight">
             Clear Booking Rules &amp; Passenger Protections
           </h2>
-          <p class="text-purple-900 dark:text-purple-200 text-sm sm:text-base mt-2">
+          <p class="text-slate-900 dark:text-slate-200 text-sm sm:text-base mt-2">
             No asterisks or hidden surge fees. We operate strictly under government gazette rules.
           </p>
         </div>
 
         <!-- Clean Editorial Rules Rows with Alternating Highlights -->
-        <div class="divide-y divide-purple-200/70 dark:divide-[#341A59] border-t border-b border-purple-200/70 dark:border-[#341A59]">
+        <div class="divide-y divide-slate-200/70 dark:divide-[#334155] border-t border-b border-slate-200/70 dark:border-[#334155]">
 
           <div class="py-6 grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
             <div class="md:col-span-3">
-              <span class="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400 block">Pickup Grace Period</span>
-              <h4 class="text-lg font-bold text-[#1A0B2E] dark:text-white">5 Minutes Free Waiting</h4>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-500 dark:text-amber-400 block">Pickup Grace Period</span>
+              <h4 class="text-lg font-bold text-[#0F172A] dark:text-white">5 Minutes Free Waiting</h4>
             </div>
             <div class="md:col-span-7">
-              <p class="text-sm text-purple-900 dark:text-purple-200">
-                The first 5 minutes of driver waiting time at your pickup station are completely complimentary. Beyond 5 minutes, standard government waiting charges of ₹1.50/minute apply transparently.
+              <p class="text-sm text-slate-900 dark:text-slate-200">
+                The first 5 minutes of driver waiting time at your pickup station are completely complimentary. Beyond 5 minutes, standard government waiting charges of &#8377;1.50/minute apply transparently.
               </p>
             </div>
             <div class="md:col-span-2 md:text-right">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-slate-900 text-amber-800 dark:text-amber-300">
                 100% Free Grace
               </span>
             </div>
@@ -1417,16 +983,16 @@
 
           <div class="py-6 grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
             <div class="md:col-span-3">
-              <span class="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400 block">Cancellation Policy</span>
-              <h4 class="text-lg font-bold text-[#1A0B2E] dark:text-white">Zero Penalty Cancellation</h4>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-500 dark:text-amber-400 block">Cancellation Policy</span>
+              <h4 class="text-lg font-bold text-[#0F172A] dark:text-white">Zero Penalty Cancellation</h4>
             </div>
             <div class="md:col-span-7">
-              <p class="text-sm text-purple-900 dark:text-purple-200">
-                Cancel within 3 minutes of booking with zero penalty. If your auto is delayed beyond 5 minutes past quoted ETA, cancellation is 100% free with an immediate ₹25 transit credit added to your account.
+              <p class="text-sm text-slate-900 dark:text-slate-200">
+                Cancel within 3 minutes of booking with zero penalty. If your auto is delayed beyond 5 minutes past quoted ETA, cancellation is 100% free with an immediate &#8377;25 transit credit added to your account.
               </p>
             </div>
             <div class="md:col-span-2 md:text-right">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-slate-900 text-amber-800 dark:text-amber-300">
                 Fair Commute SLA
               </span>
             </div>
@@ -1434,16 +1000,16 @@
 
           <div class="py-6 grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
             <div class="md:col-span-3">
-              <span class="text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-400 block">Luggage &amp; Domestic Pets</span>
-              <h4 class="text-lg font-bold text-[#1A0B2E] dark:text-white">Free Bags &amp; Pet Carriers</h4>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-500 dark:text-amber-400 block">Luggage &amp; Domestic Pets</span>
+              <h4 class="text-lg font-bold text-[#0F172A] dark:text-white">Free Bags &amp; Pet Carriers</h4>
             </div>
             <div class="md:col-span-7">
-              <p class="text-sm text-purple-900 dark:text-purple-200">
+              <p class="text-sm text-slate-900 dark:text-slate-200">
                 Up to 2 standard travel suitcases or shopping cartons under 15kg ride free. Small domestic pets in clean travel carriers are warmly welcomed at zero extra surcharge.
               </p>
             </div>
             <div class="md:col-span-2 md:text-right">
-              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-violet-100 dark:bg-violet-950 text-violet-800 dark:text-violet-300">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-slate-900 text-amber-800 dark:text-amber-300">
                 Pet &amp; Bag Friendly
               </span>
             </div>
@@ -1456,23 +1022,23 @@
     <!-- ----------------------------------------------------
          SECTION 6: DISPATCH CONTROL DESK DIRECT CTA (Editorial Banner)
     ----------------------------------------------------- -->
-    <section class="py-16 lg:py-24 bg-gradient-to-r from-violet-950 via-[#180D2D] to-purple-950 text-white relative overflow-hidden">
+    <section class="py-16 lg:py-24 bg-gradient-to-r from-slate-900 via-[#1E293B] to-slate-950 text-white relative overflow-hidden">
       <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-6">
-          <span class="px-3.5 py-1 rounded-full bg-violet-500/20 text-violet-300 border border-violet-500/40 text-xs font-bold uppercase tracking-wider inline-block">
+          <span class="px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold uppercase tracking-wider inline-block">
             24/7 Human Dispatch Assistance
           </span>
           <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
             Need An Auto Right Now? Speak to a Supervisor.
           </h2>
-          <p class="text-base text-purple-200/90 max-w-2xl mx-auto">
+          <p class="text-base text-slate-200/90 max-w-2xl mx-auto">
             Our centralized city dispatch supervisors coordinate emergency rides, railway station pickups, lost &amp; found recoveries, and airport feeders with immediate priority.
           </p>
           <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-            <a href="tel:18004192886" class="btn-primary text-sm py-3.5 px-8 font-bold shadow-xl shadow-violet-500/30">
+            <a href="tel:18004192886" class="btn-primary text-sm py-3.5 px-8 font-bold shadow-xl shadow-amber-500/30">
               <span>Call Toll-Free 1800-419-AUTO</span>
             </a>
-            <a href="fare-calculator.html" class="btn-secondary text-white border-purple-400/40 hover:border-violet-300 text-sm py-3.5 px-8 font-bold">
+            <a href="fare-calculator.html" class="px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/25 hover:border-amber-300 font-bold text-sm transition-all shadow-md">
               <span>Live Fare Calculator &rarr;</span>
             </a>
           </div>
@@ -1483,34 +1049,34 @@
   </main>
 
   <!-- ==================== CONSISTENT GLOBAL FOOTER ==================== -->
-  <footer class="bg-[#0C0517] text-white text-sm pt-16 pb-12 border-t border-[#341A59]">
+  <footer class="bg-[#0B0F17] text-white text-sm pt-16 pb-12 border-t border-[#334155]">
     <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#341A59]">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#334155]">
 
         <!-- Brand Summary with matching logo icon -->
         <div class="lg:col-span-2 space-y-4">
-          <a href="index.html" class="flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-3 group">
             <div
-              class="w-9 h-9 rounded-xl bg-gradient-to-tr from-violet-600 to-purple-500 flex items-center justify-center text-white font-bold shadow-md shadow-violet-500/25">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 font-bold shadow-md shadow-amber-500/25 group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6 text-slate-950" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
               </svg>
             </div>
             <div class="flex flex-col leading-none">
               <span class="font-heading font-extrabold text-2xl text-white leading-none">Auto<span
-                  class="text-violet-400">Pulse</span></span>
-              <span class="text-[10px] font-semibold uppercase tracking-wider text-purple-400/80">Urban Transit
+                  class="text-amber-500">Pulse</span></span>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Urban Transit
                 Network</span>
             </div>
           </a>
-          <p class="text-xs sm:text-sm text-purple-200 max-w-sm leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-200 max-w-sm leading-relaxed">
             The premier platform for metered auto rickshaw hailing, zero-emission e-rickshaws, and city cruiser bicycle
             rentals across 32 transit hubs.
           </p>
-          <div class="flex items-center gap-3 text-xs text-violet-300 font-semibold">
+          <div class="flex items-center gap-3 text-xs text-amber-300 font-semibold">
             <span class="flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-violet-400"></span> 24/7 Helpline: 1800-419-AUTO
+              <span class="w-2 h-2 rounded-full bg-amber-400/20"></span> 24/7 Helpline: 1800-419-AUTO
             </span>
           </div>
         </div>
@@ -1519,16 +1085,16 @@
         <div>
           <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Navigation</h4>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="index.html" class="text-purple-200 hover:text-white transition-colors font-medium">Home 1:
+            <li><a href="index.html" class="text-slate-200 hover:text-white transition-colors font-medium">Home 1:
                 Feeder &amp; City</a></li>
-            <li><a href="home-2.html" class="text-purple-200 hover:text-white transition-colors font-medium">Home 2:
+            <li><a href="home-2.html" class="text-slate-200 hover:text-white transition-colors font-medium">Home 2:
                 Express Night</a></li>
-            <li><a href="booking.html" class="text-violet-300 font-bold hover:underline transition-colors">Book a Ride
+            <li><a href="booking.html" class="text-amber-300 font-bold hover:underline transition-colors">Book a Ride
                 Now</a></li>
-            <li><a href="how-to-book.html" class="text-purple-200 hover:text-white transition-colors font-medium">How
+            <li><a href="how-to-book.html" class="text-slate-200 hover:text-white transition-colors font-medium">How
                 to Book (Phone/App)</a></li>
             <li><a href="fare-calculator.html"
-                class="text-purple-200 hover:text-white transition-colors font-medium">Fare &amp; Meter
+                class="text-slate-200 hover:text-white transition-colors font-medium">Fare &amp; Meter
                 Calculator</a></li>
           </ul>
         </div>
@@ -1537,18 +1103,18 @@
         <div>
           <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Ride Services</h4>
           <ul class="space-y-2.5 text-xs">
-            <li><a href="booking.html" class="text-purple-200 hover:text-white transition-colors font-medium">City
+            <li><a href="booking.html" class="text-slate-200 hover:text-white transition-colors font-medium">City
                 Cruiser Bike Rental</a></li>
-            <li><a href="booking.html" class="text-purple-200 hover:text-white transition-colors font-medium">Urban
+            <li><a href="booking.html" class="text-slate-200 hover:text-white transition-colors font-medium">Urban
                 E-Bike Hire</a></li>
             <li><a href="corporate.html"
-                class="text-purple-200 hover:text-white transition-colors font-medium">Corporate Commute Shuttles</a>
+                class="text-slate-200 hover:text-white transition-colors font-medium">Corporate Commute Shuttles</a>
             </li>
             <li><a href="safety.html"
-                class="text-purple-200 hover:text-white transition-colors font-medium">Police-Verified Drivers</a>
+                class="text-slate-200 hover:text-white transition-colors font-medium">Police-Verified Drivers</a>
             </li>
             <li><a href="contact.html#driver"
-                class="text-purple-200 hover:text-white transition-colors font-medium">Join as Driver Partner</a>
+                class="text-slate-200 hover:text-white transition-colors font-medium">Join as Driver Partner</a>
             </li>
           </ul>
         </div>
@@ -1556,17 +1122,17 @@
         <!-- Compliance & Trust -->
         <div>
           <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Regulatory Standards</h4>
-          <ul class="space-y-2.5 text-xs text-purple-200">
-            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> 100% RTO Gazette Meters</li>
-            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> Instant Deposit Refund</li>
-            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> CE Certified Helmets</li>
-            <li class="flex items-center gap-2"><span class="text-violet-400 font-bold">✓</span> 24/7 Mobile Roadside Rescue</li>
+          <ul class="space-y-2.5 text-xs text-slate-200">
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> 100% RTO Gazette Meters</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> Instant Deposit Refund</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> CE Certified Helmets</li>
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> 24/7 Mobile Roadside Rescue</li>
           </ul>
         </div>
 
       </div>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-purple-300">
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
         <p>&copy; 2026 AutoPulse Mobility Technologies Pvt. Ltd. All rights reserved.</p>
         <div class="flex items-center gap-6">
           <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>

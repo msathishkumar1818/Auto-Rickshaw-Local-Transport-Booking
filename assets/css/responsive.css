@@ -86,6 +86,12 @@ canvas {
     gap: 0.35rem !important;
   }
 
+  .site-header .header-actions .btn-login {
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.8rem !important;
+    gap: 0.25rem !important;
+  }
+
   .site-header .header-actions .util-btn {
     width: 2.1rem !important;
     height: 2.1rem !important;
@@ -224,6 +230,24 @@ canvas {
     width: 100%;
   }
 
+  /* 360px Mobile CTA Stacking */
+  .hero-cta-group,
+  .cta-btn-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-secondary,
+  .hero-cta-group .btn-eco {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
   .digital-meter-display {
     padding: 0.85rem !important;
   }
@@ -346,21 +370,21 @@ html.dark .mobile-nav-link {
 }
 
 html.dark .mobile-nav-link:hover {
-  background-color: #180D2D;
-  color: #C084FC;
+  background-color: #1E293B;
+  color: #F59E0B;
 }
 
 .mobile-nav-link.active {
-  background-color: rgba(124, 58, 237, 0.08);
+  background-color: rgba(245, 158, 11, 0.1);
   color: var(--color-primary) !important;
   font-weight: 700;
-  border-color: rgba(124, 58, 237, 0.2);
+  border-color: rgba(245, 158, 11, 0.25);
 }
 
 html.dark .mobile-nav-link.active {
-  background-color: rgba(192, 132, 252, 0.12);
-  color: #C084FC !important;
-  border-color: rgba(192, 132, 252, 0.25);
+  background-color: rgba(245, 158, 11, 0.18);
+  color: #FBBF24 !important;
+  border-color: rgba(245, 158, 11, 0.35);
 }
 
 .toggle-icon {
@@ -415,7 +439,7 @@ html.dark .mobile-nav-link.active {
 }
 
 html.dark .mobile-subnav-link {
-  color: #D8B4FE;
+  color: #CBD5E1;
 }
 
 .mobile-subnav-link:hover {
@@ -425,20 +449,20 @@ html.dark .mobile-subnav-link {
 
 html.dark .mobile-subnav-link:hover {
   color: #FFFFFF;
-  background-color: #180D2D;
+  background-color: #1E293B;
 }
 
 .mobile-subnav-link.active {
   color: var(--color-primary) !important;
   font-weight: 700;
-  background-color: rgba(124, 58, 237, 0.08);
-  border-color: rgba(124, 58, 237, 0.15);
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.2);
 }
 
 html.dark .mobile-subnav-link.active {
-  color: #C084FC !important;
-  background-color: rgba(192, 132, 252, 0.12);
-  border-color: rgba(192, 132, 252, 0.2);
+  color: #FBBF24 !important;
+  background-color: rgba(245, 158, 11, 0.18);
+  border-color: rgba(245, 158, 11, 0.3);
 }
 
 /* ==========================================================================
