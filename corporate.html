@@ -12,7 +12,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg?v=2">
   <link rel="apple-touch-icon" href="assets/images/icons/favicon.svg?v=2">
 
-    <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -546,20 +546,17 @@
             </p>
 
             <div class="space-y-3.5 pt-2 border-t border-slate-200 dark:border-[#334155]">
-              <div
-                class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-200">
+              <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-200">
                 <span
                   class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 flex items-center justify-center font-bold text-xs">&#10003;</span>
                 <span>Department-level cost tagging (Engineering, Sales, Operations, Late Roster)</span>
               </div>
-              <div
-                class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-200">
+              <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-200">
                 <span
                   class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 flex items-center justify-center font-bold text-xs">&#10003;</span>
                 <span>Automated geofencing parameters preventing unauthorized off-route usage</span>
               </div>
-              <div
-                class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-200">
+              <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-200">
                 <span
                   class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-500 dark:text-amber-400 flex items-center justify-center font-bold text-xs">&#10003;</span>
                 <span>Direct API synchronization with SAP, Oracle NetSuite, and Workday Expense</span>
@@ -584,14 +581,11 @@
                   <button type="button"
                     class="erp-dept-btn px-2.5 py-1 rounded bg-amber-500 text-slate-950 font-bold font-bold text-[10px]"
                     data-dept="all">All</button>
-                  <button type="button"
-                    class="erp-dept-btn px-2.5 py-1 rounded bg-[#0F172A] text-slate-300 text-[10px]"
+                  <button type="button" class="erp-dept-btn px-2.5 py-1 rounded bg-[#0F172A] text-slate-300 text-[10px]"
                     data-dept="engineering">Eng</button>
-                  <button type="button"
-                    class="erp-dept-btn px-2.5 py-1 rounded bg-[#0F172A] text-slate-300 text-[10px]"
+                  <button type="button" class="erp-dept-btn px-2.5 py-1 rounded bg-[#0F172A] text-slate-300 text-[10px]"
                     data-dept="operations">Ops</button>
-                  <button type="button"
-                    class="erp-dept-btn px-2.5 py-1 rounded bg-[#0F172A] text-slate-300 text-[10px]"
+                  <button type="button" class="erp-dept-btn px-2.5 py-1 rounded bg-[#0F172A] text-slate-300 text-[10px]"
                     data-dept="night">Night</button>
                 </div>
               </div>
@@ -600,7 +594,8 @@
               <div class="space-y-2 text-slate-200 text-xs">
                 <div class="flex justify-between"><span>Cost Center:</span> <strong id="erp-dept-name"
                     class="text-white font-sans font-bold">All Corporate Departments (Consolidated)</strong></div>
-                <div class="flex justify-between"><span>Billing Period:</span> <span>01 Aug &ndash; 31 Aug 2026</span></div>
+                <div class="flex justify-between"><span>Billing Period:</span> <span>01 Aug &ndash; 31 Aug 2026</span>
+                </div>
                 <div class="flex justify-between"><span>Authorized Trips:</span> <span id="erp-rides-count">3,420
                     Completed</span></div>
                 <div class="flex justify-between"><span>On-Time Arrival SLA:</span> <span id="erp-ontime-rate"
@@ -614,7 +609,8 @@
               <!-- Financial Net Result -->
               <div class="pt-3 border-t border-[#334155] flex justify-between items-center text-xs">
                 <span class="text-amber-400 font-bold">Net Savings vs Cab Fleet:</span>
-                <span id="erp-savings-total" class="text-emerald-400 font-extrabold text-sm">&#8377;2,18,000 (43.4%)</span>
+                <span id="erp-savings-total" class="text-emerald-400 font-extrabold text-sm">&#8377;2,18,000
+                  (43.4%)</span>
               </div>
 
             </div>
@@ -689,24 +685,21 @@
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-center text-xs font-bold">
-            <div
-              class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
               <span id="mod-stat-1"
                 class="text-lg font-extrabold text-amber-500 dark:text-amber-400 font-heading block">Every 3
                 Mins</span>
               <span class="text-[10px] text-slate-700 dark:text-slate-300 uppercase font-semibold">Peak
                 Frequency</span>
             </div>
-            <div
-              class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
               <span id="mod-stat-2"
                 class="text-lg font-extrabold text-amber-500 dark:text-amber-400 font-heading block">100% Zero
                 Wait</span>
               <span class="text-[10px] text-slate-700 dark:text-slate-300 uppercase font-semibold">Pre-Staged
                 Fleet</span>
             </div>
-            <div
-              class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
+            <div class="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
               <span id="mod-stat-3"
                 class="text-lg font-extrabold text-amber-500 dark:text-amber-400 font-heading block">Dedicated Campus
                 Bay</span>
@@ -729,69 +722,7 @@
 
 
 
-    <!-- ----------------------------------------------------
-         SECTION 6: CLIENT TRANSFORMATION & EDITORIAL QUOTES (NO CARDS)
-    ----------------------------------------------------- -->
-    <section class="section-py bg-white dark:bg-[#0B0F17]">
-      <div class="container-custom">
-        <div class="max-w-3xl mb-16 space-y-3">
-          <span class="brand-badge">Proven Campus Impact</span>
-          <h2 class="section-heading text-3xl sm:text-5xl font-extrabold text-[#0F172A] dark:text-white leading-tight">
-            How Tech Parks Transformed Mobility
-          </h2>
-          <p class="text-sm sm:text-base text-slate-900 dark:text-slate-200">
-            Real operational results delivered to facilities management teams across the city.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-
-          <!-- Story 1 -->
-          <div
-            class="space-y-4 pb-8 border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-[#334155] lg:pr-12">
-            <div class="flex items-center gap-3">
-              <span
-                class="px-3 py-1 rounded text-xs font-bold bg-amber-100 text-amber-800 dark:bg-slate-900 dark:text-amber-300">
-                46% Cost Reduction
-              </span>
-              <span class="text-xs text-slate-700 dark:text-slate-300 font-semibold">1,800 Employee Tech Campus</span>
-            </div>
-            <blockquote class="text-base sm:text-lg text-[#0F172A] dark:text-white font-medium leading-relaxed italic">
-              "We replaced 24 contracted diesel cabs with a continuous loop of 14 electric auto rickshaws connecting
-              staff to the Transit Line metro station. Commute satisfaction leaped from 61% to 94% within 60 days."
-            </blockquote>
-            <div class="text-xs text-slate-900 dark:text-slate-200">
-              <strong class="text-[#0F172A] dark:text-white block font-bold">VP of Corporate Real Estate &amp;
-                Facilities</strong>
-              <span>Global FinTech Campus &bull; Outer Ring Road</span>
-            </div>
-          </div>
-
-          <!-- Story 2 -->
-          <div class="space-y-4">
-            <div class="flex items-center gap-3">
-              <span
-                class="px-3 py-1 rounded text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
-                100% Safe Drops
-              </span>
-              <span class="text-xs text-slate-700 dark:text-slate-300 font-semibold">450 Night-Shift Staff</span>
-            </div>
-            <blockquote class="text-base sm:text-lg text-[#0F172A] dark:text-white font-medium leading-relaxed italic">
-              "Managing late-night shift safe departures was our biggest HR headache. AutoPulse's live GPS tracking and
-              verified drivers with security check-in at employee doorsteps achieved zero incidents over 18 consecutive
-              months."
-            </blockquote>
-            <div class="text-xs text-slate-900 dark:text-slate-200">
-              <strong class="text-[#0F172A] dark:text-white block font-bold">Head of Human Resources &amp; People
-                Operations</strong>
-              <span>BPO &amp; Analytics Center &bull; Cyber Gateway Hub</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
+    
     <!-- ----------------------------------------------------
          SECTION 7: TRANSPARENT COMMUTE CONTRACT PLANS (THE ONLY CARD SECTION ON THE PAGE)
     ----------------------------------------------------- -->
@@ -846,12 +777,15 @@
                   class="text-xs text-slate-600 dark:text-slate-400 font-normal">/ rider / trip</span></div>
               <ul class="text-xs space-y-2.5 text-slate-900 dark:text-slate-200">
                 <li class="flex items-center gap-2"><span
-                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Up to 12 dedicated electric autos
+                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Up to 12 dedicated electric
+                  autos
                 </li>
                 <li class="flex items-center gap-2"><span
-                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> 99.8% On-time SLA guarantee</li>
+                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> 99.8% On-time SLA guarantee
+                </li>
                 <li class="flex items-center gap-2"><span
-                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Automated cost center tagging</li>
+                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Automated cost center tagging
+                </li>
                 <li class="flex items-center gap-2"><span
                     class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Dedicated account manager</li>
               </ul>
@@ -872,14 +806,18 @@
                   class="text-xs text-slate-600 dark:text-slate-400 font-normal">contract tariff</span></div>
               <ul class="text-xs space-y-2.5 text-slate-900 dark:text-slate-200">
                 <li class="flex items-center gap-2"><span
-                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Unlimited custom electric fleet</li>
-                <li class="flex items-center gap-2"><span
-                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Co-branded on-campus auto bays</li>
-                <li class="flex items-center gap-2"><span
-                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> API ERP integration (SAP/Workday)
+                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Unlimited custom electric fleet
                 </li>
                 <li class="flex items-center gap-2"><span
-                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> On-site transport supervisor</li>
+                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> Co-branded on-campus auto bays
+                </li>
+                <li class="flex items-center gap-2"><span
+                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> API ERP integration
+                  (SAP/Workday)
+                </li>
+                <li class="flex items-center gap-2"><span
+                    class="text-amber-500 dark:text-amber-400 font-bold">&#10003;</span> On-site transport supervisor
+                </li>
               </ul>
             </div>
             <a href="#rfp-form" class="btn-secondary text-xs w-full text-center mt-6">Talk to Enterprise Team &rarr;</a>
@@ -893,7 +831,8 @@
     ----------------------------------------------------- -->
     <section id="rfp-form" class="section-py bg-slate-100 dark:bg-[#0B0F17] text-[#0F172A] dark:text-white relative">
       <div class="container-custom max-w-4xl">
-        <div class="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] shadow-xl">
+        <div
+          class="p-8 sm:p-12 rounded-3xl bg-white dark:bg-[#1E293B] border border-slate-200 dark:border-[#334155] shadow-xl">
           <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
             <span class="brand-badge mb-2">Enterprise Consultation</span>
             <h3 class="text-2xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-white">
@@ -909,12 +848,14 @@
             onsubmit="event.preventDefault(); window.AutoPulse.showToast('RFP Request received! An Enterprise Account Director will contact you within 2 hours.'); this.reset();">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Company / Campus Name</label>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Company /
+                  Campus Name</label>
                 <input type="text" required placeholder="e.g. Infosys, Wipro, Microsoft"
                   class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-slate-300 dark:border-[#334155] text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500">
               </div>
               <div>
-                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Work Email</label>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Work
+                  Email</label>
                 <input type="email" required placeholder="name@company.com"
                   class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-slate-300 dark:border-[#334155] text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500">
               </div>
@@ -922,12 +863,14 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Office Location / Tech Park</label>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Office Location
+                  / Tech Park</label>
                 <input type="text" required placeholder="e.g. Manyata Embassy Business Park"
                   class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-slate-300 dark:border-[#334155] text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500">
               </div>
               <div>
-                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Estimated Commuting Staff</label>
+                <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Estimated
+                  Commuting Staff</label>
                 <select
                   class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-slate-300 dark:border-[#334155] text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500">
                   <option>10 - 50 Employees</option>
@@ -939,7 +882,8 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Commute Requirements or Shift Timings</label>
+              <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 uppercase mb-1">Commute
+                Requirements or Shift Timings</label>
               <textarea rows="3" placeholder="Describe pickup metro hubs, shift timings, or special requirements..."
                 class="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#0B0F17] border border-slate-300 dark:border-[#334155] text-sm text-slate-900 dark:text-white focus:outline-none focus:border-amber-500"></textarea>
             </div>
@@ -961,7 +905,7 @@
 
         <!-- Brand Summary with matching logo icon -->
         <div class="lg:col-span-2 space-y-4">
-                    <a href="index.html" class="flex items-center gap-3 group">
+          <a href="index.html" class="flex items-center gap-3 group">
             <div
               class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 font-bold shadow-md shadow-amber-500/25 group-hover:scale-105 transition-transform">
               <svg class="w-6 h-6 text-slate-950" fill="currentColor" viewBox="0 0 24 24">
@@ -1015,14 +959,14 @@
                 Cruiser Bike Rental</a></li>
             <li><a href="booking.html" class="text-slate-200 hover:text-white transition-colors font-medium">Urban
                 E-Bike Hire</a></li>
-            <li><a href="corporate.html"
-                class="text-slate-200 hover:text-white transition-colors font-medium">Corporate Commute Shuttles</a>
+            <li><a href="corporate.html" class="text-slate-200 hover:text-white transition-colors font-medium">Corporate
+                Commute Shuttles</a>
             </li>
             <li><a href="safety.html"
                 class="text-slate-200 hover:text-white transition-colors font-medium">Police-Verified Drivers</a>
             </li>
-            <li><a href="contact.html#driver"
-                class="text-slate-200 hover:text-white transition-colors font-medium">Join as Driver Partner</a>
+            <li><a href="contact.html#driver" class="text-slate-200 hover:text-white transition-colors font-medium">Join
+                as Driver Partner</a>
             </li>
           </ul>
         </div>
@@ -1031,13 +975,17 @@
         <div>
           <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4 font-heading">Regulatory Standards</h4>
           <ul class="space-y-2.5 text-xs text-slate-200">
-            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> 100% RTO Gazette Meters
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> 100% RTO Gazette
+              Meters
             </li>
-            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> Instant Deposit Refund
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> Instant Deposit
+              Refund
             </li>
-            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> CE Certified Helmets
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> CE Certified
+              Helmets
             </li>
-            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> 24/7 Mobile Roadside
+            <li class="flex items-center gap-2"><span class="text-amber-400 font-bold">&#10003;</span> 24/7 Mobile
+              Roadside
               Rescue</li>
           </ul>
         </div>

@@ -142,20 +142,23 @@
         </a>
 
         <!-- Desktop Nav -->
+        <!-- Desktop Navigation Links (Strict 1-Line) -->
         <nav class="desktop-nav nav-links-wrap">
+          <!-- Home Dropdown -->
           <div class="nav-item-dropdown">
-            <a href="javascript:void(0)" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">
+            <a href="javascript:void(0)" class="nav-link active" role="button" aria-haspopup="true" aria-expanded="false">
               <span>Home</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7-7-7" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </a>
             <div class="nav-dropdown-menu">
-              <a href="index.html" class="nav-dropdown-link">
-                <span class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></span> Home 1 (Feeder & City)
+              <a href="index.html" class="nav-dropdown-link font-semibold text-amber-600 dark:text-amber-400">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span> Home 1 (Feeder & City)
               </a>
               <a href="home-2.html" class="nav-dropdown-link">
-                <span class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></span> Home 2 (Express Night & Bento)
+                <span class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></span> Home 2 (Express Night &
+                Bento)
               </a>
             </div>
           </div>
@@ -289,10 +292,7 @@
          SECTION 1: HERO &mdash; ASYMMETRIC EDITORIAL SAFETY STATEMENT & LIVE COMMAND BAR
     ----------------------------------------------------- -->
     <section class="relative pt-12 pb-20 sm:pt-16 sm:pb-28 overflow-hidden bg-white dark:bg-[#0B0F17]">
-      <!-- Ambient Glow Orbs -->
-      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"></div>
-      <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-amber-500 blur-3xl pointer-events-none"></div>
-
+      
       <div class="container-custom relative">
         <div class="max-w-4xl mx-auto text-center space-y-6">
           <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-xs font-bold uppercase tracking-wider">
@@ -440,103 +440,7 @@
       </div>
     </section>
 
-    <!-- ----------------------------------------------------
-         SECTION 3: INTERACTIVE 4-LAYER SAFETY SHIELD VISUALIZER (SPLIT SCREEN &mdash; NO CARDS)
-    ----------------------------------------------------- -->
-    <section class="section-py bg-white dark:bg-[#0B0F17]">
-      <div class="container-custom">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-
-          <!-- Left: Layer Selector Tabs & Dynamic Copy -->
-          <div class="lg:col-span-6 space-y-6">
-            <span class="brand-badge">Interactive Multi-Shield</span>
-            <h2 class="section-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] dark:text-white">
-              The 4 Layers of the AutoPulse Shield
-            </h2>
-            <p class="text-sm sm:text-base text-slate-900 dark:text-slate-200 leading-relaxed">
-              Explore how our redundant layers of physical, digital, and regulatory protections interact dynamically to maintain our 99.98% zero-incident benchmark.
-            </p>
-
-            <!-- Tab Buttons -->
-            <div class="grid grid-cols-2 gap-3 pt-2">
-              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-[#F8FAFC] dark:bg-[#1E293B] text-[#0F172A] dark:text-white border border-slate-200 dark:border-[#334155] hover:border-amber-500 hover:bg-amber-50/50 dark:hover:bg-slate-900" data-layer="criminal">
-                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 01</span>
-                <span>Police &amp; Biometric Clearance</span>
-              </button>
-              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-[#F8FAFC] dark:bg-[#1E293B] text-[#0F172A] dark:text-white border border-slate-200 dark:border-[#334155] hover:border-amber-500 hover:bg-amber-50/50 dark:hover:bg-slate-900" data-layer="telematics">
-                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 02</span>
-                <span>IoT Telematics &amp; SOS Shield</span>
-              </button>
-              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-[#F8FAFC] dark:bg-[#1E293B] text-[#0F172A] dark:text-white border border-slate-200 dark:border-[#334155] hover:border-amber-500 hover:bg-amber-50/50 dark:hover:bg-slate-900" data-layer="structural">
-                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 03</span>
-                <span>24-Point Vehicle Health Audit</span>
-              </button>
-              <button type="button" class="safety-layer-btn p-3.5 rounded-2xl text-left text-xs font-bold transition-all bg-[#F8FAFC] dark:bg-[#1E293B] text-[#0F172A] dark:text-white border border-slate-200 dark:border-[#334155] hover:border-amber-500 hover:bg-amber-50/50 dark:hover:bg-slate-900" data-layer="pinkfleet">
-                <span class="block text-[10px] uppercase opacity-80 mb-0.5">Layer 04</span>
-                <span>"Pink Auto" Female Safety Fleet</span>
-              </button>
-            </div>
-
-            <!-- Dynamic Readout -->
-            <div class="pt-4 border-t border-slate-200 dark:border-[#334155] space-y-3">
-              <div class="flex items-center gap-2">
-                <span id="safety-layer-badge" class="px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider bg-amber-100 text-amber-800 dark:bg-slate-900 dark:text-amber-300">
-                  Zero Criminal Record Mandate
-                </span>
-              </div>
-              <h4 id="safety-layer-title" class="text-xl font-bold font-heading text-[#0F172A] dark:text-white">
-                Layer 1: Police Background &amp; Biometric Clearance
-              </h4>
-              <p id="safety-layer-desc" class="text-xs sm:text-sm text-slate-900 dark:text-slate-200 leading-relaxed">
-                Direct API integration with State Police Control Bureau. Every driver undergoes residential physical address checks, RTO passenger commercial badge validation, and quarterly biometric fingerprint synchronization.
-              </p>
-
-              <div class="grid grid-cols-3 gap-2 pt-2 text-center text-xs font-bold">
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
-                  <span id="safety-spec-1" class="text-amber-500 dark:text-amber-400 block font-heading">100% Police Cleared</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
-                  <span id="safety-spec-2" class="text-amber-500 dark:text-amber-400 block font-heading">RTO 3+ Yr Badge</span>
-                </div>
-                <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-[#0F172A] border border-slate-200 dark:border-[#334155]">
-                  <span id="safety-spec-3" class="text-amber-500 dark:text-amber-400 block font-heading">Quarterly Biometrics</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Animated Radar Disc & Telemetry Console -->
-          <div class="lg:col-span-6 flex flex-col items-center justify-center relative">
-            <div class="relative flex items-center justify-center p-8 sm:p-12">
-              <!-- Radar Graphic with Spinning Beam -->
-              <div class="safety-radar-disc bg-gradient-to-tr from-amber-500/10 via-[#1E293B]/20 to-amber-600/10 shadow-2xl">
-                <div class="safety-radar-beam"></div>
-                <div class="w-20 h-20 sm:w-28 sm:h-28 rounded-full bg-amber-500/20 border-2 border-amber-500 flex flex-col items-center justify-center text-center p-2 z-10 shadow-lg">
-                  <span class="text-[9px] font-bold text-amber-400 uppercase tracking-wider">STATUS</span>
-                  <span class="text-xs sm:text-sm font-extrabold text-white">LIVE 24/7</span>
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping mt-1"></span>
-                </div>
-              </div>
-
-              <!-- Floating Live Telemetry Labels -->
-              <div class="absolute top-4 right-4 px-3 py-1.5 rounded-xl bg-[#1E293B] border border-amber-500/40 text-[10px] font-mono text-amber-300 shadow-xl hidden sm:block">
-                GPS LATENCY: 12ms
-              </div>
-              <div class="absolute bottom-4 left-4 px-3 py-1.5 rounded-xl bg-[#1E293B] border border-amber-500/40 text-[10px] font-mono text-slate-300 shadow-xl hidden sm:block">
-                POLICE DIAL 112: SYNCED
-              </div>
-            </div>
-
-            <!-- Terminal Status Strip -->
-            <div class="w-full max-w-md p-3.5 rounded-xl bg-[#1E293B] border border-[#334155] text-center font-mono text-xs text-amber-300 shadow-lg">
-              <span id="safety-radar-status-text" class="tracking-wider">POLICE CLEARANCE: SECURE</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
+    
    <!-- ---------------------------------------------------- 
      SECTION 4: OVERSIZED TYPOGRAPHIC IMPACT WALL & SLA METRICS
 ----------------------------------------------------- -->
